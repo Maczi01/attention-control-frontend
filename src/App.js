@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Button, ButtonGroup, Grid, Flex} from "@chakra-ui/react"
 import {ChakraProvider} from "@chakra-ui/react"
+import Number from "./components/Number";
 
 function App() {
 
@@ -14,18 +15,10 @@ function App() {
                   backgroundColor="#ffd803" mx="auto" py="1%">
                 <Grid templateColumns="repeat(9, 1fr)" gap="5%" w="800px" h="100%"
                 >
-                    {table.map((e,index) =>
-                        <Button
-                            key={index}
-                            size="md"
-                            height="48px"
-                            width="48px"
-                            border="2px"
-                            borderColor="green.500"
-                        >
-                            {e}
-                        </Button>
-
+                    {table.map((e, index) =>
+                        <Number
+                            number={e}
+                            key={index}/>
                     )}
 
                 </Grid>
