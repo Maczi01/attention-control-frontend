@@ -15,6 +15,25 @@ function App() {
         fetchData();
     },[setTable])
 
+    const makeRequest =  () => {
+       console.log("**")
+        const body = "nic";
+        const url = "http://localhost:8080/api";
+        const jsonBody = body ? JSON.stringify(body) : undefined;
+        const headers= {
+            "Content-Type": "application/json",
+        }
+        const response = fetch(url,
+            {
+                method: "post",
+                headers,
+                body: jsonBody
+            }
+        );
+        // if (!response.ok) {
+        //     throw new Error("Coś nie tak z api!")
+        // }
+    };
 
     return (
         <ChakraProvider>
@@ -25,6 +44,7 @@ function App() {
                 >
                     {table.map((e, index) =>
                         <Number
+                            makeRequest={makeRequest}
                             number={e}
                             key={index}/>
                     )}

@@ -64,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
-      <workItem from="1613514616271" duration="4972000" />
+      <workItem from="1613514616271" duration="6541000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613517339111</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add useEffect and fetch.">
+      <created>1613607650662</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613607650662</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +125,7 @@
     <MESSAGE value="add useState" />
     <MESSAGE value="Add Number component" />
     <MESSAGE value="Add useState to change button color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add useState to change button color" />
+    <MESSAGE value="Add useEffect and fetch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add useEffect and fetch." />
   </component>
 </project>
