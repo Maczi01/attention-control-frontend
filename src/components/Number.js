@@ -11,6 +11,7 @@ const Number = ({number}) => {
                 height="48px"
                 width="48px"
                 border="2px"
+                colorScheme="red"
                 borderColor="green.500"
                 onClick={() => setActive(false)}
             >
@@ -18,6 +19,7 @@ const Number = ({number}) => {
             </Button> :
             <Button
                 size="md"
+                colorScheme="teal"
                 height="48px"
                 width="48px"
                 border="2px"
