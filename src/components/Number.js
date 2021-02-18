@@ -4,6 +4,7 @@ import {Button, ButtonGroup, Grid, Flex} from "@chakra-ui/react"
 const Number = ({number, makeRequest}) => {
 
     const [active, setActive] = useState(true);
+
     return (
 
         active ? <Button
@@ -13,18 +14,18 @@ const Number = ({number, makeRequest}) => {
                 border="2px"
                 colorScheme="red"
                 borderColor="green.500"
-                onClick={() => setActive(false)}
+                onClick={() => setActive(makeRequest(number))}
             >
                 {number}
             </Button> :
             <Button
                 size="md"
-                colorScheme="teal"
+                colorScheme="pink"
                 height="48px"
                 width="48px"
                 border="2px"
                 borderColor="yellow.500"
-                onClick={makeRequest}
+                // onClick={() => setActive(makeRequest(number))}
             >
                 {number}
             </Button>

@@ -13,26 +13,27 @@ function App() {
                 .then(res => setTable(res))
         }
         fetchData();
-    },[setTable])
+    }, [setTable])
 
-    const makeRequest =  () => {
-       console.log("**")
-        const body = "nic";
+    const makeRequest = async (number) => {
+        // const body = number;
         const url = "http://localhost:8080/api";
-        const jsonBody = body ? JSON.stringify(body) : undefined;
-        const headers= {
+        const headers = {
             "Content-Type": "application/json",
         }
-        const response = fetch(url,
+        // const response = fetch(url,
+        const response = await fetch(url,
             {
                 method: "post",
                 headers,
-                body: jsonBody
+                body: number
             }
         );
-        // if (!response.ok) {
-        //     throw new Error("Coś nie tak z api!")
-        // }
+        const newVar = await response.json();
+        console.log(newVar);
+        // ).then(response => console.log(response.json()));
+        // console.log(response)
+        return newVar;
     };
 
     return (
