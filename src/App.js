@@ -38,7 +38,6 @@ function App() {
 
     return (
         <ChakraProvider>
-            {console.log(table)}
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
                 <Grid templateColumns="repeat(9, 1fr)" gap="5%" w="800px" h="80%"

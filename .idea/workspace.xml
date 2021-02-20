@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/atenntion-contolr-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/attention-contolr-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
-      <workItem from="1613514616271" duration="14777000" />
+      <workItem from="1613514616271" duration="25986000" />
+      <workItem from="1613778752875" duration="1647000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -115,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613689724421</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Unfinished disable button.">
+      <created>1613766295536</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613766295539</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +153,8 @@
     <MESSAGE value="Add useEffect and fetch." />
     <MESSAGE value="Add post method (only test)" />
     <MESSAGE value="Add return to post method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add return to post method" />
+    <MESSAGE value="Unfinished disable button." />
+    <MESSAGE value="Work with async function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work with async function" />
   </component>
 </project>
