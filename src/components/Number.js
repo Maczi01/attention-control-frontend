@@ -7,9 +7,9 @@ const Number = ({number, makeRequest}) => {
 
     return (
 
-        active ?
+        // active ?
             <Button
-                // disabled={active}
+                disabled={active}
                 size="md"
                 colorScheme="pink"
                 height="48px"
@@ -21,18 +21,18 @@ const Number = ({number, makeRequest}) => {
             >
                 {number}
             </Button>
-            :
-            <Button
-                disabled={active}
-                size="md"
-                height="48px"colorScheme="blue"
-                width="48px"
-                border="2px"
-                borderColor="yellow.500"
-                onClick={() => setActive(!makeRequest(number))}
-            >
-                {number}
-            </Button>
+            // :
+            // <Button
+            //     disabled={active}
+            //     size="md"
+            //     height="48px"colorScheme="blue"
+            //     width="48px"
+            //     border="2px"
+            //     borderColor="yellow.500"
+            //     onClick={() => setActive(!makeRequest(number))}
+            // >
+            //     {number}
+            // </Button>
     )
 };
 
