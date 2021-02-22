@@ -67,7 +67,7 @@
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
-      <workItem from="1613778752875" duration="8519000" />
+      <workItem from="1613778752875" duration="10217000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613950211702</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Game class and Game function">
+      <created>1614033629026</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614033629026</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +177,7 @@
     <MESSAGE value="Work with async function" />
     <MESSAGE value="Added async and await to function in button" />
     <MESSAGE value="Added another useEffect to get object from rest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added another useEffect to get object from rest" />
+    <MESSAGE value="Added Game class and Game function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Game class and Game function" />
   </component>
 </project>
