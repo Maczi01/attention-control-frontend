@@ -22,7 +22,7 @@ function App() {
             const res = await fetch("http://localhost:8080/api/time");
             res.json()
                 .then(res => console.log(res));
-            // console.log(res)
+            console.log(res)
         }
 
         fetchData();
