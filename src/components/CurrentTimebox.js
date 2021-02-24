@@ -1,5 +1,6 @@
 import React from "react";
 import Clock from "./Clock";
+import {Button, ButtonGroup, Grid, Flex, } from "@chakra-ui/react"
 
 class CurrentTimebox extends React.Component {
     constructor(props) {
@@ -7,11 +8,9 @@ class CurrentTimebox extends React.Component {
         this.state = {
             isPaused: false,
             isRunning: false,
-            pausesCount: 0,
             elapsedTime: 0,
         };
         this.handleStart = this.handleStart.bind(this);
-        this.handlePause = this.handlePause.bind(this);
         this.handleStop = this.handleStop.bind(this);
         this.stopCounting = this.stopCounting.bind(this);
         this.startCounting = this.startCounting.bind(this);
@@ -43,18 +42,8 @@ class CurrentTimebox extends React.Component {
         window.clearInterval(this.interval)
         this.interval = null;
     }
-
-    handlePause() {
-        this.setState(
-            function (prevState) {
-                const isPaused = !prevState.isPaused;
-                isPaused ? this.stopCounting() : this.startCounting();
-                return {
-                    isPaused,
-                    pausesCount: isPaused ? prevState.pausesCount + 1 : prevState.pausesCount
-                }
-            }
-        )
+    getResults(){
+        this.props.getResults();
     }
 
     handleStop() {
@@ -69,21 +58,17 @@ class CurrentTimebox extends React.Component {
     }
 
     render() {
-        const {isRunning, isPaused, elapsedTime} = this.state;
+        const {isRunning, elapsedTime} = this.state;
         const {totalTimeInMinutes, onEdit, isEditable} = this.props;
-        let playVisible = "button__play"
         const totalTimeInSeconds = totalTimeInMinutes * 60;
         const timeToLeftInSeconds = totalTimeInSeconds - elapsedTime;
-        const progress = (timeToLeftInSeconds / totalTimeInSeconds) * 100;
-        if (timeToLeftInSeconds === 0) this.stopCounting();
+        if (timeToLeftInSeconds === 0) this.getResults();
         return (
             <>
                 <div>
+                    <Button onClick={this.handleStart} colorScheme="blue">Start the game</Button>
+
                     <Clock second={timeToLeftInSeconds}/>
-                    <button onClick={this.handleStart} disabled={isRunning}>Start</button>
-                    <button onClick={this.handlePause} disabled={!isRunning}>{isPaused ? "Wznów" : "Pauzuj"}</button>
-                    <button onClick={this.handleStop} disabled={!isRunning}>Stop</button>
-                    <button onClick={onEdit} disabled={isEditable}>Edytuj</button>
                 </div>
             </>
         )
