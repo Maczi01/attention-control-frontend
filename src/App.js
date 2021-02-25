@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Button, ButtonGroup, Grid, Flex, ArrowForwardIcon} from "@chakra-ui/react"
+import {Button, ButtonGroup, Grid, Flex} from "@chakra-ui/react"
 import {ChakraProvider} from "@chakra-ui/react"
 import Number from "./components/Number";
 import CurrentTimebox from "./components/CurrentTimebox";
@@ -7,6 +7,7 @@ import CurrentTimebox from "./components/CurrentTimebox";
 function App() {
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState([]);
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     useEffect(() => {
         async function fetchData() {
@@ -45,7 +46,6 @@ function App() {
     };
 
     const getResults = async () => {
-        // const body = number;
         const url = "http://localhost:8080/api/results";
         const headers = {
             "Content-Type": "application/json",
@@ -59,12 +59,14 @@ function App() {
         console.log(`The results is: ${newVar.points}`);
         return newVar;
     };
-
-
     return (
         <ChakraProvider>
+
+
+
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
+                {/*<Game gameData={gameData}/>*/}
                 <CurrentTimebox totalTimeInMinutes={gameData.endOfGameTime} getResults={getResults}/>
                 {/*<Button onClick={countDown} colorScheme="blue">Start the game</Button>*/}
                 <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="800px" h="80%" m="20px"
