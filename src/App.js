@@ -3,12 +3,23 @@ import {Button, ButtonGroup, Grid, Flex} from "@chakra-ui/react"
 import {ChakraProvider} from "@chakra-ui/react"
 import Number from "./components/Number";
 import CurrentTimebox from "./components/CurrentTimebox";
+import {useDisclosure} from "@chakra-ui/react"
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+} from "@chakra-ui/react"
 
 function App() {
+
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState([]);
-    const { isOpen, onOpen, onClose } = useDisclosure()
-
+    // const [modalOpen, setModalOpen] = useState();
+    const {isOpen, onOpen, onClose} =useDisclosure({defaultIsOpen: true})
     useEffect(() => {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api");
@@ -25,6 +36,7 @@ function App() {
             res.json()
                 .then(res => setGameData(res));
         }
+
         fetchData();
     }, [setGameData])
 
@@ -61,14 +73,24 @@ function App() {
     };
     return (
         <ChakraProvider>
+            <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    </ModalBody>
 
-
-
+                    <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                            Close
+                        </Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
-                {/*<Game gameData={gameData}/>*/}
                 <CurrentTimebox totalTimeInMinutes={gameData.endOfGameTime} getResults={getResults}/>
-                {/*<Button onClick={countDown} colorScheme="blue">Start the game</Button>*/}
                 <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="800px" h="80%" m="20px"
                 >
                     {table.map((e, index) =>
