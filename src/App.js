@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Button, ButtonGroup, Grid, Flex} from "@chakra-ui/react"
+import {Button, ButtonGroup, Grid, Flex, Box} from "@chakra-ui/react"
 import {ChakraProvider} from "@chakra-ui/react"
 import Number from "./components/Number";
 import CurrentTimebox from "./components/CurrentTimebox";
@@ -19,7 +19,7 @@ function App() {
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState([]);
     // const [modalOpen, setModalOpen] = useState();
-    const {isOpen, onOpen, onClose} =useDisclosure({defaultIsOpen: true})
+    const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
     useEffect(() => {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api");
@@ -74,16 +74,19 @@ function App() {
     return (
         <ChakraProvider>
             <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
+                <ModalOverlay/>
                 <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
-                    <ModalCloseButton />
+                    <ModalHeader>Attention control</ModalHeader>
+                    <Box p='10px' m='10px'>
+                        Twoim zadaniem jest klikanie liczb od zera do 99. Masz na to 90 sekund. Gotowy?
+                    </Box>
+                    <ModalCloseButton/>
                     <ModalBody>
                     </ModalBody>
 
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Close
+                            Startujemy!
                         </Button>
                     </ModalFooter>
                 </ModalContent>
