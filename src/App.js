@@ -18,7 +18,6 @@ function App() {
 
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState([]);
-    // const [modalOpen, setModalOpen] = useState();
     const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
     useEffect(() => {
         async function fetchData() {
