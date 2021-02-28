@@ -64,24 +64,6 @@ function App() {
     };
     return (
         <ChakraProvider>
-            {/*<Modal isOpen={isOpen} onClose={onClose}>*/}
-            {/*    <ModalOverlay/>*/}
-            {/*    <ModalContent>*/}
-            {/*        <ModalHeader>Attention control</ModalHeader>*/}
-            {/*        <Box p='10px' m='10px'>*/}
-            {/*            Twoim zadaniem jest klikanie liczb od zera do 99. Masz na to 90 sekund. Gotowy?*/}
-            {/*        </Box>*/}
-            {/*        <ModalCloseButton/>*/}
-            {/*        <ModalBody>*/}
-            {/*        </ModalBody>*/}
-
-            {/*        <ModalFooter>*/}
-            {/*            <Button colorScheme="blue" mr={3} onClick={onClose}>*/}
-            {/*                Startujemy!*/}
-            {/*            </Button>*/}
-            {/*        </ModalFooter>*/}
-            {/*    </ModalContent>*/}
-            {/*</Modal>*/}
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
                 <CurrentTimebox

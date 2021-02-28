@@ -64,15 +64,17 @@ class CurrentTimebox extends React.Component {
         const {totalTimeInMinutes, onEdit, isEditable, isOpen, onClose} = this.props;
         const totalTimeInSeconds = totalTimeInMinutes * 60;
         const timeToLeftInSeconds = totalTimeInSeconds - elapsedTime;
-        if (timeToLeftInSeconds === 0) this.getResults();
+        if (timeToLeftInSeconds === 0) {
+            this.getResults();
+            this.stopCounting();
+        }
+        console.log(timeToLeftInSeconds)
         return (
             <>
                 <div>
                     <StartWindow isOpen={isOpen}
                            onClose={onClose}
                            handleStart={this.handleStart}/>
-
-                    <Clock second={timeToLeftInSeconds}/>
                 </div>
             </>
         )
