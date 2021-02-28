@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CurrentTimebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentTimebox.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +78,7 @@
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
-      <workItem from="1613778752875" duration="53926000" />
+      <workItem from="1613778752875" duration="55317000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614550816688</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactor">
+      <created>1614553032713</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1614553032713</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +270,7 @@
     <MESSAGE value="Removed unused useStates" />
     <MESSAGE value="Added Modal as component" />
     <MESSAGE value="Added two functions to onClick" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added two functions to onClick" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
 </project>

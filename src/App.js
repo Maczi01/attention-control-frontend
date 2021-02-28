@@ -4,6 +4,7 @@ import {ChakraProvider} from "@chakra-ui/react"
 import Number from "./components/Number";
 import CurrentTimebox from "./components/CurrentTimebox";
 import {useDisclosure} from "@chakra-ui/react"
+import GameBoard from "./components/GameBoard";
 
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
             }
         );
         const newVar = await response.json();
-        console.log(`The results is: ${newVar.points}`);
+        console.log(`The results is: ${newVar}`);
         return newVar;
     };
     return (
@@ -72,16 +73,7 @@ function App() {
                     isOpen={isOpen}
                     onClose={onClose}
                 />
-                <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="800px" h="80%" m="20px"
-                >
-                    {table.map((e, index) =>
-                        <Number
-                            makeRequest={makeRequest}
-                            number={e}
-                            key={index}/>
-                    )}
-
-                </Grid>
+                <GameBoard makeRequest={makeRequest} table={table}/>
             </Flex>
         </ChakraProvider>
     );

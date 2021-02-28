@@ -10,6 +10,7 @@ class CurrentTimebox extends React.Component {
             isPaused: false,
             isRunning: false,
             elapsedTime: 0,
+            resultModal: false
         };
         this.handleStart = this.handleStart.bind(this);
         this.handleStop = this.handleStop.bind(this);
@@ -27,6 +28,10 @@ class CurrentTimebox extends React.Component {
             isRunning: true
         })
         this.startCounting();
+    }
+
+    showResultModal() {
+        this.setState({resultModal: true});
     }
 
     startCounting() {
@@ -67,6 +72,7 @@ class CurrentTimebox extends React.Component {
         if (timeToLeftInSeconds === 0) {
             this.getResults();
             this.stopCounting();
+            this.showResultModal
         }
         console.log(timeToLeftInSeconds)
         return (
