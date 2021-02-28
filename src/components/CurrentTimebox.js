@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
-import {Button, ButtonGroup, Grid, Flex, } from "@chakra-ui/react"
+import {Button, ButtonGroup, Grid, Flex,} from "@chakra-ui/react"
+import StartWindow from "./StartWindow";
 
 class CurrentTimebox extends React.Component {
     constructor(props) {
@@ -42,7 +43,8 @@ class CurrentTimebox extends React.Component {
         window.clearInterval(this.interval)
         this.interval = null;
     }
-    getResults(){
+
+    getResults() {
         this.props.getResults();
     }
 
@@ -59,14 +61,16 @@ class CurrentTimebox extends React.Component {
 
     render() {
         const {isRunning, elapsedTime} = this.state;
-        const {totalTimeInMinutes, onEdit, isEditable} = this.props;
+        const {totalTimeInMinutes, onEdit, isEditable, isOpen, onClose} = this.props;
         const totalTimeInSeconds = totalTimeInMinutes * 60;
         const timeToLeftInSeconds = totalTimeInSeconds - elapsedTime;
         if (timeToLeftInSeconds === 0) this.getResults();
         return (
             <>
                 <div>
-                    <Button onClick={this.handleStart} colorScheme="blue">Start the game</Button>
+                    <StartWindow isOpen={isOpen}
+                           onClose={onClose}
+                           handleStart={this.handleStart}/>
 
                     <Clock second={timeToLeftInSeconds}/>
                 </div>

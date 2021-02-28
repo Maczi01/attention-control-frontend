@@ -11,7 +11,7 @@ import {
 import {Box} from "@chakra-ui/layout";
 import {Button} from "@chakra-ui/button";
 
-const Modal = ({isOpen, onClose, handleStart}) => (
+const StartWindow = ({isOpen, onClose, handleStart}) => (
 
     <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay/>
@@ -25,7 +25,7 @@ const Modal = ({isOpen, onClose, handleStart}) => (
             </ModalBody>
 
             <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                <Button colorScheme="blue" mr={3} onClick={() => {onClose(); handleStart()}}>
                     Startujemy!
                 </Button>
             </ModalFooter>
@@ -33,4 +33,4 @@ const Modal = ({isOpen, onClose, handleStart}) => (
     </Modal>
 )
 
-export default Modal;
+export default StartWindow;
