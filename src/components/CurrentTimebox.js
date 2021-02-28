@@ -2,6 +2,7 @@ import React from "react";
 import Clock from "./Clock";
 import {Button, ButtonGroup, Grid, Flex,} from "@chakra-ui/react"
 import StartWindow from "./StartWindow";
+import ResultWindow from "./ResultWindow";
 
 class CurrentTimebox extends React.Component {
     constructor(props) {
@@ -13,7 +14,6 @@ class CurrentTimebox extends React.Component {
             resultModal: false
         };
         this.handleStart = this.handleStart.bind(this);
-        this.handleStop = this.handleStop.bind(this);
         this.stopCounting = this.stopCounting.bind(this);
         this.startCounting = this.startCounting.bind(this);
         this.interval = null;
@@ -31,7 +31,8 @@ class CurrentTimebox extends React.Component {
     }
 
     showResultModal() {
-        this.setState({resultModal: true});
+        this.setState({
+            resultModal: true})
     }
 
     startCounting() {
@@ -53,34 +54,36 @@ class CurrentTimebox extends React.Component {
         this.props.getResults();
     }
 
-    handleStop() {
-        this.setState({
-                isRunning: false,
-                isPaused: false,
-                elapsedTime: 0,
-                pausesCount: 0,
-            }
-        )
-        this.stopCounting()
-    }
+    // handleStop() {
+    //     this.setState({
+    //             isRunning: false,
+    //             isPaused: false,
+    //             elapsedTime: 0,
+    //             pausesCount: 0,
+    //         }
+    //     )
+    //     this.stopCounting()
+    // }
 
     render() {
-        const {isRunning, elapsedTime} = this.state;
+        const {isRunning, elapsedTime, resultModal} = this.state;
         const {totalTimeInMinutes, onEdit, isEditable, isOpen, onClose} = this.props;
         const totalTimeInSeconds = totalTimeInMinutes * 60;
         const timeToLeftInSeconds = totalTimeInSeconds - elapsedTime;
         if (timeToLeftInSeconds === 0) {
             this.getResults();
             this.stopCounting();
-            this.showResultModal
+            this.showResultModal();
         }
         console.log(timeToLeftInSeconds)
         return (
             <>
                 <div>
                     <StartWindow isOpen={isOpen}
-                           onClose={onClose}
-                           handleStart={this.handleStart}/>
+                                 onClose={onClose}
+                                 handleStart={this.handleStart}/>
+                    { resultModal && <ResultWindow/>}
+
                 </div>
             </>
         )
