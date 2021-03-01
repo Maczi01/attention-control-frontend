@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CurrentTimebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentTimebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultWindow.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +79,7 @@
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
-      <workItem from="1613778752875" duration="57111000" />
+      <workItem from="1613778752875" duration="60676000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -233,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614554316284</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add component GameCounter (should replace CurrentTimebox)">
+      <created>1614556163562</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1614556163562</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +287,7 @@
     <MESSAGE value="Added two functions to onClick" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Add component GameBoard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add component GameBoard" />
+    <MESSAGE value="Add component GameCounter (should replace CurrentTimebox)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add component GameCounter (should replace CurrentTimebox)" />
   </component>
 </project>

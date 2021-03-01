@@ -12,6 +12,11 @@ function App() {
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState([]);
     const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+    const {
+        isOpen: isOpenReportModal,
+        onOpen: onOpenReportModal,
+        onClose: onCloseReportModal
+    } = useDisclosure()
     useEffect(() => {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api");
@@ -72,11 +77,15 @@ function App() {
                     getResults={getResults}
                     isOpen={isOpen}
                     onClose={onClose}
-                />
-                <GameBoard makeRequest={makeRequest} table={table}/>
-            </Flex>
-        </ChakraProvider>
-    );
+                    isOpenReportModal = {isOpenReportModal}
+                onOpenReportModal = {onOpenReportModal}
+                onCloseReportModal = {onCloseReportModal}
+            />
+            <GameBoard makeRequest={makeRequest} table={table}/>
+        </Flex>
+</ChakraProvider>
+)
+    ;
 }
 
 export default App;

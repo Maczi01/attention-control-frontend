@@ -11,7 +11,7 @@ class CurrentTimebox extends React.Component {
             isPaused: false,
             isRunning: false,
             elapsedTime: 0,
-            resultModal: false
+            result: 0
         };
         this.handleStart = this.handleStart.bind(this);
         this.stopCounting = this.stopCounting.bind(this);
@@ -30,10 +30,11 @@ class CurrentTimebox extends React.Component {
         this.startCounting();
     }
 
-    showResultModal() {
-        this.setState({
-            resultModal: true})
-    }
+    // showResultModal() {
+    //     this.setState({
+    //         resultModal: true
+    //     })
+    // }
 
     startCounting() {
         if (this.interval === null) {
@@ -51,7 +52,7 @@ class CurrentTimebox extends React.Component {
     }
 
     getResults() {
-        this.props.getResults();
+        this.props.getResults()
     }
 
     // handleStop() {
@@ -66,23 +67,27 @@ class CurrentTimebox extends React.Component {
     // }
 
     render() {
-        const {isRunning, elapsedTime, resultModal} = this.state;
-        const {totalTimeInMinutes, onEdit, isEditable, isOpen, onClose} = this.props;
+        const {isRunning, elapsedTime, resultModal, result} = this.state;
+        const {totalTimeInMinutes, onEdit, isEditable, isOpen, onClose, isOpenReportModal, onOpenReportModal, onCloseReportModal} = this.props;
         const totalTimeInSeconds = totalTimeInMinutes * 60;
         const timeToLeftInSeconds = totalTimeInSeconds - elapsedTime;
         if (timeToLeftInSeconds === 0) {
             this.getResults();
             this.stopCounting();
-            this.showResultModal();
+            onOpenReportModal();
         }
         console.log(timeToLeftInSeconds)
         return (
             <>
                 <div>
-                    <StartWindow isOpen={isOpen}
-                                 onClose={onClose}
-                                 handleStart={this.handleStart}/>
-                    { resultModal && <ResultWindow/>}
+                    <StartWindow
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        handleStart={this.handleStart}/>
+                    <ResultWindow
+                        isOpen={isOpenReportModal}
+                        result={result}
+                    />
 
                 </div>
             </>

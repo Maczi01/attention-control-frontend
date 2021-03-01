@@ -11,14 +11,14 @@ import {
 import {Box} from "@chakra-ui/layout";
 import {Button} from "@chakra-ui/button";
 
-const ResultWindow = () => (
+const ResultWindow = ({isOpen, result = 0 }) => (
 
-    <Modal>
+    <Modal isOpen={isOpen} >
         <ModalOverlay/>
         <ModalContent>
             <ModalHeader>Attention control</ModalHeader>
             <Box p='10px' m='10px'>
-                Twoim zadaniem jest klikanie liczb od zera do 99. Masz na to 90 sekund. Gotowy?
+                Twoj wynik to {result}
             </Box>
             <ModalCloseButton/>
             <ModalBody>
