@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CurrentTimebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentTimebox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +80,7 @@
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
-      <workItem from="1613778752875" duration="61732000" />
+      <workItem from="1613778752875" duration="64294000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -248,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614642827087</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Modal works (not properly...)">
+      <created>1614724202152</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614724202152</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +279,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add chakra-ui" />
     <MESSAGE value="add useState" />
     <MESSAGE value="Add Number component" />
     <MESSAGE value="Add useState to change button color" />
@@ -295,6 +303,7 @@
     <MESSAGE value="Add component GameBoard" />
     <MESSAGE value="Add component GameCounter (should replace CurrentTimebox)" />
     <MESSAGE value="Added second modal (not work yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added second modal (not work yet)" />
+    <MESSAGE value="Modal works (not properly...)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modal works (not properly...)" />
   </component>
 </project>

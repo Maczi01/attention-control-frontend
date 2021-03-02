@@ -53,7 +53,7 @@ class CurrentTimebox extends React.Component {
 
     getResults() {
         this.props.getResults()
-    }dominium
+    }
 
     // handleStop() {
     //     this.setState({

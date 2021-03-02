@@ -5,6 +5,7 @@ import Number from "./components/Number";
 import CurrentTimebox from "./components/CurrentTimebox";
 import {useDisclosure} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
+import GameCounter from "./components/GameCounter";
 
 
 function App() {
@@ -65,21 +66,27 @@ function App() {
             }
         );
         const newVar = await response.json();
-        console.log(`The results is: ${newVar}`);
+        // console.log(`The results is: ${newVar}`);
         return newVar;
     };
+    console.log(gameData.endOfGameTime)
     return (
         <ChakraProvider>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
-                <CurrentTimebox
-                    totalTimeInMinutes={gameData.endOfGameTime}
-                    getResults={getResults}
-                    isOpen={isOpen}
-                    onClose={onClose}
-                    isOpenReportModal = {isOpenReportModal}
-                onOpenReportModal = {onOpenReportModal}
-                onCloseReportModal = {onCloseReportModal}
+            {/*    <CurrentTimebox*/}
+            {/*        totalTimeInMinutes={gameData.endOfGameTime}*/}
+            {/*        getResults={getResults}*/}
+            {/*        isOpen={isOpen}*/}
+            {/*        onClose={onClose}*/}
+            {/*        isOpenReportModal = {isOpenReportModal}*/}
+            {/*    onOpenReportModal = {onOpenReportModal}*/}
+            {/*    onCloseReportModal = {onCloseReportModal}*/}
+            {/*/>*/}
+            <GameCounter
+                endOfGameTime={gameData.endOfGameTime}
+                isOpen={isOpen}
+                onClose={onClose}
             />
             <GameBoard makeRequest={makeRequest} table={table}/>
         </Flex>
