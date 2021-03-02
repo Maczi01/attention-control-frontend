@@ -8,13 +8,10 @@ import GameBoard from "./GameBoard";
 
 const GameCounter = () => {
 
-    const [time, setTime] = useState(
-        {
-            isPaused: false,
-            isRunning: false,
-            elapsedTime: 0,
-            resultModal: false,
-        })
+    const [pause, setPause] = useState( false);
+    const [running, setRunning] = useState( false);
+    const [elapsedTime, setElapsedTime] = useState( 0);
+    const [result, setResult] = useState( 0);
 
 
     return (
