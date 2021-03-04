@@ -88,6 +88,7 @@ function App() {
                 endOfGameTime={tim}
                 isOpen={isOpen}
                 onClose={onClose}
+                results={results}
             />
             <GameBoard makeRequest={makeRequest} table={table}/>
         </Flex>
