@@ -1,23 +1,20 @@
 import React, {useState, useRef} from "react";
 import StartWindow from "./StartWindow";
 
-const GameCounter = ({endOfGameTime, results, isOpen, onClose}) => {
+const GameCounter = ({endOfGameTime, getResults, isOpen, onClose}) => {
     const [elapsedTime, setElapsedTime] = useState(10);
     const [isActive, setIsActive] = useState(false);
 
     const [pause, setPause] = useState(false);
     const [running, setRunning] = useState(false);
-    const [result, setResult] = useState();
-    // const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
     const countRef = useRef(null);
+    const getPoints = () =>   getResults().then(res => console.log(res))
 
-
-    React.useEffect(() => {
+    React.useEffect( () => {
             if (elapsedTime < 1) {
+                getPoints();
                 clearInterval(countRef.current);
                 setIsActive(false);
-                setResult(getResults)
-                console.log(`The result is ${result}`)
             }
         }, [elapsedTime]
     );

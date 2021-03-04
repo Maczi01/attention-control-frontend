@@ -70,7 +70,7 @@ function App() {
         return newVar;
     };
     // console.log(gameData.endOfGameTime)
-    const tim = gameData.endOfGameTime
+    // const tim = gameData.endOfGameTime
     return (
         <ChakraProvider>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
@@ -85,10 +85,10 @@ function App() {
             {/*    onCloseReportModal = {onCloseReportModal}*/}
             {/*/>*/}
             <GameCounter
-                endOfGameTime={tim}
+                endOfGameTime={gameData.endOfGameTime}
                 isOpen={isOpen}
                 onClose={onClose}
-                results={results}
+                getResults={getResults}
             />
             <GameBoard makeRequest={makeRequest} table={table}/>
         </Flex>
