@@ -32,7 +32,7 @@ function App() {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api/time");
             res.json()
-                .then(res => setGameData(res));
+                .then(res =>setGameData(res));
         }
 
         fetchData();
@@ -69,7 +69,8 @@ function App() {
         // console.log(`The results is: ${newVar}`);
         return newVar;
     };
-    console.log(gameData.endOfGameTime)
+    // console.log(gameData.endOfGameTime)
+    const tim = gameData.endOfGameTime
     return (
         <ChakraProvider>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
@@ -84,7 +85,7 @@ function App() {
             {/*    onCloseReportModal = {onCloseReportModal}*/}
             {/*/>*/}
             <GameCounter
-                endOfGameTime={gameData.endOfGameTime}
+                endOfGameTime={tim}
                 isOpen={isOpen}
                 onClose={onClose}
             />

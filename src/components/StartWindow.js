@@ -25,8 +25,8 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
             </ModalBody>
 
             <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={() => {onClose()}}>
-                {/*<Button colorScheme="blue" mr={3} onClick={() => {onClose(); handleStart()}}>*/}
+                {/*<Button colorScheme="blue" mr={3} onClick={() => {onClose()}}>*/}
+                <Button colorScheme="blue" mr={3} onClick={() => {onClose(); handleStart()}}>
                     Startujemy!
                 </Button>
             </ModalFooter>
