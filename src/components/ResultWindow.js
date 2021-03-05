@@ -1,15 +1,6 @@
 import React from 'react';
-import {
-    Modal,
-    ModalBody,
-    ModalCloseButton,
-    ModalContent,
-    ModalFooter,
-    ModalHeader,
-    ModalOverlay
-} from "@chakra-ui/modal";
+import {Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay} from "@chakra-ui/modal";
 import {Box} from "@chakra-ui/layout";
-import {Button} from "@chakra-ui/button";
 
 const ResultWindow = ({isOpen, result = 0 }) => (
 
@@ -20,15 +11,13 @@ const ResultWindow = ({isOpen, result = 0 }) => (
             <Box p='10px' m='10px'>
                 Twoj wynik to {result}
             </Box>
-            <ModalCloseButton/>
+            {/*<ModalCloseButton/>*/}
             <ModalBody>
             </ModalBody>
 
-            <ModalFooter>
-                {/*<Button colorScheme="blue" mr={3} onClick={() => {onClose(); handleStart()}}>*/}
-                    Startujemy!
-                {/*</Button>*/}
-            </ModalFooter>
+            {/*<ModalFooter>*/}
+            {/*        Startujemy!*/}
+            {/*</ModalFooter>*/}
         </ModalContent>
     </Modal>
 )

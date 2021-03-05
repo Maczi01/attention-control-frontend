@@ -3,18 +3,18 @@ import StartWindow from "./StartWindow";
 import ResultWindow from "./ResultWindow";
 import {useDisclosure} from "@chakra-ui/hooks";
 
-const GameCounter = ({endOfGameTime, getResults, isOpen, onClose}) => {
-    const [elapsedTime, setElapsedTime] = useState(10);
+const GameCounter = ({endOfGameTime, getResults}) => {
+    const [elapsedTime, setElapsedTime] = useState(endOfGameTime);
     const [isActive, setIsActive] = useState(false);
     const [result, setResult] = useState(false);
+    const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+
     const {
         isOpen: isOpenReportModal,
         onOpen: onOpenReportModal,
         onClose: onCloseReportModal
     } = useDisclosure()
-
-    const [pause, setPause] = useState(false);
-    const [running, setRunning] = useState(false);
+    console.log({endOfGameTime})
     const countRef = useRef(null);
     const getPoints = () =>   getResults().then(res => setResult(res))
 
