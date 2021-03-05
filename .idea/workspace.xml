@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +77,7 @@
       <updated>1613342218303</updated>
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
-      <workItem from="1613778752875" duration="73355000" />
+      <workItem from="1613778752875" duration="74900000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -283,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614895635031</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Finally app show score (only on console)">
+      <created>1614897976872</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1614897976873</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +311,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add post method (only test)" />
     <MESSAGE value="Add return to post method" />
     <MESSAGE value="Unfinished disable button." />
     <MESSAGE value="Work with async function" />
@@ -330,6 +335,7 @@
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Fixed countdown (but I dont know how...)" />
     <MESSAGE value="New countdown (with state and ref)" />
-    <option name="LAST_COMMIT_MESSAGE" value="New countdown (with state and ref)" />
+    <MESSAGE value="Finally app show score (only on console)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally app show score (only on console)" />
   </component>
 </project>
