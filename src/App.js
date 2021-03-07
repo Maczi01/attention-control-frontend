@@ -11,8 +11,8 @@ import GameCounter from "./components/GameCounter";
 function App() {
 
     const [table, setTable] = useState([])
-    const [gameData, setGameData] = useState([]);
-    // const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+    const [gameData, setGameData] = useState({});
+    const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
     // const {
     //     isOpen: isOpenReportModal,
     //     onOpen: onOpenReportModal,
