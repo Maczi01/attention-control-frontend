@@ -1,9 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {Button, ButtonGroup, Grid, Flex, Box} from "@chakra-ui/react"
-import {ChakraProvider} from "@chakra-ui/react"
-import Number from "./components/Number";
-import CurrentTimebox from "./components/CurrentTimebox";
-import {useDisclosure} from "@chakra-ui/react"
+import React, {useEffect, useState} from "react";
+import {ChakraProvider, Flex} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
 import GameCounter from "./components/GameCounter";
 
@@ -68,7 +64,7 @@ function App() {
                 endOfGameTime={gameData.endOfGameTime}
                 getResults={getResults}
             />
-            <GameBoard makeRequest={makeRequest} table={table}/>
+            <GameBoard makeRequest={makeRequest} table={gameData.board}/>
         </Flex>
 </ChakraProvider>
 )
