@@ -12,12 +12,6 @@ function App() {
 
     const [table, setTable] = useState([])
     const [gameData, setGameData] = useState({});
-    const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
-    // const {
-    //     isOpen: isOpenReportModal,
-    //     onOpen: onOpenReportModal,
-    //     onClose: onCloseReportModal
-    // } = useDisclosure()
     useEffect(() => {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api");
@@ -36,7 +30,7 @@ function App() {
         }
 
         fetchData();
-    }, [])
+    }, [setGameData])
 
     const makeRequest = async (number) => {
         const url = "http://localhost:8080/api";
@@ -50,9 +44,7 @@ function App() {
                 body: number
             }
         );
-        const newVar = await response.json();
-        console.log(newVar);
-        return newVar;
+        return  await response.json();
     };
 
     const getResults = async () => {
@@ -66,26 +58,14 @@ function App() {
             }
         );
         const newVar = await response.json();
-        // console.log(`The results is: ${newVar}`);
         return newVar;
     };
     return (
         <ChakraProvider>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
                   backgroundColor="#ffd803" mx="auto" py="1%">
-            {/*    <CurrentTimebox*/}
-            {/*        totalTimeInMinutes={gameData.endOfGameTime}*/}
-            {/*        getResults={getResults}*/}
-            {/*        isOpen={isOpen}*/}
-            {/*        onClose={onClose}*/}
-            {/*        isOpenReportModal = {isOpenReportModal}*/}
-            {/*    onOpenReportModal = {onOpenReportModal}*/}
-            {/*    onCloseReportModal = {onCloseReportModal}*/}
-            {/*/>*/}
             <GameCounter
                 endOfGameTime={gameData.endOfGameTime}
-                // isOpen={isOpen}
-                // onClose={onClose}
                 getResults={getResults}
             />
             <GameBoard makeRequest={makeRequest} table={table}/>

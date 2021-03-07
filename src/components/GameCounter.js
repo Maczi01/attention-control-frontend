@@ -8,15 +8,20 @@ const GameCounter = ({endOfGameTime, getResults}) => {
     const [isActive, setIsActive] = useState(false);
     const [result, setResult] = useState(false);
     const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
-
     const {
         isOpen: isOpenReportModal,
         onOpen: onOpenReportModal,
         onClose: onCloseReportModal
     } = useDisclosure()
     console.log({endOfGameTime})
+
     const countRef = useRef(null);
     const getPoints = () =>   getResults().then(res => setResult(res))
+
+    React.useEffect( () => {
+            setElapsedTime(endOfGameTime)
+        }, [endOfGameTime]
+    );
 
     React.useEffect( () => {
             if (elapsedTime < 1) {

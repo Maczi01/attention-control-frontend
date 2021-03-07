@@ -4,6 +4,7 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <workItem from="1613342220111" duration="7053000" />
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
-      <workItem from="1614985202796" duration="2430000" />
+      <workItem from="1614985202796" duration="4502000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -304,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614985559388</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Timer countdown stopped working.">
+      <created>1615156433534</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1615156433535</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +334,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work with async function" />
     <MESSAGE value="Added async and await to function in button" />
     <MESSAGE value="Added another useEffect to get object from rest" />
     <MESSAGE value="Added Game class and Game function" />
@@ -351,6 +358,7 @@
     <MESSAGE value="Finally app show score (only on console)" />
     <MESSAGE value="Working version (start, counting, end game and result" />
     <MESSAGE value="Removed useDisclousure from App." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed useDisclousure from App." />
+    <MESSAGE value="Timer countdown stopped working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Timer countdown stopped working." />
   </component>
 </project>
