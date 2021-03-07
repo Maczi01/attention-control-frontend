@@ -57,9 +57,9 @@ function App() {
                 headers,
             }
         );
-        const newVar = await response.json();
-        return newVar;
+        return await response.json();
     };
+
     return (
         <ChakraProvider>
             <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
