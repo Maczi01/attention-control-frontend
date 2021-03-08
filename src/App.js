@@ -1,34 +1,23 @@
 import React, {useEffect, useState} from "react";
-import {ChakraProvider, Flex} from "@chakra-ui/react"
+import {ChakraProvider, Flex, Box} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
 import GameCounter from "./components/GameCounter";
 
-
 function App() {
 
-    const [table, setTable] = useState([])
     const [gameData, setGameData] = useState({});
-    useEffect(() => {
-        async function fetchData() {
-            const res = await fetch("http://localhost:8080/api");
-            res.json()
-                .then(res => setTable(res))
-        }
-
-        fetchData();
-    }, [setTable]);
 
     useEffect(() => {
         async function fetchData() {
             const res = await fetch("http://localhost:8080/api/time");
             res.json()
-                .then(res =>setGameData(res));
+                .then(res => setGameData(res));
         }
 
         fetchData();
     }, [setGameData])
 
-    const makeRequest = async (number) => {
+    const checkGivenNumber = async (number) => {
         const url = "http://localhost:8080/api";
         const headers = {
             "Content-Type": "application/json",
@@ -40,7 +29,7 @@ function App() {
                 body: number
             }
         );
-        return  await response.json();
+        return await response.json();
     };
 
     const getResults = async () => {
@@ -57,18 +46,22 @@ function App() {
     };
 
     return (
-        <ChakraProvider>
-            <Flex direction="column" align="center" justify="space-between" width="80%" height="full"
-                  backgroundColor="#ffd803" mx="auto" py="1%">
-            <GameCounter
-                endOfGameTime={gameData.endOfGameTime}
-                getResults={getResults}
-            />
-            <GameBoard makeRequest={makeRequest} table={gameData.board}/>
-        </Flex>
-</ChakraProvider>
-)
-    ;
+        <>
+            <Box px={10}>
+
+                <Flex direction="column" align="center" justify="space-around" width="80%"
+                      backgroundColor="#ffd803"
+                      mx="auto">
+                    <GameCounter
+                        endOfGameTime={gameData.endOfGameTime}
+                        getResults={getResults}
+                    />
+                    <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
+                </Flex>
+            </Box>
+        </>
+    )
+        ;
 }
 
 export default App;

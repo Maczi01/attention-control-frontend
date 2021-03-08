@@ -26,7 +26,6 @@ const GameCounter = ({endOfGameTime, getResults}) => {
     React.useEffect( () => {
             if (elapsedTime < 1) {
                 getPoints();
-                console.log(result)
                 clearInterval(countRef.current);
                 setIsActive(false);
                 onOpenReportModal();
