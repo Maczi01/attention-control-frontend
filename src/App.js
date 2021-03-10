@@ -7,10 +7,13 @@ import GameCounter from "./components/GameCounter";
 function App() {
     const [gameData, setGameData] = useState({});
     const [isPending, setIsPending] = useState(true);
-
+    const [error, setError] = useState()
     useEffect(() => {
         fetch("http://localhost:8080/api/time")
             .then(res => {
+                if (!res.ok) {
+                    throw Error("Couldnt fetch data from server")
+                }
                 return res.json()
             })
             .then(data => {
@@ -18,7 +21,8 @@ function App() {
                 setIsPending(false);
             })
             .catch(err => {
-                console.log(err.message)
+                setError(err)
+                isPending(true);
             })
     }, []);
 
@@ -59,6 +63,7 @@ function App() {
                     endOfGameTime={gameData.endOfGameTime}
                     getResults={getResults}
                 />
+                {error && <p> {error} </p>}
                 {isPending && <Spinner/>}
                 <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
             </Flex>
