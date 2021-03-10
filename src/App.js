@@ -1,21 +1,26 @@
 import React, {useEffect, useState} from "react";
-import {ChakraProvider, Flex, Box} from "@chakra-ui/react"
+import {ChakraProvider, Flex, Box, Spinner} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
 import GameCounter from "./components/GameCounter";
 
-function App() {
 
+function App() {
     const [gameData, setGameData] = useState({});
+    const [isPending, setIsPending] = useState(true);
 
     useEffect(() => {
-        async function fetchData() {
-            const res = await fetch("http://localhost:8080/api/time");
-            res.json()
-                .then(res => setGameData(res));
-        }
-
-        fetchData();
-    }, [setGameData])
+        fetch("http://localhost:8080/api/time")
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setGameData(data)
+                setIsPending(false);
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }, []);
 
     const checkGivenNumber = async (number) => {
         const url = "http://localhost:8080/api";
@@ -54,6 +59,7 @@ function App() {
                     endOfGameTime={gameData.endOfGameTime}
                     getResults={getResults}
                 />
+                {isPending && <Spinner/>}
                 <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
             </Flex>
         </>

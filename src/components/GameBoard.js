@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {Button, ButtonGroup, Grid, Flex, Box} from "@chakra-ui/react"
+import React from "react";
+import {Grid} from "@chakra-ui/react"
 import Number from "./Number";
 
 const GameBoard = ({table, checkGivenNumber}) => (
