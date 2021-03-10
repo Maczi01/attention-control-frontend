@@ -47,21 +47,17 @@ function App() {
 
     return (
         <>
-            <Box px={10}>
-
-                <Flex direction="column" align="center" justify="space-around" width="80%"
-                      backgroundColor="#ffd803"
-                      mx="auto">
-                    <GameCounter
-                        endOfGameTime={gameData.endOfGameTime}
-                        getResults={getResults}
-                    />
-                    <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
-                </Flex>
-            </Box>
+            <Flex direction="column" align="center" justify="space-around" width="80%"
+                  backgroundColor="#ffd803"
+                  mx="auto">
+                <GameCounter
+                    endOfGameTime={gameData.endOfGameTime}
+                    getResults={getResults}
+                />
+                <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
+            </Flex>
         </>
-    )
-        ;
+    );
 }
 
 export default App;

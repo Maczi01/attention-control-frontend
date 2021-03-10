@@ -20,7 +20,7 @@ const Number = ({number, checkGivenNumber}) => {
             }}
             _active={{
                 bg: "#dddfe2",
-                transform:  "translateY(3px)",
+                transform: "translateY(3px)",
                 borderColor: "#bec3c9",
             }}
             _focus={{
