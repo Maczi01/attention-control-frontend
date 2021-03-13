@@ -9,7 +9,8 @@ function App() {
     const [error, setError] = useState();
 
     useEffect(async () => {
-        await fetch("http://localhost:8080/api/time",)
+        // await fetch("http://localhost:8080/api/time",)
+        await fetch("https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json",)
             .then(res => {
                 if (!res.ok) {
                     throw Error("Couldn't fetch data from server")
@@ -29,7 +30,8 @@ function App() {
     }, []);
 
     const checkGivenNumber = async (number) => {
-        const url = "http://localhost:8080/api";
+        // const url = "http://localhost:8080/api";
+        const url = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/number.json";
         const headers = {
             "Content-Type": "application/json",
         };
@@ -44,7 +46,8 @@ function App() {
     };
 
     const getResults = async () => {
-        const url = "http://localhost:8080/api/results";
+        // const url = "http://localhost:8080/api/results";
+        const url = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
         const response = await fetch(url,
         );
         return response.json();
