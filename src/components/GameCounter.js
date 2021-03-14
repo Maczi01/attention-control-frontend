@@ -16,14 +16,14 @@ const GameCounter = ({endOfGameTime, getResults}) => {
     console.log({endOfGameTime})
 
     const countRef = useRef(null);
-    const getPoints = () =>   getResults().then(res => setResult(res))
+    const getPoints = () => getResults().then(res => setResult(res))
 
-    React.useEffect( () => {
+    React.useEffect(() => {
             setElapsedTime(endOfGameTime)
         }, [endOfGameTime]
     );
 
-    React.useEffect( () => {
+    React.useEffect(() => {
             if (elapsedTime < 1) {
                 getPoints();
                 clearInterval(countRef.current);
