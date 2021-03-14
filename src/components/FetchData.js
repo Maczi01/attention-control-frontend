@@ -2,7 +2,7 @@ const FetchData = {
     getData: async (url, method, body) => {
         const headers = {
             "Content-Type": "application/json",
-        }
+        };
         return await fetch(url,
             {
                 method,
@@ -17,5 +17,5 @@ const FetchData = {
                 return res.json()
             });
     }
-}
+};
 export default FetchData;

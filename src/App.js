@@ -8,43 +8,36 @@ function App() {
     const [gameData, setGameData] = useState({});
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
-    const gameDataEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json";
-    const gameResultEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
-    // const urlToGetData = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json";
-    const urlToGetData = "https://myject-1557350715381-default-rtdb.firebaseio.com/game.json";
+    const [result, setResult] = useState(0);
+
+    const urlGlobalGameDataEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json";
+    const urlGlobalToCheckNumber = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/number.json";
+    const urlLocalToCheckNumber = "http://localhost:8080/api";
+
+    const urlGlobalGameResultEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
+    const urlLocalGameResultEndpoint = "http://localhost:8080/api/results";
 
     useEffect(async () => {
-        FetchData.getData(urlToGetData, 'GET')
-            .then(data => {
-                setGameData(data)
-            })
-            .catch(err => {
-                    setError(err.message)
-                }
-            )
+        FetchData.getData(urlGlobalGameDataEndpoint, 'GET')
+            .then(data => setGameData(data))
+            .catch(err => setError(err.message))
             .finally(() => setIsPending(false))
 
     }, []);
 
     const checkGivenNumber = async (number) => {
-        const url = "http://localhost:8080/api";
-        const response = await FetchData.getData(url, 'POST', number)
-            .catch(err => {
-                setError(err)
-                console.error(err.message)
-            })
+        const response = await FetchData.getData(urlLocalToCheckNumber, 'POST', number)
+            .catch(err => console.error(err.message));
         return await response
-
     };
 
     const getResults = async () => {
-        // const url = "http://localhost:8080/api/results";
-        const url = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
-        const response = await FetchData.getData(url, 'GET')
+        const response = await FetchData.getData(urlLocalGameResultEndpoint, 'GET')
+            .then(data => setResult(data))
             .catch(err => {
                 console.error(err.message)
-            })
-        return response
+            });
+        return response;
     };
 
     return (
@@ -53,6 +46,7 @@ function App() {
                   mx="auto">
                 <GameCounter
                     endOfGameTime={gameData.endOfGameTime}
+                    result={result}
                     getResults={getResults}
                 />
                 {error && <p> {error} </p>}

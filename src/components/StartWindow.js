@@ -14,7 +14,12 @@ import {Button} from "@chakra-ui/button";
 const StartWindow = ({isOpen, onClose, handleStart}) => (
 
     <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay/>
+        <ModalOverlay
+            opacity="0.5"
+            // filter="alpha(opacity=65)"
+            // filter="opacity(0.5)"
+            filter="blur(2000px)"
+        />
         <ModalContent>
             <ModalHeader>Attention control</ModalHeader>
             <Box p='10px' m='10px'>
@@ -25,7 +30,10 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
             </ModalBody>
 
             <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={() => {onClose(); handleStart()}}>
+                <Button colorScheme="blue" mr={3} onClick={() => {
+                    onClose();
+                    handleStart()
+                }}>
                     Startujemy!
                 </Button>
             </ModalFooter>

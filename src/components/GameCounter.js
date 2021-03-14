@@ -3,20 +3,18 @@ import StartWindow from "./StartWindow";
 import ResultWindow from "./ResultWindow";
 import {useDisclosure} from "@chakra-ui/hooks";
 
-const GameCounter = ({endOfGameTime, getResults}) => {
+const GameCounter = ({endOfGameTime, getResults, result}) => {
     const [elapsedTime, setElapsedTime] = useState(endOfGameTime);
     const [isActive, setIsActive] = useState(false);
-    const [result, setResult] = useState(false);
     const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
     const {
         isOpen: isOpenReportModal,
         onOpen: onOpenReportModal,
         onClose: onCloseReportModal
-    } = useDisclosure()
-    console.log({endOfGameTime})
+    } = useDisclosure();
+    console.log({endOfGameTime});
 
     const countRef = useRef(null);
-    const getPoints = () => getResults().then(res => setResult(res))
 
     React.useEffect(() => {
             setElapsedTime(endOfGameTime)
@@ -25,7 +23,7 @@ const GameCounter = ({endOfGameTime, getResults}) => {
 
     React.useEffect(() => {
             if (elapsedTime < 1) {
-                getPoints();
+                getResults();
                 clearInterval(countRef.current);
                 setIsActive(false);
                 onOpenReportModal();
@@ -35,7 +33,7 @@ const GameCounter = ({endOfGameTime, getResults}) => {
 
     const handleStart = () => {
         if (isActive === true) {
-            clearInterval(countRef.current)
+            clearInterval(countRef.current);
             setIsActive(false);
         } else if (elapsedTime > 1) {
             setIsActive(true);
@@ -43,7 +41,7 @@ const GameCounter = ({endOfGameTime, getResults}) => {
                 setElapsedTime((elapsedTime) => elapsedTime - 1);
             }, 1000);
         }
-    }
+    };
 
     console.log(`time: ${elapsedTime}`)
     return (
