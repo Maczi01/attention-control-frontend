@@ -4,8 +4,6 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FetchData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FetchData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,6 +48,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -83,7 +82,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="40329000" />
+      <workItem from="1615242755173" duration="41490000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -393,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615757705539</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Removed duplicated code.">
+      <created>1615764721130</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1615764721130</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +421,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added two functions to onClick" />
     <MESSAGE value="Add component GameBoard" />
     <MESSAGE value="Add component GameCounter (should replace CurrentTimebox)" />
     <MESSAGE value="Added second modal (not work yet)" />
@@ -440,6 +445,7 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Added helper - FetchData file" />
     <MESSAGE value="Changed FetchData file, App component with load data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed FetchData file, App component with load data." />
+    <MESSAGE value="Removed duplicated code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed duplicated code." />
   </component>
 </project>

@@ -18,7 +18,7 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
             opacity="0.5"
             // filter="alpha(opacity=65)"
             // filter="opacity(0.5)"
-            filter="blur(2000px)"
+            filter="blur(20px)"
         />
         <ModalContent>
             <ModalHeader>Attention control</ModalHeader>

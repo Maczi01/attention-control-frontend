@@ -11,9 +11,8 @@ function App() {
     const [result, setResult] = useState(0);
 
     const urlGlobalGameDataEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json";
-    const urlGlobalToCheckNumber = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/number.json";
+    const urlLocalGameDataEndpoint = "http://localhost:8080/api/time";
     const urlLocalToCheckNumber = "http://localhost:8080/api";
-
     const urlGlobalGameResultEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
     const urlLocalGameResultEndpoint = "http://localhost:8080/api/results";
 
@@ -32,11 +31,9 @@ function App() {
     };
 
     const getResults = async () => {
-        const response = await FetchData.getData(urlLocalGameResultEndpoint, 'GET')
+        const response = await FetchData.getData(urlGlobalGameResultEndpoint, 'GET')
             .then(data => setResult(data))
-            .catch(err => {
-                console.error(err.message)
-            });
+            .catch(err => console.error(err.message));
         return response;
     };
 
