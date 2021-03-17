@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {Flex, Spinner} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
 import GameCounter from "./components/GameCounter";
 import FetchData from "./components/FetchData";
-import {BrowserRouter as Router, Switcher, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {MainView} from "./pages/MainView";
+import {url} from "./lib/urls"
 
 function App() {
     const [gameData, setGameData] = useState({});
@@ -11,14 +13,12 @@ function App() {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
 
-    const urlGlobalGameDataEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game.json";
-    const urlLocalGameDataEndpoint = "http://localhost:8080/api/time";
-    const urlLocalToCheckNumber = "http://localhost:8080/api";
-    const urlGlobalGameResultEndpoint = "https://my-project-1557350715381-default-rtdb.firebaseio.com/game/result.json";
-    const urlLocalGameResultEndpoint = "http://localhost:8080/api/results";
+    const addUserWithResult = (name) => {
+        console.log(name);
+    }
 
     useEffect(async () => {
-        FetchData.getData(urlGlobalGameDataEndpoint, 'GET')
+        FetchData.getData(url.globalGameDataEndpoint, 'GET')
             .then(data => setGameData(data))
             .catch(err => setError(err.message))
             .finally(() => setIsPending(false))
@@ -26,13 +26,13 @@ function App() {
     }, []);
 
     const checkGivenNumber = async (number) => {
-        const response = await FetchData.getData(urlLocalToCheckNumber, 'POST', number)
+        const response = await FetchData.getData(url.localToCheckNumber, 'POST', number)
             .catch(err => console.error(err.message));
         return await response
     };
 
     const getResults = async () => {
-        const response = await FetchData.getData(urlGlobalGameResultEndpoint, 'GET')
+        const response = await FetchData.getData(url.globalGameResultEndpoint, 'GET')
             .then(data => setResult(data))
             .catch(err => console.error(err.message));
         return response;
@@ -41,11 +41,11 @@ function App() {
     return (
         <>
             <Router>
-                    <Switcher>
-                        <Route exact path="/" component={}/>
-                        <Route/>
-                        <Route/>
-                    </Switcher>
+                <Switch>
+                    <Route exact path="/" component={MainView}/>
+                    <Route/>
+                    <Route/>
+                </Switch>
 
             </Router>
             {/*<Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"*/}
