@@ -3,6 +3,7 @@ import {Flex, Spinner} from "@chakra-ui/react"
 import GameBoard from "./components/GameBoard";
 import GameCounter from "./components/GameCounter";
 import FetchData from "./components/FetchData";
+import {BrowserRouter as Router, Switcher, Route} from 'react-router-dom'
 
 function App() {
     const [gameData, setGameData] = useState({});
@@ -39,17 +40,25 @@ function App() {
 
     return (
         <>
-            <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"
-                  mx="auto">
-                <GameCounter
-                    endOfGameTime={gameData.endOfGameTime}
-                    result={result}
-                    getResults={getResults}
-                />
-                {error && <p> {error} </p>}
-                {isPending && <Spinner/>}
-                <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>
-            </Flex>
+            <Router>
+                    <Switcher>
+                        <Route exact path="/" component={}/>
+                        <Route/>
+                        <Route/>
+                    </Switcher>
+
+            </Router>
+            {/*<Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"*/}
+            {/*      mx="auto">*/}
+            {/*    <GameCounter*/}
+            {/*        endOfGameTime={gameData.endOfGameTime}*/}
+            {/*        result={result}*/}
+            {/*        getResults={getResults}*/}
+            {/*    />*/}
+            {/*    {error && <p> {error} </p>}*/}
+            {/*    {isPending && <Spinner/>}*/}
+            {/*    <GameBoard checkGivenNumber={checkGivenNumber} table={gameData.board}/>*/}
+            {/*</Flex>*/}
         </>
     );
 }
