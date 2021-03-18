@@ -6,6 +6,8 @@ import FetchData from "./components/FetchData";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {MainView} from "./pages/MainView";
 import {url} from "./lib/urls"
+import {BoardView} from "./pages/BoardView";
+import {AppContext} from './context/context'
 
 function App() {
     const [gameData, setGameData] = useState({});
@@ -18,11 +20,10 @@ function App() {
     }
 
     useEffect(async () => {
-        FetchData.getData(url.globalGameDataEndpoint, 'GET')
+        FetchData.getData(url.urlLocalGameDataEndpoint, 'GET')
             .then(data => setGameData(data))
             .catch(err => setError(err.message))
             .finally(() => setIsPending(false))
-
     }, []);
 
     const checkGivenNumber = async (number) => {
@@ -38,15 +39,22 @@ function App() {
         return response;
     };
 
+    const contextElements = {
+        board: gameData.board,
+        checkGivenNumber: checkGivenNumber
+    }
+
     return (
         <>
             <Router>
-                <Switch>
-                    <Route exact path="/" component={MainView}/>
-                    <Route/>
-                    <Route/>
-                </Switch>
-
+                <AppContext.Provider value={contextElements}>
+                    <Switch>
+                        <Route exact path="/" component={MainView}/>
+                        <Route path="/game" component={BoardView}/>
+                        <Route/>
+                        <Route/>
+                    </Switch>
+                </AppContext.Provider>
             </Router>
             {/*<Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"*/}
             {/*      mx="auto">*/}
