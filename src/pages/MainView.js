@@ -16,7 +16,6 @@ export const MainView = () => {
         console.log(name)
         setName('')
     }
-    //onSubmit={handleName}
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
             <FormControl onSubmit={handleName} id="name">

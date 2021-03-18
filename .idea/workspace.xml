@@ -4,6 +4,7 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +83,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="56201000" />
+      <workItem from="1615242755173" duration="57170000" />
     </task>
     <task id="LOCAL-00001" summary="add chakra-ui">
       <created>1613432445765</created>
@@ -420,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616024506857</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Added context">
+      <created>1616110765047</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1616110765050</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +450,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Modal works (not properly...)" />
     <MESSAGE value="Start changing class component into functional" />
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Fixed countdown (but I dont know how...)" />
@@ -467,6 +474,7 @@
     <MESSAGE value="Changed links" />
     <MESSAGE value="Added pages" />
     <MESSAGE value="Work with pages (views)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work with pages (views)" />
+    <MESSAGE value="Added context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added context" />
   </component>
 </project>

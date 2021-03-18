@@ -20,7 +20,7 @@ function App() {
     }
 
     useEffect(async () => {
-        FetchData.getData(url.urlLocalGameDataEndpoint, 'GET')
+        FetchData.getData(url.localGameDataEndpoint, 'GET')
             .then(data => setGameData(data))
             .catch(err => setError(err.message))
             .finally(() => setIsPending(false))
@@ -33,7 +33,7 @@ function App() {
     };
 
     const getResults = async () => {
-        const response = await FetchData.getData(url.globalGameResultEndpoint, 'GET')
+        const response = await FetchData.getData(url.localGameResultEndpoint, 'GET')
             .then(data => setResult(data))
             .catch(err => console.error(err.message));
         return response;
@@ -41,7 +41,10 @@ function App() {
 
     const contextElements = {
         board: gameData.board,
-        checkGivenNumber: checkGivenNumber
+        checkGivenNumber: checkGivenNumber,
+        getResults: getResults,
+        endOfGameTime: gameData.endOfGameTime,
+        result: result
     }
 
     return (
