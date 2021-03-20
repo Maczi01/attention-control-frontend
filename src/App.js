@@ -10,7 +10,7 @@ import {BoardView} from "./pages/BoardView";
 import {AppContext} from './context/context'
 
 function App() {
-    const [gameData, setGameData] = useState({});
+    // const [gameData, setGameData] = useState({});
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
@@ -19,12 +19,12 @@ function App() {
         console.log(name);
     }
 
-    useEffect(async () => {
-        FetchData.getData(url.localGameDataEndpoint, 'GET')
-            .then(data => setGameData(data))
-            .catch(err => setError(err.message))
-            .finally(() => setIsPending(false))
-    }, []);
+    // useEffect(async () => {
+    //     FetchData.getData(url.localGameDataEndpoint, 'GET')
+    //         .then(data => setGameData(data))
+    //         .catch(err => setError(err.message))
+    //         .finally(() => setIsPending(false))
+    // }, []);
 
     const checkGivenNumber = async (number) => {
         const response = await FetchData.getData(url.localToCheckNumber, 'POST', number)
@@ -40,10 +40,10 @@ function App() {
     };
 
     const contextElements = {
-        board: gameData.board,
+        // board: gameData.board,
         checkGivenNumber: checkGivenNumber,
         getResults: getResults,
-        endOfGameTime: gameData.endOfGameTime,
+        // endOfGameTime: gameData.endOfGameTime,
         result: result
     }
 

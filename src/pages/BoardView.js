@@ -1,20 +1,24 @@
 import GameBoard from "../components/GameBoard";
-import React from "react";
+import React, {useContext} from "react";
 import {AppContext} from "../context/context";
 import GameCounter from "../components/GameCounter";
+import {GameContext} from "../context/GameDataProvider";
 
-export const BoardView = () => (
-    <AppContext.Consumer>
-        {(contextElements) =>
+export const BoardView = () => {
+        const {gameData, checkGivenNumber} = useContext(GameContext)
+
+        return (
             <>
-                <GameBoard table={contextElements.board}
-                           checkGivenNumber={contextElements.checkGivenNumber}
+                <GameBoard table={gameData.board}
+                           checkGivenNumber={checkGivenNumber}
                 />
-                <GameCounter endOfGameTime={contextElements.endOfGameTime}
-                             result={contextElements.result}
-                             getResults={contextElements.getResults}
+                <GameCounter endOfGameTime={gameData.endOfGameTime}
+                    // result={contextElements.result}
+                    // getResults={contextElements.getResults}
                 />
             </>
-        }
-    </AppContext.Consumer>
-);
+        )
+    }
+
+
+;
