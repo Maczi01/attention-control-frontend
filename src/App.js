@@ -1,16 +1,13 @@
-import React, {useEffect, useState, useContext} from "react";
-import {Flex, Spinner} from "@chakra-ui/react"
-import GameBoard from "./components/GameBoard";
-import GameCounter from "./components/GameCounter";
+import React, {useState, useEffect} from "react";
 import FetchData from "./components/FetchData";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {MainView} from "./pages/MainView";
 import {url} from "./lib/urls"
 import {BoardView} from "./pages/BoardView";
-import {AppContext} from './context/context'
+import GameDataProvider, {GameDataContext} from "./context/GameDataContext";
 
 function App() {
-    // const [gameData, setGameData] = useState({});
+    const [gameData, setGameData] = useState({});
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
@@ -19,12 +16,12 @@ function App() {
         console.log(name);
     }
 
-    // useEffect(async () => {
-    //     FetchData.getData(url.localGameDataEndpoint, 'GET')
-    //         .then(data => setGameData(data))
-    //         .catch(err => setError(err.message))
-    //         .finally(() => setIsPending(false))
-    // }, []);
+    useEffect(async () => {
+        FetchData.getData(url.localGameDataEndpoint, 'GET')
+            .then(data => setGameData(data))
+            .catch(err => setError(err.message))
+            .finally(() => setIsPending(false))
+    }, []);
 
     const checkGivenNumber = async (number) => {
         const response = await FetchData.getData(url.localToCheckNumber, 'POST', number)
@@ -38,26 +35,26 @@ function App() {
             .catch(err => console.error(err.message));
         return response;
     };
-
-    const contextElements = {
-        // board: gameData.board,
-        checkGivenNumber: checkGivenNumber,
-        getResults: getResults,
-        // endOfGameTime: gameData.endOfGameTime,
-        result: result
-    }
+    //
+    // const contextElements = {
+    //     // board: gameData.board,
+    //     checkGivenNumber: checkGivenNumber,
+    //     getResults: getResults,
+    //     // endOfGameTime: gameData.endOfGameTime,
+    //     result: result
+    // }
 
     return (
         <>
             <Router>
-                <AppContext.Provider value={contextElements}>
-                    <Switch>
+                <Switch>
+                    <GameDataProvider>
                         <Route exact path="/" component={MainView}/>
                         <Route path="/game" component={BoardView}/>
                         <Route/>
                         <Route/>
-                    </Switch>
-                </AppContext.Provider>
+                    </GameDataProvider>
+                </Switch>
             </Router>
             {/*<Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"*/}
             {/*      mx="auto">*/}

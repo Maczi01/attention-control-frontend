@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from "react";
 import FetchData from "../components/FetchData";
 import {url} from "../lib/urls";
-export const GameContext = React.createContext()
 
-const GameDataProvider = () => {
+export const GameDataContext = React.createContext(null);
+
+const GameDataProvider = ({children}) => {
     const [gameData, setGameData] = useState({});
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
-
-    const addUserWithResult = (name) => {
-        console.log(name);
-    }
-
+//
+//     const addUserWithResult = (name) => {
+//         console.log(name);
+//     }
+//
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, 'GET')
             .then(data => setGameData(data))
@@ -26,15 +27,17 @@ const GameDataProvider = () => {
         return await response
     };
     //
-    // const getResults = async () => {
-    //     const response = await FetchData.getData(url.localGameResultEndpoint, 'GET')
-    //         .then(data => setResult(data))
-    //         .catch(err => console.error(err.message));
-    //     return response;
-    // };
+    const getResults = async () => {
+        const response = await FetchData.getData(url.localGameResultEndpoint, 'GET')
+            .then(data => setResult(data))
+            .catch(err => console.error(err.message));
+        return response;
+    };
 
-    const value = {gameData, checkGivenNumber}
-    return <GameContext value={value}/>
+    const value = {gameData, checkGivenNumber, getResults, result}
+    return (<GameDataContext.Provider value={value}>
+        {children}
+    </GameDataContext.Provider>)
 }
 
 export default GameDataProvider;
