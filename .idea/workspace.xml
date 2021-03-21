@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,14 +80,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="63441000" />
-    </task>
-    <task id="LOCAL-00002" summary="add useState">
-      <created>1613503946156</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1613503946157</updated>
+      <workItem from="1615242755173" duration="64110000" />
     </task>
     <task id="LOCAL-00003" summary="Add Number component">
       <created>1613516418022</created>
@@ -430,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616111807347</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Work with context">
+      <created>1616337256594</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1616337256598</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +447,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Fixed countdown (but I dont know how...)" />
     <MESSAGE value="New countdown (with state and ref)" />
     <MESSAGE value="Finally app show score (only on console)" />
@@ -477,6 +471,7 @@
     <MESSAGE value="Work with pages (views)" />
     <MESSAGE value="Added context" />
     <MESSAGE value="Added data to context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added data to context" />
+    <MESSAGE value="Work with context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work with context" />
   </component>
 </project>
