@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import FetchData from "../components/FetchData";
+import FetchData from "../api/FetchData";
 import {url} from "../lib/urls";
 
 export const GameDataContext = React.createContext(null);
@@ -22,19 +22,17 @@ const GameDataProvider = ({children}) => {
     }, []);
 
     const checkGivenNumber = async (number) => {
-        const response = await FetchData.getData(url.localToCheckNumber, 'POST', number)
+        return await FetchData.getData(url.localToCheckNumber, 'POST', number)
             .catch(err => console.error(err.message));
-        return await response
-    };
-    //
-    const getResults = async () => {
-        const response = await FetchData.getData(url.localGameResultEndpoint, 'GET')
-            .then(data => setResult(data))
-            .catch(err => console.error(err.message));
-        return response;
     };
 
-    const value = {gameData, checkGivenNumber, getResults, result}
+    const getResults = async () => {
+        return await FetchData.getData(url.localGameResultEndpoint, 'GET')
+            .then(data => setResult(data))
+            .catch(err => console.error(err.message));
+    };
+
+    const value = {gameData, checkGivenNumber, getResults, result, error, isPending}
     return (<GameDataContext.Provider value={value}>
         {children}
     </GameDataContext.Provider>)

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EndGameView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EndGameView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,14 +85,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="64110000" />
-    </task>
-    <task id="LOCAL-00003" summary="Add Number component">
-      <created>1613516418022</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1613516418023</updated>
+      <workItem from="1615242755173" duration="65898000" />
     </task>
     <task id="LOCAL-00004" summary="Add useState to change button color">
       <created>1613517339111</created>
@@ -425,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616337256598</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Removed data from App component">
+      <created>1616338218859</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1616338218859</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +452,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fixed countdown (but I dont know how...)" />
     <MESSAGE value="New countdown (with state and ref)" />
     <MESSAGE value="Finally app show score (only on console)" />
     <MESSAGE value="Working version (start, counting, end game and result" />
@@ -472,6 +476,7 @@
     <MESSAGE value="Added context" />
     <MESSAGE value="Added data to context" />
     <MESSAGE value="Work with context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work with context" />
+    <MESSAGE value="Removed data from App component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed data from App component" />
   </component>
 </project>

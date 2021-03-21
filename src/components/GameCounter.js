@@ -56,7 +56,6 @@ const GameCounter = ({endOfGameTime, getResults, result}) => {
                 isOpen={isOpenReportModal}
                 result={result}
             />
-            <p>{elapsedTime}</p>
         </>
     )
 }
