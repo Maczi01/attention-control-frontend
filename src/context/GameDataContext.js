@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import FetchData from "../api/FetchData";
 import {url} from "../lib/urls";
 
@@ -31,6 +31,7 @@ const GameDataProvider = ({children}) => {
             .then(data => setResult(data))
             .catch(err => console.error(err.message));
     };
+
 
     const value = {gameData, checkGivenNumber, getResults, result, error, isPending}
     return (<GameDataContext.Provider value={value}>
