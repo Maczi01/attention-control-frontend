@@ -1,12 +1,12 @@
-import {Button, Flex, FormControl, FormLabel, Input, Center} from "@chakra-ui/react"
-import React, {useState} from "react";
+import {Button, Center, Flex} from "@chakra-ui/react"
+import React from "react";
 import {Link} from "react-router-dom";
 
 export const MainView = () => {
 
 
     return (
-        <Center>
+        <Center h="100%">
             <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803"
                   mx="auto">
                 <Link to="/game">

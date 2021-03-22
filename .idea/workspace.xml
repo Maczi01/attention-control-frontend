@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,14 +85,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="67095000" />
-    </task>
-    <task id="LOCAL-00005" summary="Add useEffect and fetch.">
-      <created>1613607650662</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613607650662</updated>
+      <workItem from="1615242755173" duration="67959000" />
     </task>
     <task id="LOCAL-00006" summary="Add post method (only test)">
       <created>1613682003719</created>
@@ -431,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616371012403</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Refactor and added Center chakra component">
+      <created>1616372477955</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1616372477969</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +452,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Finally app show score (only on console)" />
     <MESSAGE value="Working version (start, counting, end game and result" />
     <MESSAGE value="Removed useDisclousure from App." />
     <MESSAGE value="Timer countdown stopped working." />
@@ -478,6 +476,7 @@
     <MESSAGE value="Work with context" />
     <MESSAGE value="Removed data from App component" />
     <MESSAGE value="Changes in pages, changes in structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in pages, changes in structure" />
+    <MESSAGE value="Refactor and added Center chakra component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor and added Center chakra component" />
   </component>
 </project>
