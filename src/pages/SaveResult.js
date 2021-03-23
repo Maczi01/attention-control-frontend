@@ -1,14 +1,15 @@
 import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import {GameDataContext} from "../context/GameDataContext";
+import {Link} from "react-router-dom";
 
-export const EndGameView = () => {
+export const SaveResult = () => {
 
-    const [name, setName] = useState('');
-
+    const {name, setName, result} = useContext(GameDataContext);
     const handleName = (e) => {
         e.preventDefault();
-        console.log(name)
-        setName('')
+        setName(name)
+        localStorage.setItem(name, result)
     }
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
@@ -28,6 +29,8 @@ export const EndGameView = () => {
                 >
                     Submit
                 </Button>
+                <Link to="/results">Wyniki
+                </Link>
             </FormControl>
         </Flex>
     )

@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EndGameView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,14 +88,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="72091000" />
-    </task>
-    <task id="LOCAL-00008" summary="Unfinished disable button.">
-      <created>1613766295536</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613766295539</updated>
+      <workItem from="1615242755173" duration="74413000" />
     </task>
     <task id="LOCAL-00009" summary="Added async and await to function in button">
       <created>1613827131435</created>
@@ -435,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616456822635</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Changes in apllication structure">
+      <created>1616538057905</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1616538057906</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +455,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Timer countdown stopped working." />
     <MESSAGE value="Added second useEffect. Working version." />
     <MESSAGE value="Removed class component CurrentTimebox" />
     <MESSAGE value="Optimize imports." />
@@ -482,6 +479,7 @@
     <MESSAGE value="Refactor and added Center chakra component" />
     <MESSAGE value="Removed unused import" />
     <MESSAGE value="Changes in styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in styles" />
+    <MESSAGE value="Changes in apllication structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in apllication structure" />
   </component>
 </project>

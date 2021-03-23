@@ -23,7 +23,7 @@ const ResultWindow = ({isOpen, result, handleStart}) => (
                             Play again
                         </Button>
                     </Link>
-                    <Link to="/game">
+                    <Link to="/save">
                         <Button colorScheme="cyan" size="lg">
                             Save result
                         </Button>

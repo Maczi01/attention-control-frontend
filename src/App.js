@@ -3,7 +3,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {MainView} from "./pages/MainView";
 import {BoardView} from "./pages/BoardView";
 import GameDataProvider from "./context/GameDataContext";
-import {EndGameView} from "./pages/EndGameView";
+import {SaveResult} from "./pages/SaveResult";
+import ResultWindow from "./components/ResultWindow";
+import {ResultView} from "./pages/ResultView";
 
 const App = () => (
     <>
@@ -12,8 +14,8 @@ const App = () => (
                 <GameDataProvider>
                     <Route exact path="/" component={MainView}/>
                     <Route path="/game" component={BoardView}/>
-                    <Route path="/save" component={EndGameView}/>
-                    <Route/>
+                    <Route path="/save" component={SaveResult}/>
+                    <Route path="/results" component={ResultView}/>
                 </GameDataProvider>
             </Switch>
         </Router>
