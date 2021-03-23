@@ -4,7 +4,6 @@ import {MainView} from "./pages/MainView";
 import {BoardView} from "./pages/BoardView";
 import GameDataProvider from "./context/GameDataContext";
 import {SaveResult} from "./pages/SaveResult";
-import ResultWindow from "./components/ResultWindow";
 import {ResultView} from "./pages/ResultView";
 
 const App = () => (

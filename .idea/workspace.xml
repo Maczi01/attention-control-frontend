@@ -4,9 +4,8 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EndGameView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,14 +87,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="74413000" />
-    </task>
-    <task id="LOCAL-00009" summary="Added async and await to function in button">
-      <created>1613827131435</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1613827131435</updated>
+      <workItem from="1615242755173" duration="75362000" />
     </task>
     <task id="LOCAL-00010" summary="Added another useEffect to get object from rest">
       <created>1613950211702</created>
@@ -433,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616538057906</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added very simple local storage">
+      <created>1616541018099</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1616541018101</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +454,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added second useEffect. Working version." />
     <MESSAGE value="Removed class component CurrentTimebox" />
     <MESSAGE value="Optimize imports." />
     <MESSAGE value="Refactor - number instead of e" />
@@ -480,6 +478,7 @@
     <MESSAGE value="Removed unused import" />
     <MESSAGE value="Changes in styles" />
     <MESSAGE value="Changes in apllication structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in apllication structure" />
+    <MESSAGE value="Added very simple local storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added very simple local storage" />
   </component>
 </project>

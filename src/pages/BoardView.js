@@ -7,6 +7,7 @@ import {Flex, Spinner,Center} from "@chakra-ui/react"
 export const BoardView = () => {
     const {gameData, checkGivenNumber, result, getResults, error, isPending} = useContext(GameDataContext);
     const {board, endOfGameTime} = gameData;
+
     return (
         <Center>
             <Flex direction="column"

@@ -18,7 +18,7 @@ const ResultWindow = ({isOpen, result, handleStart}) => (
                     align="center"
                     justify="space-around"
                 >
-                    <Link to="/game">
+                    <Link to="/">
                         <Button colorScheme="teal" size="lg" onClick={handleStart}>
                             Play again
                         </Button>
