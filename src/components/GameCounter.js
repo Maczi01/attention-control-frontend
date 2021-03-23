@@ -52,6 +52,8 @@ const GameCounter = ({endOfGameTime, getResults, result}) => {
                 onOpen={onOpenReportModal}
                 isOpen={isOpenReportModal}
                 result={result}
+                handleStart={handleStart}
+
             />
         </>
     )

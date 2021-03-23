@@ -4,7 +4,7 @@ import {Box} from "@chakra-ui/layout";
 import {Link} from "react-router-dom";
 import {Button, Center, Flex} from "@chakra-ui/react"
 
-const ResultWindow = ({isOpen, result}) => (
+const ResultWindow = ({isOpen, result, handleStart}) => (
 
     <Modal isOpen={isOpen}>
         <ModalOverlay/>
@@ -19,13 +19,13 @@ const ResultWindow = ({isOpen, result}) => (
                     justify="space-around"
                 >
                     <Link to="/game">
-                        <Button colorScheme="teal" size="lg">
+                        <Button colorScheme="teal" size="lg" onClick={handleStart}>
                             Play again
                         </Button>
                     </Link>
                     <Link to="/game">
-                        <Button colorScheme="teal" size="lg">
-                            Play again
+                        <Button colorScheme="cyan" size="lg">
+                            Save result
                         </Button>
                     </Link>
                 </Flex>

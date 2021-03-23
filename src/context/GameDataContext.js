@@ -9,11 +9,8 @@ const GameDataProvider = ({children}) => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
-//
-//     const addUserWithResult = (name) => {
-//         console.log(name);
-//     }
-//
+    const [name, setName] = useState('');
+
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, 'GET')
             .then(data => setGameData(data))
@@ -33,7 +30,7 @@ const GameDataProvider = ({children}) => {
     };
 
 
-    const value = {gameData, checkGivenNumber, getResults, result, error, isPending}
+    const value = {gameData, checkGivenNumber, getResults, name, setName, result, error, isPending}
     return (<GameDataContext.Provider value={value}>
         {children}
     </GameDataContext.Provider>)
