@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultWindow.js" afterDir="false" />
-    </list>
+    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +82,7 @@
       <workItem from="1613514616271" duration="25986000" />
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
-      <workItem from="1615242755173" duration="75362000" />
-    </task>
-    <task id="LOCAL-00010" summary="Added another useEffect to get object from rest">
-      <created>1613950211702</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1613950211702</updated>
+      <workItem from="1615242755173" duration="76123000" />
     </task>
     <task id="LOCAL-00011" summary="Added Game class and Game function">
       <created>1614033629026</created>
@@ -432,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616541018101</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Changed in Result window - form">
+      <created>1616542042692</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1616542042699</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +449,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Removed class component CurrentTimebox" />
     <MESSAGE value="Optimize imports." />
     <MESSAGE value="Refactor - number instead of e" />
     <MESSAGE value="Remove Clock component" />
@@ -479,6 +473,7 @@
     <MESSAGE value="Changes in styles" />
     <MESSAGE value="Changes in apllication structure" />
     <MESSAGE value="Added very simple local storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added very simple local storage" />
+    <MESSAGE value="Changed in Result window - form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed in Result window - form" />
   </component>
 </project>
