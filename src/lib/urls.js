@@ -4,4 +4,5 @@ export const url = {
     localToCheckNumber: "http://localhost:8080/api",
     localGameDataEndpoint: "http://localhost:8080/api/time",
     localGameResultEndpoint: "http://localhost:8080/api/results",
+    localToSaveResultEndpoint: "http://localhost:8080/api/players",
 }

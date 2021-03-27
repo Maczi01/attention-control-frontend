@@ -16,6 +16,7 @@ const FetchData = {
                 }
                 return res.json()
             });
-    }
+    },
+
 };
 export default FetchData;

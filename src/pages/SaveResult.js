@@ -2,6 +2,8 @@ import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
 import React, {useState, useContext} from "react";
 import {GameDataContext} from "../context/GameDataContext";
 import {Link} from "react-router-dom";
+import FetchData from "../api/FetchData";
+import {url} from "../lib/urls";
 
 export const SaveResult = () => {
 
@@ -11,6 +13,12 @@ export const SaveResult = () => {
         setName(name)
         localStorage.setItem(name, result)
     }
+
+    const saveUserInDatabase = async (name) => {
+        return await FetchData.getData(url.localToSaveResultEndpoint, 'POST', name)
+            .catch(err => console.error(err.message));
+    };
+
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
             <FormControl onSubmit={handleName} id="name">
