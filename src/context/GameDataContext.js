@@ -29,8 +29,13 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
+    const saveUserInDatabase = async () => {
+        return await FetchData.getData(url.localToSaveResultEndpoint, 'POST', name)
+            .catch(err => console.error(err.message));
+    };
 
-    const value = {gameData, checkGivenNumber, getResults, name, setName, result, error, isPending}
+
+    const value = {gameData, checkGivenNumber, getResults, name, setName, result, error, isPending, saveUserInDatabase}
     return (<GameDataContext.Provider value={value}>
         {children}
     </GameDataContext.Provider>)

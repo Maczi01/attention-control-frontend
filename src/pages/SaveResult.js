@@ -7,17 +7,11 @@ import {url} from "../lib/urls";
 
 export const SaveResult = () => {
 
-    const {name, setName, result} = useContext(GameDataContext);
+    const {name, setName, result, saveUserInDatabase} = useContext(GameDataContext);
     const handleName = (e) => {
         e.preventDefault();
         setName(name)
-        localStorage.setItem(name, result)
     }
-
-    const saveUserInDatabase = async () => {
-        return await FetchData.getData(url.localToSaveResultEndpoint, 'POST', name)
-            .catch(err => console.error(err.message));
-    };
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
@@ -29,7 +23,7 @@ export const SaveResult = () => {
 
                 />
                 <Button
-                    onClick={saveUserInDatabase}
+                    onClick={() => saveUserInDatabase()}
                     mt={4}
                     colorScheme="teal"
                     // isLoading={props.isSubmitting}
