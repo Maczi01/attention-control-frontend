@@ -1,5 +1,5 @@
 import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
-import React, {useState, useContext} from "react";
+import React, {useContext} from "react";
 import {GameDataContext} from "../context/GameDataContext";
 import {Link} from "react-router-dom";
 import FetchData from "../api/FetchData";
@@ -14,7 +14,7 @@ export const SaveResult = () => {
         localStorage.setItem(name, result)
     }
 
-    const saveUserInDatabase = async (name) => {
+    const saveUserInDatabase = async () => {
         return await FetchData.getData(url.localToSaveResultEndpoint, 'POST', name)
             .catch(err => console.error(err.message));
     };
@@ -29,7 +29,7 @@ export const SaveResult = () => {
 
                 />
                 <Button
-                    onClick={handleName}
+                    onClick={saveUserInDatabase}
                     mt={4}
                     colorScheme="teal"
                     // isLoading={props.isSubmitting}
