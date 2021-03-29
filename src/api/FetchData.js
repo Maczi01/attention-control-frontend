@@ -1,5 +1,6 @@
 const FetchData = {
     getData: async (url, method, body) => {
+        // const jsonBody = body ? JSON.stringify(body) : undefined;
         const headers = {
             "Content-Type": "application/json",
         };

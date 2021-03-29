@@ -11,11 +11,11 @@ export const SaveResult = () => {
 
     const [name, setName] = useState('')
 
-    const handleName = (e) => {
-        e.preventDefault();
-        saveUserInDatabase(name, result)
-        console.log(name, result)
-    }
+    // const handleName = (e) => {
+    //     e.preventDefault();
+    //     saveUserInDatabase(name, result)
+    //     console.log(name, result)
+    // }
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
@@ -27,7 +27,7 @@ export const SaveResult = () => {
 
                 />
                 <Button
-                    onClick={() => saveUserInDatabase({name, result})}
+                    onClick={() => saveUserInDatabase(name, result)}
                     // onClick={() => saveUserInDatabase(name)}
                     mt={4}
                     colorScheme="teal"

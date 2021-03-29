@@ -30,6 +30,7 @@ const GameDataProvider = ({children}) => {
     };
 
     const saveUserInDatabase = async (name, result) => {
+        console.log({name, result})
         return await FetchData.getData(url.localToSaveResultEndpoint, 'POST', {name, result})
             .catch(err => console.error(err.message));
     };
