@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/FetchData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FetchData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,14 +86,7 @@
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
       <workItem from="1615242755173" duration="78307000" />
-      <workItem from="1616795301146" duration="10308000" />
-    </task>
-    <task id="LOCAL-00016" summary="Added first version of modal">
-      <created>1614292409122</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1614292409123</updated>
+      <workItem from="1616795301146" duration="13331000" />
     </task>
     <task id="LOCAL-00017" summary="Changes in modal">
       <created>1614379726761</created>
@@ -434,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617049252776</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Fight with fetch data">
+      <created>1617055972004</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1617055972007</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +453,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changed fetching data" />
     <MESSAGE value="Added db.json" />
     <MESSAGE value="Changes in db.json" />
     <MESSAGE value="Refactor" />
@@ -481,6 +477,7 @@
     <MESSAGE value="Added method 'saveToDatabase'" />
     <MESSAGE value="Work with saving user into database" />
     <MESSAGE value="Work with post user with result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work with post user with result" />
+    <MESSAGE value="Fight with fetch data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fight with fetch data" />
   </component>
 </project>
