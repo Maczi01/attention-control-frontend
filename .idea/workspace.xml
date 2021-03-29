@@ -87,14 +87,7 @@
       <workItem from="1613778752875" duration="76462000" />
       <workItem from="1614985202796" duration="12977000" />
       <workItem from="1615242755173" duration="78307000" />
-      <workItem from="1616795301146" duration="5395000" />
-    </task>
-    <task id="LOCAL-00014" summary="Code refactor. Remove unused code.">
-      <created>1614208353680</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1614208353681</updated>
+      <workItem from="1616795301146" duration="7410000" />
     </task>
     <task id="LOCAL-00015" summary="Added chakra / modal">
       <created>1614288358662</created>
@@ -432,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616970830447</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Work with saving user into database">
+      <created>1616971671805</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1616971671806</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
