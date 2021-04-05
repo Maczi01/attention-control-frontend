@@ -10,6 +10,7 @@ const GameDataProvider = ({children}) => {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
     const [name, setName] = useState('');
+    const [resultsBoard, setResultsBoard] = useState([]);
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, 'GET')
@@ -35,8 +36,24 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
+    const getReasultsBoard = async () => {
+        return await FetchData.getData(url.localToSaveResultEndpoint, 'GET')
+            .then(data => setResultsBoard(data))
+            .catch(err => console.error(err.message));
+    }
 
-    const value = {gameData, checkGivenNumber, getResults, name, setName, result, error, isPending, saveUserInDatabase}
+    const value = {
+        gameData,
+        checkGivenNumber,
+        getResults,
+        name,
+        setName,
+        result,
+        error,
+        isPending,
+        saveUserInDatabase,
+        resultsBoard
+    }
     return (<GameDataContext.Provider value={value}>
         {children}
     </GameDataContext.Provider>)
