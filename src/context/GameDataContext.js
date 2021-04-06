@@ -52,7 +52,7 @@ const GameDataProvider = ({children}) => {
         error,
         isPending,
         saveUserInDatabase,
-        resultsBoard
+        resultsBoard,
     }
     return (<GameDataContext.Provider value={value}>
         {children}

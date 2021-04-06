@@ -89,14 +89,7 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="1143000" />
-    </task>
-    <task id="LOCAL-00018" summary="Removed unused useStates">
-      <created>1614382800442</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1614382800442</updated>
+      <workItem from="1617565266362" duration="2306000" />
     </task>
     <task id="LOCAL-00019" summary="Added Modal as component">
       <created>1614550142071</created>
@@ -434,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617059552752</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Added chakra-ui table (simple)">
+      <created>1617659740221</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1617659740226</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +456,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changes in db.json" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Added helper - FetchData file" />
     <MESSAGE value="Changed FetchData file, App component with load data." />
@@ -481,6 +480,7 @@
     <MESSAGE value="Work with post user with result" />
     <MESSAGE value="Fight with fetch data" />
     <MESSAGE value="Working save user to database (first version)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working save user to database (first version)" />
+    <MESSAGE value="Added chakra-ui table (simple)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added chakra-ui table (simple)" />
   </component>
 </project>
