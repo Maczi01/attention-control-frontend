@@ -40,7 +40,7 @@ export const ResultView = () => {
                 </Thead>
                 <Tbody>
                     {resultsBoard ? resultsBoard.map(result => (
-                        <Tr>
+                        <Tr key={result.id}>
                             <Td>{result.id}</Td>
                             <Td>{result.playerName}</Td>
                             <Td>{result.score}</Td>

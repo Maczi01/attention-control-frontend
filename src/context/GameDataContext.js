@@ -33,7 +33,7 @@ const GameDataProvider = ({children}) => {
     const saveUserInDatabase = async (playerName, score) => {
         console.log({name, result})
         const date = new Date();
-        await FetchData.getData(url.localToGetResultBoard, 'POST', JSON.stringify(({name, result, date})))
+        await FetchData.getData(url.localToGetResultBoard, 'POST', JSON.stringify(({playerName, score, date})))
             .catch(err => console.error(err.message));
     };
 
