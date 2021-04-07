@@ -5,7 +5,7 @@ import GameCounter from "../components/GameCounter";
 import {Flex, Spinner,Center} from "@chakra-ui/react"
 
 export const BoardView = () => {
-    const {gameData, checkGivenNumber, result, getResults, error, isPending} = useContext(GameDataContext);
+    const {gameData, checkGivenNumber, result, getResultsBoard, error, isPending} = useContext(GameDataContext);
     const {board, endOfGameTime} = gameData;
 
     return (
@@ -20,7 +20,7 @@ export const BoardView = () => {
 
                 <GameCounter endOfGameTime={endOfGameTime}
                              result={result}
-                             getResults={getResults}
+                             getResults={getResultsBoard}
                 />
                 {error && <p> {error} </p>}
                 {isPending && <Spinner/>}

@@ -36,7 +36,7 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
-    const getReasultsBoard = async () => {
+    const getResultsBoard = async () => {
         return await FetchData.getData(url.localToSaveResultEndpoint, 'GET')
             .then(data => setResultsBoard(data))
             .catch(err => console.error(err.message));
@@ -52,6 +52,7 @@ const GameDataProvider = ({children}) => {
         error,
         isPending,
         saveUserInDatabase,
+        getResultsBoard,
         resultsBoard,
     }
     return (<GameDataContext.Provider value={value}>

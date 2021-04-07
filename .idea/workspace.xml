@@ -4,7 +4,9 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,14 +91,7 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="2306000" />
-    </task>
-    <task id="LOCAL-00019" summary="Added Modal as component">
-      <created>1614550142071</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1614550142071</updated>
+      <workItem from="1617565266362" duration="3767000" />
     </task>
     <task id="LOCAL-00020" summary="Added two functions to onClick">
       <created>1614550816688</created>
@@ -434,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617659740226</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Changed table (map result board)">
+      <created>1617748085479</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1617748085479</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +458,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="Added helper - FetchData file" />
     <MESSAGE value="Changed FetchData file, App component with load data." />
     <MESSAGE value="Removed duplicated code." />
@@ -481,6 +482,7 @@
     <MESSAGE value="Fight with fetch data" />
     <MESSAGE value="Working save user to database (first version)" />
     <MESSAGE value="Added chakra-ui table (simple)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added chakra-ui table (simple)" />
+    <MESSAGE value="Changed table (map result board)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed table (map result board)" />
   </component>
 </project>

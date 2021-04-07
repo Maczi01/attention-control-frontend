@@ -36,6 +36,7 @@ export const SaveResult = () => {
                 >
                     Submit
                 </Button>
+
                 <Link to="/results">Wyniki
                 </Link>
             </FormControl>

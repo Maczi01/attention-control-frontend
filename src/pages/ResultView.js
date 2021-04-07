@@ -36,14 +36,15 @@ export const ResultView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    resultsBoard.map((result) =>(
-                    <Tr>
-                        <Td>{result.key}</Td>
-                        <Td>{result.playerName}</Td>
-                        <Td>{result.score}</Td>
-                        <Td>{result.date}</Td>
-                    </Tr>
+                    {resultsBoard.map(result => (
+                        <Tr>
+                            <Td>{result.id}</Td>
+                            <Td>{result.playerName}</Td>
+                            <Td>{result.score}</Td>
+                            <Td>{result.date}</Td>
+                        </Tr>
                     ))
+                    }
                 </Tbody>
             </Table>
         </Flex>
