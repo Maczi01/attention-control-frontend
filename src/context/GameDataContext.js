@@ -30,14 +30,15 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
-    const saveUserInDatabase = async (name, result) => {
+    const saveUserInDatabase = async (playerName, score) => {
         console.log({name, result})
-        await FetchData.getData(url.localToSaveResultEndpoint, 'POST', JSON.stringify(({name, result})))
+        const date = new Date();
+        await FetchData.getData(url.localToGetResultBoard, 'POST', JSON.stringify(({name, result, date})))
             .catch(err => console.error(err.message));
     };
 
     const getResultsBoard = async () => {
-        return await FetchData.getData(url.localToSaveResultEndpoint, 'GET')
+        return await FetchData.getData(url.localToGetResultBoard, 'GET')
             .then(data => setResultsBoard(data))
             .catch(err => console.error(err.message));
     }
@@ -45,13 +46,13 @@ const GameDataProvider = ({children}) => {
     const value = {
         gameData,
         checkGivenNumber,
-        getResults,
         name,
         setName,
         result,
         error,
         isPending,
         saveUserInDatabase,
+        getResults,
         getResultsBoard,
         resultsBoard,
     }

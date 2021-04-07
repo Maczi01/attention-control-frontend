@@ -1,5 +1,5 @@
 import {GameDataContext} from "../context/GameDataContext";
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {
     Table,
     Thead,
@@ -12,8 +12,11 @@ import {
 } from "@chakra-ui/react";
 
 export const ResultView = () => {
-    const {resultsBoard} = useContext(GameDataContext);
+    const {resultsBoard, getResultsBoard} = useContext(GameDataContext);
     // const {board, endOfGameTime} = gameData;
+    useEffect(() => {
+        getResultsBoard()
+    }, [])
 
 
     return (
@@ -36,14 +39,15 @@ export const ResultView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {resultsBoard.map(result => (
+                    {resultsBoard ? resultsBoard.map(result => (
                         <Tr>
                             <Td>{result.id}</Td>
                             <Td>{result.playerName}</Td>
                             <Td>{result.score}</Td>
                             <Td>{result.date}</Td>
                         </Tr>
-                    ))
+                    )) :
+                        null
                     }
                 </Tbody>
             </Table>
