@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,21 +90,7 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="11080000" />
-    </task>
-    <task id="LOCAL-00024" summary="Added second modal (not work yet)">
-      <created>1614642827087</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1614642827087</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Modal works (not properly...)">
-      <created>1614724202152</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1614724202152</updated>
+      <workItem from="1617565266362" duration="13787000" />
     </task>
     <task id="LOCAL-00026" summary="Start changing class component into functional">
       <created>1614726833590</created>
@@ -433,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618075791175</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Fixed form - change to initial state after save.">
+      <created>1618076328129</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1618076328129</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Added enum with http methods">
+      <created>1618076545670</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1618076545671</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,8 +457,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added pages" />
-    <MESSAGE value="Work with pages (views)" />
     <MESSAGE value="Added context" />
     <MESSAGE value="Added data to context" />
     <MESSAGE value="Work with context" />
@@ -480,6 +480,8 @@
     <MESSAGE value="Working version (TODO: add unique key). Fixed Post user, get score, get scoreboard." />
     <MESSAGE value="Changed parametrs in saveUserInDatabase method" />
     <MESSAGE value="Split code to component (form)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split code to component (form)" />
+    <MESSAGE value="Fixed form - change to initial state after save." />
+    <MESSAGE value="Added enum with http methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enum with http methods" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 import {GameDataContext} from "../context/GameDataContext";
 import React, {useContext, useEffect} from 'react';
+import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
 import {
     Table,
     Thead,
@@ -8,11 +9,11 @@ import {
     Tr,
     Th,
     Td,
-    TableCaption, Flex, Center,
+    TableCaption, Center,
 } from "@chakra-ui/react";
 
 export const ResultView = () => {
-    const {resultsBoard, getResultsBoard} = useContext(GameDataContext);
+    const {resultsBoard, getResultsBoard, deleteResultFromBoard} = useContext(GameDataContext);
     // const {board, endOfGameTime} = gameData;
     useEffect(() => {
         getResultsBoard()
@@ -40,13 +41,16 @@ export const ResultView = () => {
                 </Thead>
                 <Tbody>
                     {resultsBoard ? resultsBoard.map((result, index) => (
-                        <Tr key={index+1}>
-                            <Td>{index+1}</Td>
-                            <Td>{result.playerName}</Td>
-                            <Td>{result.score}</Td>
-                            <Td>{result.date}</Td>
-                        </Tr>
-                    )) :
+                            <Tr key={index + 1}>
+                                <Td>{index + 1}</Td>
+                                <Td>{result.playerName}</Td>
+                                <Td>{result.score}</Td>
+                                <Td>{result.date}</Td>
+                                <Td><Button onClick={(index) => deleteResultFromBoard(index)}>
+                                    Remove
+                                </Button></Td>
+                            </Tr>
+                        )) :
                         null
                     }
                 </Tbody>
