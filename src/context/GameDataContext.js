@@ -44,6 +44,10 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     }
 
+    const deleteResultFromBoard = async (id) => {
+        
+    }
+
     const value = {
         gameData,
         checkGivenNumber,
