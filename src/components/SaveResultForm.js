@@ -6,6 +6,12 @@ import {Link} from "react-router-dom";
 const SaveResultForm = ({result, saveUserInDatabase}) => {
 
     const [name, setName] = useState('')
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        saveUserInDatabase(name, result)
+        setName('')
+    }
     return (
         <FormControl id="name">
             <FormLabel>Your name</FormLabel>
@@ -14,7 +20,7 @@ const SaveResultForm = ({result, saveUserInDatabase}) => {
                    onChange={(event) => setName(event.target.value)}
             />
             <Button
-                onClick={() => saveUserInDatabase(name, result)}
+                onClick={handleSubmit}
                 // onClick={() => saveUserInDatabase(name)}
                 mt={4}
                 colorScheme="teal"
