@@ -39,9 +39,9 @@ export const ResultView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {resultsBoard ? resultsBoard.map(result => (
-                        <Tr key={result.id}>
-                            <Td>{result.id}</Td>
+                    {resultsBoard ? resultsBoard.map((result, index) => (
+                        <Tr key={index+1}>
+                            <Td>{index+1}</Td>
                             <Td>{result.playerName}</Td>
                             <Td>{result.score}</Td>
                             <Td>{result.date}</Td>

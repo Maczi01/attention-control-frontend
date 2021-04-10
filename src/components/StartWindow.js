@@ -23,8 +23,7 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
         <ModalContent>
             <ModalHeader>Attention control</ModalHeader>
             <Box p='10px' m='10px'>
-                Twoim zadaniem jest klikanie liczb od zera do 99. Masz na to 90 sekund. Gotowy?
-            </Box>
+                Your goal is to click numbers from zero to 99. You have 90 seconds for that. Ready?            </Box>
             <ModalCloseButton/>
             <ModalBody>
             </ModalBody>

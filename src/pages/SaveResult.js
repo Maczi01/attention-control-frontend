@@ -4,12 +4,13 @@ import {GameDataContext} from "../context/GameDataContext";
 import {Link} from "react-router-dom";
 import FetchData from "../api/FetchData";
 import {url} from "../lib/urls";
+import SaveResultForm from "../components/SaveResultForm";
 
 export const SaveResult = () => {
 
     const {result, saveUserInDatabase} = useContext(GameDataContext);
 
-    const [name, setName] = useState('')
+    // const [name, setName] = useState('')
 
     // const handleName = (e) => {
     //     e.preventDefault();
@@ -19,27 +20,7 @@ export const SaveResult = () => {
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
-            <FormControl  id="name">
-                <FormLabel>Email address</FormLabel>
-                <Input type="text"
-                       value={name}
-                       onChange={(event) => setName(event.target.value)}
-
-                />
-                <Button
-                    onClick={() => saveUserInDatabase(name, result)}
-                    // onClick={() => saveUserInDatabase(name)}
-                    mt={4}
-                    colorScheme="teal"
-                    // isLoading={props.isSubmitting}
-                    // type="submit"
-                >
-                    Submit
-                </Button>
-
-                <Link to="/results">Wyniki
-                </Link>
-            </FormControl>
+          <SaveResultForm result={result} saveUserInDatabase={saveUserInDatabase}/>
         </Flex>
     )
 }
