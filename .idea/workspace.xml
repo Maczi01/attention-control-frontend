@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
+    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="Work on delete from board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,21 +88,7 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="13787000" />
-    </task>
-    <task id="LOCAL-00026" summary="Start changing class component into functional">
-      <created>1614726833590</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1614726833591</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Remove unused imports">
-      <created>1614814946604</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1614814946606</updated>
+      <workItem from="1617565266362" duration="16492000" />
     </task>
     <task id="LOCAL-00028" summary="Fixed countdown (but I dont know how...)">
       <created>1614816864909</created>
@@ -435,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618076545671</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Work on delete from board">
+      <created>1618079339510</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1618079339511</updated>
+    </task>
+    <task id="LOCAL-00076" summary="One line commit (test)">
+      <created>1618082888390</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1618082888390</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,8 +455,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added context" />
-    <MESSAGE value="Added data to context" />
     <MESSAGE value="Work with context" />
     <MESSAGE value="Removed data from App component" />
     <MESSAGE value="Changes in pages, changes in structure" />
@@ -482,6 +478,8 @@
     <MESSAGE value="Split code to component (form)" />
     <MESSAGE value="Fixed form - change to initial state after save." />
     <MESSAGE value="Added enum with http methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added enum with http methods" />
+    <MESSAGE value="Work on delete from board" />
+    <MESSAGE value="One line commit (test)" />
+    <option name="LAST_COMMIT_MESSAGE" value="One line commit (test)" />
   </component>
 </project>

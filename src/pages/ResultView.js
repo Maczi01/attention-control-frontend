@@ -46,10 +46,8 @@ export const ResultView = () => {
                                 <Td>{result.playerName}</Td>
                                 <Td>{result.score}</Td>
                                 <Td>{result.date}</Td>
-                                <Td><Button onClick={(index) => deleteResultFromBoard(index)}>
-                                    Remove or not removed
-                                    just test how to commit
-                                    or not to commit
+                                <Td><Button onClick={() => deleteResultFromBoard(index)}>
+                                    Remove
                                 </Button></Td>
                             </Tr>
                         )) :
