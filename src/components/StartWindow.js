@@ -33,7 +33,7 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
                     onClose();
                     handleStart()
                 }}>
-                    Startujemy!
+                    Lets start!
                 </Button>
             </ModalFooter>
         </ModalContent>

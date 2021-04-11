@@ -45,10 +45,11 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     }
 
-    const deleteResultFromBoard = async ({id}) => {
-        await fetch(`${url}${id}`, {method: 'DELETE'})
-        // FetchData.getData(url.localToGetResultBoard, `${Http.DELETE}${id}`)
+    const deleteResultFromBoard = async (id) => {
+        await fetch(`${url.localToGetResultBoard}${id}`, {method: 'DELETE'})
+        // FetchData.getData(`${url.localToGetResultBoard}${id}`, `${Http.DELETE)
     }
+
 
     const value = {
         gameData,

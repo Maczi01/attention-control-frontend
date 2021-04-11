@@ -17,7 +17,7 @@ export const ResultView = () => {
     // const {board, endOfGameTime} = gameData;
     useEffect(() => {
         getResultsBoard()
-    }, [])
+    }, [resultsBoard])
 
 
     return (
@@ -46,7 +46,7 @@ export const ResultView = () => {
                                 <Td>{result.playerName}</Td>
                                 <Td>{result.score}</Td>
                                 <Td>{result.date}</Td>
-                                <Td><Button onClick={() => deleteResultFromBoard(index)}>
+                                <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
                                     Remove
                                 </Button></Td>
                             </Tr>

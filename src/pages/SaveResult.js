@@ -10,14 +10,6 @@ export const SaveResult = () => {
 
     const {result, saveUserInDatabase} = useContext(GameDataContext);
 
-    // const [name, setName] = useState('')
-
-    // const handleName = (e) => {
-    //     e.preventDefault();
-    //     saveUserInDatabase(name, result)
-    //     console.log(name, result)
-    // }
-
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
           <SaveResultForm result={result} saveUserInDatabase={saveUserInDatabase}/>
