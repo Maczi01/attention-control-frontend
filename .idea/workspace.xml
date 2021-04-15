@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,14 +87,7 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="17901000" />
-    </task>
-    <task id="LOCAL-00029" summary="New countdown (with state and ref)">
-      <created>1614895635031</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1614895635031</updated>
+      <workItem from="1617565266362" duration="18526000" />
     </task>
     <task id="LOCAL-00030" summary="Finally app show score (only on console)">
       <created>1614897976872</created>
@@ -436,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618173666265</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Working versiob of delete result">
+      <created>1618175197641</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1618175197644</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +454,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Removed data from App component" />
     <MESSAGE value="Changes in pages, changes in structure" />
     <MESSAGE value="Refactor and added Center chakra component" />
     <MESSAGE value="Removed unused import" />
@@ -483,6 +478,7 @@
     <MESSAGE value="Work on delete from board" />
     <MESSAGE value="One line commit (test)" />
     <MESSAGE value="Changed in delete button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed in delete button" />
+    <MESSAGE value="Working versiob of delete result" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working versiob of delete result" />
   </component>
 </project>

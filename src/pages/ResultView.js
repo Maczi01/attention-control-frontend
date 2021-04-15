@@ -25,7 +25,7 @@ export const ResultView = () => {
             direction="column"
             align="center"
             justify="space-around"
-            width="80%"
+            width="85%"
             backgroundColor="#ffd803"
             mx="auto"
         >
