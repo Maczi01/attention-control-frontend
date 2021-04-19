@@ -76,7 +76,8 @@ const GameDataProvider = ({children}) => {
         getResultsBoard,
         resultsBoard,
         deleteResultFromBoard,
-        getPlayersResult
+        getPlayersResult,
+        choosenResult
     }
     return (<GameDataContext.Provider value={value}>
         {children}

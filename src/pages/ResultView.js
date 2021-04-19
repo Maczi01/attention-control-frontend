@@ -1,5 +1,6 @@
 import {GameDataContext} from "../context/GameDataContext";
 import React, {useContext, useEffect} from 'react';
+import {useHistory} from "react-router";
 import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
 import {
     Table,
@@ -11,15 +12,14 @@ import {
     Td,
     TableCaption, Center,
 } from "@chakra-ui/react";
-import {useHistory} from "react-router";
 
 export const ResultView = () => {
     const {resultsBoard, getResultsBoard, deleteResultFromBoard} = useContext(GameDataContext);
     // const {board, endOfGameTime} = gameData;
     useEffect(() => {
         getResultsBoard()
-    }, [resultsBoard])
-
+    }, [resultsBoard]);
+    const history = useHistory();
 
     return (
         <Flex
@@ -48,8 +48,9 @@ export const ResultView = () => {
                                 <Td>{result.score}</Td>
                                 <Td>{result.date}</Td>
                                 <Td>{result.date}</Td>
-                                onClick={() => history.push(`/edituser/${user.id}`)}
-
+                                <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
+                                </Button>
+                                </Td>
                                 <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
                                     Remove
                                 </Button></Td>

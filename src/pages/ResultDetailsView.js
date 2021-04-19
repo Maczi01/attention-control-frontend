@@ -1,5 +1,5 @@
 import {Button, Flex, FormControl, FormLabel, Grid, Input} from "@chakra-ui/react"
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {GameDataContext} from "../context/GameDataContext";
 import {Link} from "react-router-dom";
 import FetchData from "../api/FetchData";
@@ -7,19 +7,24 @@ import {url} from "../lib/urls";
 import SaveResultForm from "../components/SaveResultForm";
 import Number from "../components/Number";
 
-export const ResultDetailsView = () => {
+export const ResultDetailsView = ({match}) => {
+    const selectedId = match.params.id
+    const {getPlayersResult,choosenResult} = useContext(GameDataContext);
+    useEffect(() => {
+        getPlayersResult()
+    } );
 
+    console.log(choosenResult)
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
-            <h1>Gracz </h1>
-            <h2>wynik </h2>
-            <h2>Data gry </h2>
+            <h1>{choosenResult.score} </h1>
+            <h2>wynik: {choosenResult.score}</h2>
+            <h2>Data gry {choosenResult.data}</h2>
             <h2>Tabela gry</h2>
             <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="600px" m="5px">
-                {board && board.map((number, indexNummber) =>
+                {choosenResult.gameboard && choosenResult.gameboard.map((number, indexNummber) =>
                     <Number
-                        checkGivenNumber={checkGivenNumber}
                         number={number}
                         key={indexNummber}/>
                 )}
