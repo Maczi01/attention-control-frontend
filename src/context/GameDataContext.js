@@ -35,7 +35,7 @@ const GameDataProvider = ({children}) => {
         console.log({playerName, score});
         const date = new Date();
         const id = Math.random();
-        await FetchData.getData(url.localToGetResultBoard, Http.POST, JSON.stringify(({playerName, score, date})))
+        await FetchData.getData(url.localToGetResultBoard, Http.POST, JSON.stringify(({playerName, score, date, gameboard: gameData.board})))
             .catch(err => console.error(err.message));
     };
 

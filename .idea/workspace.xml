@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,14 +89,8 @@
       <workItem from="1615242755173" duration="78307000" />
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
-      <workItem from="1617565266362" duration="18526000" />
-    </task>
-    <task id="LOCAL-00030" summary="Finally app show score (only on console)">
-      <created>1614897976872</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1614897976873</updated>
+      <workItem from="1617565266362" duration="19702000" />
+      <workItem from="1618737581726" duration="4144000" />
     </task>
     <task id="LOCAL-00031" summary="Working version (start, counting, end game and result">
       <created>1614902779251</created>
@@ -432,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618175197644</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Change width">
+      <created>1618525434354</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1618525434372</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +457,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changes in pages, changes in structure" />
     <MESSAGE value="Refactor and added Center chakra component" />
     <MESSAGE value="Removed unused import" />
     <MESSAGE value="Changes in styles" />
@@ -479,6 +481,7 @@
     <MESSAGE value="One line commit (test)" />
     <MESSAGE value="Changed in delete button" />
     <MESSAGE value="Working versiob of delete result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working versiob of delete result" />
+    <MESSAGE value="Change width" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change width" />
   </component>
 </project>
