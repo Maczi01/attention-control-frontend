@@ -12,6 +12,7 @@ const GameDataProvider = ({children}) => {
     const [result, setResult] = useState(0);
     const [name, setName] = useState('');
     const [resultsBoard, setResultsBoard] = useState([]);
+    const [choosenResult, setChoosenResult] = useState({});
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, Http.GET)
@@ -35,13 +36,24 @@ const GameDataProvider = ({children}) => {
         console.log({playerName, score});
         const date = new Date();
         const id = Math.random();
-        await FetchData.getData(url.localToGetResultBoard, Http.POST, JSON.stringify(({playerName, score, date, gameboard: gameData.board})))
+        await FetchData.getData(url.localToGetResultBoard, Http.POST, JSON.stringify(({
+            playerName,
+            score,
+            date,
+            gameboard: gameData.board
+        })))
             .catch(err => console.error(err.message));
     };
 
     const getResultsBoard = async () => {
         return await FetchData.getData(url.localToGetResultBoard, Http.GET)
             .then(data => setResultsBoard(data))
+            .catch(err => console.error(err.message));
+    }
+
+    const getPlayersResult = async (id) => {
+        return await FetchData.getData(`${url.localToGetResultBoard}${id}`, Http.GET)
+            .then(data => setChoosenResult(data))
             .catch(err => console.error(err.message));
     }
 
@@ -63,7 +75,8 @@ const GameDataProvider = ({children}) => {
         getResults,
         getResultsBoard,
         resultsBoard,
-        deleteResultFromBoard
+        deleteResultFromBoard,
+        getPlayersResult
     }
     return (<GameDataContext.Provider value={value}>
         {children}

@@ -11,6 +11,7 @@ import {
     Td,
     TableCaption, Center,
 } from "@chakra-ui/react";
+import {useHistory} from "react-router";
 
 export const ResultView = () => {
     const {resultsBoard, getResultsBoard, deleteResultFromBoard} = useContext(GameDataContext);
@@ -46,6 +47,9 @@ export const ResultView = () => {
                                 <Td>{result.playerName}</Td>
                                 <Td>{result.score}</Td>
                                 <Td>{result.date}</Td>
+                                <Td>{result.date}</Td>
+                                onClick={() => history.push(`/edituser/${user.id}`)}
+
                                 <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
                                     Remove
                                 </Button></Td>
