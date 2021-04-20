@@ -14,13 +14,11 @@ import {
 } from "@chakra-ui/react";
 
 export const ResultView = () => {
-    const {resultsBoard, getResultsBoard, deleteResultFromBoard} = useContext(GameDataContext);
-    // const {board, endOfGameTime} = gameData;
+    const {resultsList, setResultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
     useEffect(() => {
-        getResultsBoard()
-    }, );
+        getResultsList()
+    }, [getResultsList]);
     const history = useHistory();
-    console.log("Getting results")
     console.log("Getting results")
     return (
         <Flex
@@ -42,7 +40,7 @@ export const ResultView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {resultsBoard && resultsBoard.map((result, index) => (
+                    {resultsList && resultsList.map((result, index) => (
                         <Tr key={index + 1}>
                             <Td>{index + 1}</Td>
                             <Td>{result.playerName}</Td>
@@ -52,7 +50,7 @@ export const ResultView = () => {
                             <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
                             </Button>
                             </Td>
-                            <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
+                            <Td><Button onClick={() => deleteResultFromList(result.id)}>
                                 Remove
                             </Button></Td>
                         </Tr>

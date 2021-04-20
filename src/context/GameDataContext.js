@@ -11,7 +11,7 @@ const GameDataProvider = ({children}) => {
     const [error, setError] = useState(null);
     const [result, setResult] = useState(0);
     const [name, setName] = useState('');
-    const [resultsBoard, setResultsBoard] = useState([]);
+    const [resultsList, setResultsList] = useState([]);
     const [choosenResult, setChoosenResult] = useState({});
 
     useEffect(async () => {
@@ -45,9 +45,9 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
-    const getResultsBoard = async () => {
+    const getResultsList = async () => {
         return await FetchData.getData(url.localToGetResultBoard, Http.GET)
-            .then(data => setResultsBoard(data))
+            .then(data => setResultsList(data))
             .catch(err => console.error(err.message));
     }
 
@@ -57,7 +57,7 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     }
 
-    const deleteResultFromBoard = async (id) => {
+    const deleteResultFromList = async (id) => {
         await fetch(`${url.localToGetResultBoard}${id}`, {method: 'DELETE'})
         // FetchData.getData(`${url.localToGetResultBoard}${id}`, `${Http.DELETE)
     }
@@ -73,11 +73,12 @@ const GameDataProvider = ({children}) => {
         isPending,
         saveUserInDatabase,
         getResults,
-        getResultsBoard,
-        resultsBoard,
-        deleteResultFromBoard,
+        getResultsList,
+        resultsList,
+        deleteResultFromList,
         getPlayersResult,
-        choosenResult
+        choosenResult,
+        setResultsList
     }
     return (<GameDataContext.Provider value={value}>
         {children}
