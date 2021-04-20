@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
@@ -92,14 +90,7 @@
       <workItem from="1616795301146" duration="13456000" />
       <workItem from="1617217328547" duration="3105000" />
       <workItem from="1617565266362" duration="19702000" />
-      <workItem from="1618737581726" duration="5795000" />
-    </task>
-    <task id="LOCAL-00033" summary="Timer countdown stopped working.">
-      <created>1615156433534</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1615156433535</updated>
+      <workItem from="1618737581726" duration="9906000" />
     </task>
     <task id="LOCAL-00034" summary="Added second useEffect. Working version.">
       <created>1615158917290</created>
@@ -437,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618868958375</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Added page for player's game details (not finished)">
+      <created>1618870304291</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1618870304291</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +457,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changes in styles" />
     <MESSAGE value="Changes in apllication structure" />
     <MESSAGE value="Added very simple local storage" />
     <MESSAGE value="Changed in Result window - form" />
@@ -484,6 +481,7 @@
     <MESSAGE value="Change width" />
     <MESSAGE value="Added view of chosen result" />
     <MESSAGE value="Added hook useHistory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added hook useHistory" />
+    <MESSAGE value="Added page for player's game details (not finished)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added page for player's game details (not finished)" />
   </component>
 </project>

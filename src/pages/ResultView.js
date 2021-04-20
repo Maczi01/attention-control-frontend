@@ -18,9 +18,10 @@ export const ResultView = () => {
     // const {board, endOfGameTime} = gameData;
     useEffect(() => {
         getResultsBoard()
-    }, [resultsBoard]);
+    }, );
     const history = useHistory();
-
+    console.log("Getting results")
+    console.log("Getting results")
     return (
         <Flex
             direction="column"
@@ -41,22 +42,21 @@ export const ResultView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {resultsBoard ? resultsBoard.map((result, index) => (
-                            <Tr key={index + 1}>
-                                <Td>{index + 1}</Td>
-                                <Td>{result.playerName}</Td>
-                                <Td>{result.score}</Td>
-                                <Td>{result.date}</Td>
-                                <Td>{result.date}</Td>
-                                <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
-                                </Button>
-                                </Td>
-                                <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
-                                    Remove
-                                </Button></Td>
-                            </Tr>
-                        )) :
-                        null
+                    {resultsBoard && resultsBoard.map((result, index) => (
+                        <Tr key={index + 1}>
+                            <Td>{index + 1}</Td>
+                            <Td>{result.playerName}</Td>
+                            <Td>{result.score}</Td>
+                            <Td>{result.date}</Td>
+                            <Td>{result.date}</Td>
+                            <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
+                            </Button>
+                            </Td>
+                            <Td><Button onClick={() => deleteResultFromBoard(result.id)}>
+                                Remove
+                            </Button></Td>
+                        </Tr>
+                    ))
                     }
                 </Tbody>
             </Table>

@@ -9,16 +9,17 @@ import Number from "../components/Number";
 
 export const ResultDetailsView = ({match}) => {
     const selectedId = match.params.id
-    const {getPlayersResult,choosenResult} = useContext(GameDataContext);
+    console.log(selectedId)
+    const {getPlayersResult, choosenResult} = useContext(GameDataContext);
     useEffect(() => {
-        getPlayersResult()
-    } );
+        getPlayersResult(selectedId)
+    },[choosenResult.id]);
 
     console.log(choosenResult)
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
-            <h1>{choosenResult.score} </h1>
+            <h1>{choosenResult.playerName} </h1>
             <h2>wynik: {choosenResult.score}</h2>
             <h2>Data gry {choosenResult.data}</h2>
             <h2>Tabela gry</h2>
