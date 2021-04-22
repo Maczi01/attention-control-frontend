@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import FetchData from "../api/FetchData";
 import {url} from "../lib/urls";
 import {Http} from "../lib/HttpMethods";
@@ -13,6 +13,13 @@ const GameDataProvider = ({children}) => {
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [choosenResult, setChoosenResult] = useState({});
+
+    useEffect(async () => {
+        FetchData.getData(url.localGameDataEndpoint, Http.GET)
+            .then(data => setGameData(data))
+            .catch(err => setError(err.message))
+            .finally(() => setIsPending(false))
+    }, []);
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, Http.GET)
@@ -59,7 +66,7 @@ const GameDataProvider = ({children}) => {
 
     const deleteResultFromList = async (id) => {
         await fetch(`${url.localToGetResultBoard}${id}`, {method: 'DELETE'})
-        // FetchData.getData(`${url.localToGetResultBoard}${id}`, `${Http.DELETE)
+        getResultsList();
     }
 
 
