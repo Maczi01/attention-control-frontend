@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,14 +91,7 @@
       <workItem from="1617217328547" duration="3105000" />
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
-      <workItem from="1618956051217" duration="3554000" />
-    </task>
-    <task id="LOCAL-00036" summary="Optimize imports.">
-      <created>1615159945303</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1615159945305</updated>
+      <workItem from="1618956051217" duration="6835000" />
     </task>
     <task id="LOCAL-00037" summary="Refactor - number instead of e">
       <created>1615240271469</created>
@@ -436,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618949858177</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Remove unused imports">
+      <created>1619128580488</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1619128580490</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +458,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changed in Result window - form" />
     <MESSAGE value="Added method to save result (in progress)" />
     <MESSAGE value="Added method 'saveToDatabase'" />
     <MESSAGE value="Work with saving user into database" />
@@ -483,6 +482,7 @@
     <MESSAGE value="Added page for player's game details (not finished)" />
     <MESSAGE value="Work with results board" />
     <MESSAGE value="Work on useEffect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on useEffect" />
+    <MESSAGE value="Remove unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused imports" />
   </component>
 </project>

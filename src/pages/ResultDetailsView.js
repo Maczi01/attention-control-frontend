@@ -13,9 +13,9 @@ export const ResultDetailsView = ({match}) => {
     const {getPlayersResult, choosenResult} = useContext(GameDataContext);
     useEffect(() => {
         getPlayersResult(selectedId)
-    },[choosenResult.id]);
+    },[]);
 
-    console.log(choosenResult)
+    console.log(getPlayersResult(selectedId))
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">

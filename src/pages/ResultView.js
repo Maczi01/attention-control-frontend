@@ -47,6 +47,7 @@ export const ResultView = () => {
                             <Td>{result.score}</Td>
                             <Td>{result.date}</Td>
                             <Td>{result.date}</Td>
+                            {console.log(`${result.playerName}+ ${result.id}`)}
                             <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
                             </Button>
                             </Td>
