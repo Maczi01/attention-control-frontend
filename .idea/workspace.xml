@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
@@ -91,14 +92,7 @@
       <workItem from="1617217328547" duration="3105000" />
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
-      <workItem from="1618956051217" duration="9192000" />
-    </task>
-    <task id="LOCAL-00038" summary="Remove Clock component">
-      <created>1615406679368</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1615406679375</updated>
+      <workItem from="1618956051217" duration="9867000" />
     </task>
     <task id="LOCAL-00039" summary="Changes in useEffect (fetch)">
       <created>1615415353765</created>
@@ -436,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619303676974</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Errors in getting results">
+      <created>1619387206779</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1619387206779</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +459,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added method 'saveToDatabase'" />
     <MESSAGE value="Work with saving user into database" />
     <MESSAGE value="Work with post user with result" />
     <MESSAGE value="Fight with fetch data" />
@@ -483,6 +483,7 @@
     <MESSAGE value="Work on useEffect" />
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Changing in player data and get list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing in player data and get list" />
+    <MESSAGE value="Errors in getting results" />
+    <option name="LAST_COMMIT_MESSAGE" value="Errors in getting results" />
   </component>
 </project>

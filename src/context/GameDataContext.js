@@ -65,7 +65,7 @@ const GameDataProvider = ({children}) => {
     }
 
     const deleteResultFromList = async (id) => {
-        await fetch(`${url.localToGetResultBoard}${id}`, {method: 'DELETE'})
+        await fetch(`${url.localToGetResultBoard}${id}`, {method: Http.DELETE})
         getResultsList();
     }
 
