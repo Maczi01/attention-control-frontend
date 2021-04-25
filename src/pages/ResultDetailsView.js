@@ -13,7 +13,7 @@ export const ResultDetailsView = ({match}) => {
     const {getPlayersResult, choosenResult} = useContext(GameDataContext);
     useEffect(() => {
         getPlayersResult(selectedId)
-    },[]);
+    }, []);
 
     console.log(getPlayersResult(selectedId))
 
