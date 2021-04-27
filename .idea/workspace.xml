@@ -89,14 +89,7 @@
       <workItem from="1617217328547" duration="3105000" />
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
-      <workItem from="1618956051217" duration="11346000" />
-    </task>
-    <task id="LOCAL-00040" summary="Changed fetching data">
-      <created>1615419979968</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1615419979969</updated>
+      <workItem from="1618956051217" duration="12493000" />
     </task>
     <task id="LOCAL-00041" summary="Added db.json">
       <created>1615499979460</created>
@@ -434,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619387901337</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Remove unused imports">
+      <created>1619471798762</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1619471798767</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,10 +477,10 @@
     <MESSAGE value="Added page for player's game details (not finished)" />
     <MESSAGE value="Work with results board" />
     <MESSAGE value="Work on useEffect" />
-    <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Changing in player data and get list" />
     <MESSAGE value="Errors in getting results" />
     <MESSAGE value="Try to fix get result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix get result" />
+    <MESSAGE value="Remove unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused imports" />
   </component>
 </project>
