@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/HttpMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/HttpMethods.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,14 +91,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="6518000" />
-    </task>
-    <task id="LOCAL-00043" summary="Added helper - FetchData file">
-      <created>1615742395438</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1615742395438</updated>
+      <workItem from="1619561980008" duration="7229000" />
     </task>
     <task id="LOCAL-00044" summary="Changed FetchData file, App component with load data.">
       <created>1615757705538</created>
@@ -437,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619962998979</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Players details page works ok.">
+      <created>1619994160103</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1619994160105</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +458,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Working save user to database (first version)" />
     <MESSAGE value="Added chakra-ui table (simple)" />
     <MESSAGE value="Changed table (map result board)" />
     <MESSAGE value="Changed context(get results)" />
@@ -484,6 +482,7 @@
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Changes in css for button" />
     <MESSAGE value="Try to fix ResultsDetailsView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix ResultsDetailsView" />
+    <MESSAGE value="Players details page works ok." />
+    <option name="LAST_COMMIT_MESSAGE" value="Players details page works ok." />
   </component>
 </project>

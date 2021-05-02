@@ -1,4 +1,4 @@
-export const Http = {
+export const HttpMethod = {
     GET:"Get",
     POST:"Post",
     PUT:"Put",

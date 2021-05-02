@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import FetchData from "../api/FetchData";
 import {url} from "../lib/urls";
-import {Http} from "../lib/HttpMethods";
+import {HttpMethod} from "../lib/HttpMethods";
 
 export const GameDataContext = React.createContext(null);
 
@@ -15,26 +15,19 @@ const GameDataProvider = ({children}) => {
     const [playersResult, setPlayersResult] = useState({});
 
     useEffect(async () => {
-        FetchData.getData(url.localGameDataEndpoint, Http.GET)
-            .then(data => setGameData(data))
-            .catch(err => setError(err.message))
-            .finally(() => setIsPending(false))
-    }, []);
-
-    useEffect(async () => {
-        FetchData.getData(url.localGameDataEndpoint, Http.GET)
+        FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)
             .then(data => setGameData(data))
             .catch(err => setError(err.message))
             .finally(() => setIsPending(false))
     }, []);
 
     const checkGivenNumber = async (number) => {
-        return await FetchData.getData(url.localToCheckNumber, Http.POST, number)
+        return await FetchData.getData(url.localToCheckNumber, HttpMethod.POST, number)
             .catch(err => console.error(err.message));
     };
 
     const getResults = async () => {
-        return await FetchData.getData(url.localGameResultEndpoint, Http.GET)
+        return await FetchData.getData(url.localGameResultEndpoint, HttpMethod.GET)
             .then(data => setResult(data))
             .catch(err => console.error(err.message));
     };
@@ -43,7 +36,8 @@ const GameDataProvider = ({children}) => {
         console.log({playerName, score});
         const date = new Date();
         const id = Math.random();
-        await FetchData.getData(url.localToGetResultBoard, Http.POST, JSON.stringify(({
+        await FetchData.getData(url.localToGetResultBoard, HttpMethod.POST, JSON.stringify(({
+            id,
             playerName,
             score,
             date,
@@ -53,24 +47,22 @@ const GameDataProvider = ({children}) => {
     };
 
     const getResultsList = async () => {
-        return await FetchData.getData(url.localToGetResultBoard, Http.GET)
+        return await FetchData.getData(url.localToGetResultBoard, HttpMethod.GET)
             .then(data => setResultsList(data))
             .catch(err => console.error(err.message));
-    }
+    };
 
     const getPlayersResult = async (id) => {
         console.log(id);
-        return await FetchData.getData(`${url.localToGetResultBoard}${id}`, Http.GET)
-        // return await FetchData.getData("http://localhost:8081/api/results/1", Http.GET)
+        return await FetchData.getData(`${url.localToGetResultBoard}${id}`, HttpMethod.GET)
             .then(data => setPlayersResult(data))
             .catch(err => console.error(err.message));
-    }
+    };
 
     const deleteResultFromList = async (id) => {
-        await fetch(`${url.localToGetResultBoard}${id}`, {method: Http.DELETE})
+        await fetch(`${url.localToGetResultBoard}${id}`, {method: HttpMethod.DELETE});
         getResultsList();
-    }
-
+    };
 
     const value = {
         gameData,
@@ -88,10 +80,10 @@ const GameDataProvider = ({children}) => {
         getPlayersResult,
         playersResult,
         setResultsList
-    }
+    };
     return (<GameDataContext.Provider value={value}>
         {children}
     </GameDataContext.Provider>)
-}
+};
 
 export default GameDataProvider;
