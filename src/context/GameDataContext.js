@@ -12,7 +12,7 @@ const GameDataProvider = ({children}) => {
     const [result, setResult] = useState(0);
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
-    const [choosenResult, setChoosenResult] = useState({});
+    const [playersResult, setPlayersResult] = useState({});
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, Http.GET)
@@ -59,8 +59,10 @@ const GameDataProvider = ({children}) => {
     }
 
     const getPlayersResult = async (id) => {
+        console.log(id);
         return await FetchData.getData(`${url.localToGetResultBoard}${id}`, Http.GET)
-            .then(data => setChoosenResult(data))
+        // return await FetchData.getData("http://localhost:8081/api/results/1", Http.GET)
+            .then(data => setPlayersResult(data))
             .catch(err => console.error(err.message));
     }
 
@@ -84,7 +86,7 @@ const GameDataProvider = ({children}) => {
         resultsList,
         deleteResultFromList,
         getPlayersResult,
-        choosenResult,
+        playersResult,
         setResultsList
     }
     return (<GameDataContext.Provider value={value}>

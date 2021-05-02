@@ -10,21 +10,21 @@ import Number from "../components/Number";
 export const ResultDetailsView = ({match}) => {
     const selectedId = match.params.id
     console.log(selectedId)
-    const {getPlayersResult, choosenResult} = useContext(GameDataContext);
+    const {getPlayersResult, playersResult} = useContext(GameDataContext);
     useEffect(() => {
         getPlayersResult(selectedId)
-    }, [selectedId]);
+    },[selectedId]);
 
-    console.log(getPlayersResult(selectedId))
+    console.log(playersResult)
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
-            <h1>{choosenResult.playerName} </h1>
-            <h2>wynik: {choosenResult.score}</h2>
-            <h2>Data gry {choosenResult.data}</h2>
+            <h1>{playersResult.playerName} </h1>
+            <h2>wynik: {playersResult.score}</h2>
+            <h2>Data gry {playersResult.data}</h2>
             <h2>Tabela gry</h2>
             <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="600px" m="5px">
-                {choosenResult.gameboard && choosenResult.gameboard.map((number, indexNummber) =>
+                {playersResult.gameboard && playersResult.gameboard.map((number, indexNummber) =>
                     <Number
                         number={number}
                         key={indexNummber}/>
