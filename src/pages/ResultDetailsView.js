@@ -1,10 +1,6 @@
-import {Button, Flex, FormControl, FormLabel, Grid, Input} from "@chakra-ui/react"
-import React, {useContext, useEffect, useState} from "react";
+import {Flex, Grid} from "@chakra-ui/react"
+import React, {useContext, useEffect} from "react";
 import {GameDataContext} from "../context/GameDataContext";
-import {Link} from "react-router-dom";
-import FetchData from "../api/FetchData";
-import {url} from "../lib/urls";
-import SaveResultForm from "../components/SaveResultForm";
 import Number from "../components/Number";
 
 export const ResultDetailsView = ({match}) => {
