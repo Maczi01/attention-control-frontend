@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 export const ResultView = () => {
-    const {resultsList, setResultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
+    const {resultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
     useEffect(() => {
         getResultsList()
     }, []);

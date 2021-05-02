@@ -1,6 +1,5 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import {Button, FormControl, FormLabel, Input} from "@chakra-ui/react"
-import {GameDataContext} from "../context/GameDataContext";
 import {Link} from "react-router-dom";
 
 const SaveResultForm = ({result, saveUserInDatabase}) => {
@@ -21,11 +20,8 @@ const SaveResultForm = ({result, saveUserInDatabase}) => {
             />
             <Button
                 onClick={handleSubmit}
-                // onClick={() => saveUserInDatabase(name)}
                 mt={4}
                 colorScheme="teal"
-                // isLoading={props.isSubmitting}
-                // type="submit"
             >
                 Submit
             </Button>
