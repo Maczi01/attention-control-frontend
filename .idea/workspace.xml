@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +91,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-    </task>
-    <task id="LOCAL-00041" summary="Added db.json">
-      <created>1615499979460</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1615499979464</updated>
+      <workItem from="1619561980008" duration="1664000" />
     </task>
     <task id="LOCAL-00042" summary="Changes in db.json">
       <created>1615501821725</created>
@@ -434,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619471798767</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Changes in css for button">
+      <created>1619562206743</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1619562206746</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,8 +458,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work with post user with result" />
-    <MESSAGE value="Fight with fetch data" />
     <MESSAGE value="Working save user to database (first version)" />
     <MESSAGE value="Added chakra-ui table (simple)" />
     <MESSAGE value="Changed table (map result board)" />
@@ -481,6 +481,8 @@
     <MESSAGE value="Errors in getting results" />
     <MESSAGE value="Try to fix get result" />
     <MESSAGE value="Remove unused imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused imports" />
+    <MESSAGE value="Changes in css for button" />
+    <MESSAGE value="Try to fix ResultsDetailsView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to fix ResultsDetailsView" />
   </component>
 </project>
