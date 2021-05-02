@@ -1,17 +1,7 @@
 import {GameDataContext} from "../context/GameDataContext";
 import React, {useContext, useEffect} from 'react';
 import {useHistory} from "react-router";
-import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption, Center,
-} from "@chakra-ui/react";
+import {Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react"
 
 export const ResultView = () => {
     const {resultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
