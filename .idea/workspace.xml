@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,14 +94,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="15983000" />
-    </task>
-    <task id="LOCAL-00050" summary="Added data to context">
-      <created>1616111807286</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1616111807347</updated>
+      <workItem from="1619561980008" duration="19426000" />
     </task>
     <task id="LOCAL-00051" summary="Work with context">
       <created>1616337256594</created>
@@ -438,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620043929266</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Changes in button">
+      <created>1620050607434</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1620050607435</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +461,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fixed form - change to initial state after save." />
     <MESSAGE value="Added enum with http methods" />
     <MESSAGE value="Work on delete from board" />
     <MESSAGE value="One line commit (test)" />
@@ -485,6 +485,7 @@
     <MESSAGE value="Optimize import in Results Details view" />
     <MESSAGE value="Changed in chakra ui - save result form" />
     <MESSAGE value="Changed form (texts)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed form (texts)" />
+    <MESSAGE value="Changes in button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in button" />
   </component>
 </project>

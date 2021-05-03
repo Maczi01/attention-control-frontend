@@ -30,18 +30,18 @@ const SaveResultForm = ({result, saveUserInDatabase}) => {
             >
                 {submitted ?
                     <Button
-                        m="5px"
+                        m="10px"
                         w="150px"
                         leftIcon={<GiConfirmed/>}
-                        colorScheme="teal"
+                        colorScheme="green"
                         variant="solid"
-                        onClick={handleSubmit}
+                        // onClick={handleSubmit}
                     >
                         Submited
                     </Button>
                     :
                     <Button
-                        m="5px"
+                        m="10px"
                         w="150px"
                         colorScheme="pink"
                         variant="solid"
@@ -50,17 +50,18 @@ const SaveResultForm = ({result, saveUserInDatabase}) => {
                         Submit
                     </Button>
                 }
-                {/*<Link to="/results">*/}
+                <Link to="/results">
                     <Button
-                        m="3px"
+                        m="10px"
                         w="150px"
-                        colorScheme="teal"
-                    ><Link
-                        to="/results">
+                        colorScheme="yellow"
+                        >
+                    {/*><Link*/}
+                    {/*    // to="/results">*/}
                         Results
-                    </Link>
+                    {/*</Link>*/}
                     </Button>
-                {/*</Link>*/}
+                </Link>
 
             </Flex>
 

@@ -5,7 +5,8 @@ import {Link} from "react-router-dom";
 import {Button, Center, Flex} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
-// import {GiConfirmed} from "react-icons/gi"
+import {BsArrowCounterclockwise} from "react-icons/bs"
+import CountUp from 'react-countup';
 
 const ResultModal = ({isOpen, result, handleStart}) => {
 
@@ -22,7 +23,11 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-                        Your result is: {result}
+
+                        Your result is: <CountUp
+                        end={result}
+                        duration={5}
+                    />
                     </Box>
                 </Center>
                 <ModalBody>
@@ -39,7 +44,9 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                                 <Button
                                     w="150px"
                                     m="3px"
-                                    colorScheme="teal"
+                                    colorScheme="red"
+                                    leftIcon={<BsArrowCounterclockwise/>}
+
                                     onClick={handleStart}>
                                     Play again
                                 </Button>
@@ -47,8 +54,8 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                             <Button
                                 w="150px"
                                 m="3px"
-                                colorScheme="teal"
                                 variant="solid"
+                                colorScheme="blue"
                                 onClick={() => setShowMailInput(prev => !prev)}
                             >
                                 Save result
