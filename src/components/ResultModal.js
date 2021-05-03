@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {Button, Center, Flex} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
-import { MdBuild , MdCall } from "react-icons/md"
+// import {GiConfirmed} from "react-icons/gi"
 
 const ResultModal = ({isOpen, result, handleStart}) => {
 
@@ -18,7 +18,7 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                 <ModalHeader
                     align="center"
                     justify="space-around">
-                    Game over!
+                    Time's up!
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
@@ -32,25 +32,30 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                         direction="column"
                     >
                         <Flex
-                            // direction="row"
                             align="normal"
                             justify="space-around"
                         >
                             <Link to="/">
-                                <Button m="3px" colorScheme="teal" onClick={handleStart}>
+                                <Button
+                                    w="150px"
+                                    m="3px"
+                                    colorScheme="teal"
+                                    onClick={handleStart}>
                                     Play again
                                 </Button>
                             </Link>
-                            <Button leftIcon={<MdBuild />} colorScheme="pink" variant="solid">
-                                Settings
+                            <Button
+                                w="150px"
+                                m="3px"
+                                colorScheme="teal"
+                                variant="solid"
+                                onClick={() => setShowMailInput(prev => !prev)}
+                            >
+                                Save result
                             </Button>
-
                         </Flex>
-
                         <Flex m="15px">
                             {showMailInput && <SaveResultForm result={result} saveUserInDatabase={saveUserInDatabase}/>}
-                            {/*<Link to="/save">*/}
-                            {/*</Link>*/}
                         </Flex>
                     </Flex>
                 </ModalBody>
