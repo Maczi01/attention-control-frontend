@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {Button, Center, Flex} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
+import { MdBuild , MdCall } from "react-icons/md"
 
 const ResultModal = ({isOpen, result, handleStart}) => {
 
@@ -36,20 +37,20 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                             justify="space-around"
                         >
                             <Link to="/">
-                                <Button colorScheme="teal" size="lg" onClick={handleStart}>
+                                <Button m="3px" colorScheme="teal" onClick={handleStart}>
                                     Play again
                                 </Button>
                             </Link>
-                            <Button colorScheme="cyan" size="lg" onClick={() => setShowMailInput(prev => !prev)}>
-                                Save result
+                            <Button leftIcon={<MdBuild />} colorScheme="pink" variant="solid">
+                                Settings
                             </Button>
 
                         </Flex>
 
-                        <Flex m="px">
+                        <Flex m="15px">
                             {showMailInput && <SaveResultForm result={result} saveUserInDatabase={saveUserInDatabase}/>}
-                            <Link to="/save">
-                            </Link>
+                            {/*<Link to="/save">*/}
+                            {/*</Link>*/}
                         </Flex>
                     </Flex>
                 </ModalBody>

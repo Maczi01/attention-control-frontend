@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,14 +92,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="11392000" />
-    </task>
-    <task id="LOCAL-00048" summary="Work with pages (views)">
-      <created>1616024506856</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1616024506857</updated>
+      <workItem from="1619561980008" duration="12766000" />
     </task>
     <task id="LOCAL-00049" summary="Added context">
       <created>1616110765047</created>
@@ -438,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619995101908</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Changed in chakra ui - save result form">
+      <created>1620037778380</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1620037778380</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +459,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changed parametrs in saveUserInDatabase method" />
     <MESSAGE value="Split code to component (form)" />
     <MESSAGE value="Fixed form - change to initial state after save." />
     <MESSAGE value="Added enum with http methods" />
@@ -485,6 +483,7 @@
     <MESSAGE value="Updated Results Form" />
     <MESSAGE value="Optimize import in Results view" />
     <MESSAGE value="Optimize import in Results Details view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize import in Results Details view" />
+    <MESSAGE value="Changed in chakra ui - save result form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed in chakra ui - save result form" />
   </component>
 </project>
