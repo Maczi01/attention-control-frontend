@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from "react";
 import StartWindow from "./StartWindow";
-import ResultWindow from "./ResultWindow";
+import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
 
 const GameCounter = ({endOfGameTime, getResults, result}) => {
@@ -48,7 +48,7 @@ const GameCounter = ({endOfGameTime, getResults, result}) => {
                 onClose={onClose}
                 handleStart={handleStart}
             />
-            <ResultWindow
+            <ResultModal
                 onOpen={onOpenReportModal}
                 isOpen={isOpenReportModal}
                 result={result}

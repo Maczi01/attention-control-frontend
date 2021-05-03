@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/HttpMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/HttpMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResult.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,35 +93,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="7229000" />
-    </task>
-    <task id="LOCAL-00044" summary="Changed FetchData file, App component with load data.">
-      <created>1615757705538</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1615757705539</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Removed duplicated code.">
-      <created>1615764721130</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1615764721130</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Changed links">
-      <created>1615837718988</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1615837718989</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Added pages">
-      <created>1616017318791</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1616017318792</updated>
+      <workItem from="1619561980008" duration="11392000" />
     </task>
     <task id="LOCAL-00048" summary="Work with pages (views)">
       <created>1616024506856</created>
@@ -436,7 +410,35 @@
       <option name="project" value="LOCAL" />
       <updated>1619994160105</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Refactor in Context">
+      <created>1619994871741</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1619994871741</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Updated Results Form">
+      <created>1619995043931</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1619995043931</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Optimize import in Results view">
+      <created>1619995070478</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1619995070478</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Optimize import in Results Details view">
+      <created>1619995101907</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1619995101908</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,10 +460,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added chakra-ui table (simple)" />
-    <MESSAGE value="Changed table (map result board)" />
-    <MESSAGE value="Changed context(get results)" />
-    <MESSAGE value="Working version (TODO: add unique key). Fixed Post user, get score, get scoreboard." />
     <MESSAGE value="Changed parametrs in saveUserInDatabase method" />
     <MESSAGE value="Split code to component (form)" />
     <MESSAGE value="Fixed form - change to initial state after save." />
@@ -483,6 +481,10 @@
     <MESSAGE value="Changes in css for button" />
     <MESSAGE value="Try to fix ResultsDetailsView" />
     <MESSAGE value="Players details page works ok." />
-    <option name="LAST_COMMIT_MESSAGE" value="Players details page works ok." />
+    <MESSAGE value="Refactor in Context" />
+    <MESSAGE value="Updated Results Form" />
+    <MESSAGE value="Optimize import in Results view" />
+    <MESSAGE value="Optimize import in Results Details view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize import in Results Details view" />
   </component>
 </project>
