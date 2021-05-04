@@ -3,14 +3,14 @@ import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
 import {Link} from "react-router-dom";
 import {GiConfirmed} from "react-icons/gi";
 
-const SaveResultForm = ({result, saveUserInDatabase}) => {
+const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
 
     const [name, setName] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        saveUserInDatabase(name, result)
+        saveUserInDatabase(name, result, clicked)
         setName('')
         setSubmitted(true);
     }
@@ -43,7 +43,7 @@ const SaveResultForm = ({result, saveUserInDatabase}) => {
                     <Button
                         m="10px"
                         w="150px"
-                        colorScheme="pink"
+                        colorScheme="messenger"
                         variant="solid"
                         onClick={handleSubmit}
                     >

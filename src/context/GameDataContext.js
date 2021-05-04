@@ -13,6 +13,7 @@ const GameDataProvider = ({children}) => {
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [playersResult, setPlayersResult] = useState({});
+    const [clicked, setClicked] = useState(0);
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)
@@ -32,8 +33,8 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
-    const saveUserInDatabase = async (playerName, score) => {
-        console.log({playerName, score});
+    const saveUserInDatabase = async (playerName, score, clicked) => {
+        console.log({playerName, score, clicked});
         const date = new Date();
         const id = Math.random();
         await FetchData.getData(url.localToGetResultBoard, HttpMethod.POST, JSON.stringify(({
@@ -41,7 +42,8 @@ const GameDataProvider = ({children}) => {
             playerName,
             score,
             date,
-            gameboard: gameData.board
+            gameboard: gameData.board,
+            clicked
         })))
             .catch(err => console.error(err.message));
     };
@@ -64,6 +66,11 @@ const GameDataProvider = ({children}) => {
         getResultsList();
     };
 
+    const countNumberOfClicks = () => {
+        setClicked(clicked + 1);
+    }
+
+
     const value = {
         gameData,
         checkGivenNumber,
@@ -79,7 +86,9 @@ const GameDataProvider = ({children}) => {
         deleteResultFromList,
         getPlayersResult,
         playersResult,
-        setResultsList
+        setResultsList,
+        clicked,
+        countNumberOfClicks
     };
     return (<GameDataContext.Provider value={value}>
         {children}

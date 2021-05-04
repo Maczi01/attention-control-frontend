@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,14 +95,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="21040000" />
-    </task>
-    <task id="LOCAL-00052" summary="Removed data from App component">
-      <created>1616338218859</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1616338218859</updated>
+      <workItem from="1619561980008" duration="24355000" />
     </task>
     <task id="LOCAL-00053" summary="Changes in pages, changes in structure">
       <created>1616371012397</created>
@@ -436,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620084857112</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Removed listener to ctrl+F (prevent Default)">
+      <created>1620166076046</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1620166076047</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +462,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work on delete from board" />
     <MESSAGE value="One line commit (test)" />
     <MESSAGE value="Changed in delete button" />
     <MESSAGE value="Working versiob of delete result" />
@@ -483,6 +486,7 @@
     <MESSAGE value="Changed form (texts)" />
     <MESSAGE value="Changes in button" />
     <MESSAGE value="Changes in result modal, added Counter animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in result modal, added Counter animation" />
+    <MESSAGE value="Removed listener to ctrl+F (prevent Default)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed listener to ctrl+F (prevent Default)" />
   </component>
 </project>

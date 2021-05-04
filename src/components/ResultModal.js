@@ -11,7 +11,9 @@ import CountUp from 'react-countup';
 const ResultModal = ({isOpen, result, handleStart}) => {
 
     const [showMailInput, setShowMailInput] = useState(false);
-    const {saveUserInDatabase} = useContext(GameDataContext);
+    const {saveUserInDatabase, clicked} = useContext(GameDataContext);
+
+
     return (
         <Modal isOpen={isOpen}>
             <ModalOverlay/>
@@ -23,11 +25,11 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-
                         Your result is: <CountUp
                         end={result}
                         duration={5}
                     />
+                        Accuracy: {result / clicked}
                     </Box>
                 </Center>
                 <ModalBody>
@@ -62,7 +64,8 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                             </Button>
                         </Flex>
                         <Flex m="15px">
-                            {showMailInput && <SaveResultForm result={result} saveUserInDatabase={saveUserInDatabase}/>}
+                            {showMailInput &&
+                            <SaveResultForm result={result} clicked={clicked} saveUserInDatabase={saveUserInDatabase}/>}
                         </Flex>
                     </Flex>
                 </ModalBody>
