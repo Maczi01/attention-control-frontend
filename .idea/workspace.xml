@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
     </list>
@@ -95,14 +92,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="24355000" />
-    </task>
-    <task id="LOCAL-00053" summary="Changes in pages, changes in structure">
-      <created>1616371012397</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1616371012403</updated>
+      <workItem from="1619561980008" duration="26735000" />
     </task>
     <task id="LOCAL-00054" summary="Refactor and added Center chakra component">
       <created>1616372477955</created>
@@ -440,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620166076047</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Work on accuracy result">
+      <created>1620169401685</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1620169401686</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +459,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="One line commit (test)" />
     <MESSAGE value="Changed in delete button" />
     <MESSAGE value="Working versiob of delete result" />
     <MESSAGE value="Change width" />
@@ -487,6 +483,7 @@
     <MESSAGE value="Changes in button" />
     <MESSAGE value="Changes in result modal, added Counter animation" />
     <MESSAGE value="Removed listener to ctrl+F (prevent Default)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed listener to ctrl+F (prevent Default)" />
+    <MESSAGE value="Work on accuracy result" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on accuracy result" />
   </component>
 </project>

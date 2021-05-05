@@ -67,7 +67,7 @@ const GameDataProvider = ({children}) => {
     };
 
     const countNumberOfClicks = () => {
-        setClicked(clicked + 1);
+        setClicked(previous => previous +1);
     }
 
 
