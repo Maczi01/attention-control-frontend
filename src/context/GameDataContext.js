@@ -13,7 +13,7 @@ const GameDataProvider = ({children}) => {
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [playersResult, setPlayersResult] = useState({});
-    const [clicked, setClicked] = useState(0);
+    // const [clicked, setClicked] = useState(0);
 
     useEffect(async () => {
         FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)
@@ -66,9 +66,9 @@ const GameDataProvider = ({children}) => {
         getResultsList();
     };
 
-    const countNumberOfClicks = () => {
-        setClicked(previous => previous +1);
-    }
+    // const countNumberOfClicks = () => {
+    //     setClicked(previous => previous +1);
+    // }
 
 
     const value = {
@@ -87,8 +87,8 @@ const GameDataProvider = ({children}) => {
         getPlayersResult,
         playersResult,
         setResultsList,
-        clicked,
-        countNumberOfClicks
+        // clicked,
+        // countNumberOfClicks
     };
     return (<GameDataContext.Provider value={value}>
         {children}

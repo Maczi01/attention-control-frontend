@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {GameDataContext} from "../context/GameDataContext";
 import GameBoard from "../components/GameBoard";
 import GameCounter from "../components/GameCounter";
@@ -7,7 +7,7 @@ import {Flex, Spinner, Center} from "@chakra-ui/react"
 export const BoardView = () => {
         const {gameData, checkGivenNumber, result, getResults, error, isPending, countNumberOfClicks, clicked} = useContext(GameDataContext);
         const {board, endOfGameTime} = gameData;
-        const [checkAccuracy, setCheckAccuracy] = useState(true);
+        // const [checkAccuracy, setCheckAccuracy] = useState(true);
         useEffect(() => {
                 window.addEventListener("keydown", removeFindOption)
 
@@ -16,15 +16,15 @@ export const BoardView = () => {
                 })
             }
         );
-
-        useEffect(() => {
-                window.addEventListener("click", () => countNumberOfClicks())
-            },[]
-        );
-
-        const stopCheckingAccuracy = () => {
-            setCheckAccuracy(false);
-        }
+        //
+        // useEffect(() => {
+        //         window.addEventListener("click", () => countNumberOfClicks())
+        //     }
+        // );
+        //
+        // const stopCheckingAccuracy = () => {
+        //     window.removeEventListener("click", countNumberOfClicks)
+        // }
 
 
         const removeFindOption = (e) => {
@@ -47,6 +47,7 @@ export const BoardView = () => {
                                  result={result}
                                  getResults={getResults}
                                  clicked={clicked}
+                                 // stopCheckingAccuracy={stopCheckingAccuracy}
                     />
                     {error && <p> {error} </p>}
                     {isPending && <Spinner/>}

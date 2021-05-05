@@ -8,10 +8,10 @@ import {GameDataContext} from "../context/GameDataContext";
 import {BsArrowCounterclockwise} from "react-icons/bs"
 import CountUp from 'react-countup';
 
-const ResultModal = ({isOpen, result, handleStart}) => {
+const ResultModal = ({isOpen, result, handleStart, clicked}) => {
 
     const [showMailInput, setShowMailInput] = useState(false);
-    const {saveUserInDatabase, clicked} = useContext(GameDataContext);
+    const {saveUserInDatabase} = useContext(GameDataContext);
 
 
     return (
@@ -25,11 +25,8 @@ const ResultModal = ({isOpen, result, handleStart}) => {
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-                        Your result is: <CountUp
-                        end={result}
-                        duration={5}
-                    />
-                        Accuracy: {result / clicked}
+                        <p> Your result is: {result} </p>
+                        <p>Accuracy: {result / clicked}</p>
                     </Box>
                 </Center>
                 <ModalBody>
