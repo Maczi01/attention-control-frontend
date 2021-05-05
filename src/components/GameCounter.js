@@ -26,6 +26,7 @@ const GameCounter = ({endOfGameTime, getResults, result, stopCheckingAccuracy}) 
                 clearInterval(countRef.current);
                 setIsActive(false);
                 onOpenReportModal();
+                window.removeEventListener("click", countNumberOfClicks)
             }
         }, [elapsedTime]
     );
@@ -40,7 +41,6 @@ const GameCounter = ({endOfGameTime, getResults, result, stopCheckingAccuracy}) 
         if (isActive === true) {
             clearInterval(countRef.current);
             setIsActive(false);
-            window.removeEventListener("click", countNumberOfClicks)
         } else if (elapsedTime > 1) {
             window.addEventListener("click", () => countNumberOfClicks())
             setIsActive(true);

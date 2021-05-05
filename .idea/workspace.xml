@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,14 +93,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="28942000" />
-    </task>
-    <task id="LOCAL-00055" summary="Removed unused import">
-      <created>1616453894280</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1616453894290</updated>
+      <workItem from="1619561980008" duration="29844000" />
     </task>
     <task id="LOCAL-00056" summary="Changes in styles">
       <created>1616456822634</created>
@@ -439,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620248952187</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Changed in window event listener. And it works!">
+      <created>1620251245929</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1620251245930</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +460,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Working versiob of delete result" />
     <MESSAGE value="Change width" />
     <MESSAGE value="Added view of chosen result" />
     <MESSAGE value="Added hook useHistory" />
@@ -486,6 +484,7 @@
     <MESSAGE value="Removed listener to ctrl+F (prevent Default)" />
     <MESSAGE value="Work on accuracy result" />
     <MESSAGE value="Changing way to measure accuracy (after time's up)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing way to measure accuracy (after time's up)" />
+    <MESSAGE value="Changed in window event listener. And it works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed in window event listener. And it works!" />
   </component>
 </project>

@@ -26,7 +26,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                 <Center>
                     <Box p='10px' m='10px'>
                         <p> Your result is: {result} </p>
-                        <p>Accuracy: {result / clicked}</p>
+                        <p>Accuracy: {(result / clicked) * 100}%</p>
                     </Box>
                 </Center>
                 <ModalBody>

@@ -13,7 +13,7 @@ import {Button} from "@chakra-ui/button";
 
 const StartWindow = ({isOpen, onClose, handleStart}) => (
 
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
         <ModalOverlay
             opacity="0.5"
             // filter="alpha(opacity=65)"
