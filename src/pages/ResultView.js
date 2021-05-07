@@ -19,7 +19,7 @@ export const ResultView = () => {
             backgroundColor="#ffd803"
             mx="auto"
         >
-            <Center>Results</Center>
+            <Center><h2>Results</h2></Center>
             <Table variant="simple">
                 <Thead>
                     <Tr>
@@ -27,6 +27,9 @@ export const ResultView = () => {
                         <Th>Name</Th>
                         <Th>Score</Th>
                         <Th>Date</Th>
+                        <Th>Accuracy</Th>
+                        <Th>Info</Th>
+                        <Th>Action</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -36,9 +39,9 @@ export const ResultView = () => {
                             <Td>{result.playerName}</Td>
                             <Td>{result.score}</Td>
                             <Td>{result.date}</Td>
-                            <Td>{result.date}</Td>
+                            <Td>{result.accuracy}</Td>
                             {console.log(`${result.playerName}: ${result.id}`)}
-                            <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}>
+                            <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details
                             </Button>
                             </Td>
                             <Td><Button onClick={() => deleteResultFromList(result.id)}>

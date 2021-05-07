@@ -43,7 +43,7 @@ const GameDataProvider = ({children}) => {
             score,
             date,
             gameboard: gameData.board,
-            clicked
+            accuracy: (score/clicked)
         })))
             .catch(err => console.error(err.message));
     };
