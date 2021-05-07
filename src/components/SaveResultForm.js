@@ -46,6 +46,7 @@ const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
                         colorScheme="messenger"
                         variant="solid"
                         onClick={handleSubmit}
+
                     >
                         Submit
                     </Button>

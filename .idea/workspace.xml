@@ -4,9 +4,8 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,14 +93,7 @@
       <workItem from="1617565266362" duration="19702000" />
       <workItem from="1618737581726" duration="13598000" />
       <workItem from="1618956051217" duration="12493000" />
-      <workItem from="1619561980008" duration="36410000" />
-    </task>
-    <task id="LOCAL-00057" summary="Changes in apllication structure">
-      <created>1616538057905</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1616538057906</updated>
+      <workItem from="1619561980008" duration="37133000" />
     </task>
     <task id="LOCAL-00058" summary="Added very simple local storage">
       <created>1616541018099</created>
@@ -439,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620253723543</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Trying to replace event listener by overlay">
+      <created>1620424536778</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1620424536779</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +460,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added view of chosen result" />
     <MESSAGE value="Added hook useHistory" />
     <MESSAGE value="Added page for player's game details (not finished)" />
     <MESSAGE value="Work with results board" />
@@ -486,6 +484,7 @@
     <MESSAGE value="Changing way to measure accuracy (after time's up)" />
     <MESSAGE value="Changed in window event listener. And it works!" />
     <MESSAGE value="Added remove close on overlay modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added remove close on overlay modal" />
+    <MESSAGE value="Trying to replace event listener by overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to replace event listener by overlay" />
   </component>
 </project>

@@ -20,7 +20,9 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
             <ModalContent>
                 <ModalHeader
                     align="center"
-                    justify="space-around">
+                    justify="space-around"
+                    zIndex="3"
+                >
                     Time's up!
                 </ModalHeader>
                 <Center>
