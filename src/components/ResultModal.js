@@ -21,7 +21,6 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                 <ModalHeader
                     align="center"
                     justify="space-around"
-                    zIndex="3"
                 >
                     Time's up!
                 </ModalHeader>

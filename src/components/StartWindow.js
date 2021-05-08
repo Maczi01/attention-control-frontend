@@ -18,6 +18,7 @@ const StartWindow = ({isOpen, onClose, handleStart}) => (
             opacity="0.5"
             // filter="alpha(opacity=65)"
             // filter="opacity(0.5)"
+            backgroundColor="rgba(0,17,0,0.9)"
             filter="blur(20px)"
         />
         <ModalContent>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
 import {Link} from "react-router-dom";
 import {GiConfirmed} from "react-icons/gi";
+import {ModalHeader} from "@chakra-ui/modal";
 
 const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
 
@@ -26,6 +27,7 @@ const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
             <Flex
                 align="center"
                 justify="space-around"
+                zIndex="-5"
 
             >
                 {submitted ?
@@ -35,7 +37,6 @@ const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
                         leftIcon={<GiConfirmed/>}
                         colorScheme="green"
                         variant="solid"
-                        // onClick={handleSubmit}
                     >
                         Submited
                     </Button>
@@ -46,7 +47,6 @@ const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
                         colorScheme="messenger"
                         variant="solid"
                         onClick={handleSubmit}
-
                     >
                         Submit
                     </Button>
