@@ -5,8 +5,16 @@ import GameCounter from "../components/GameCounter";
 import {Flex, Spinner, Center, Box} from "@chakra-ui/react"
 
 export const BoardView = () => {
-        const {gameData, checkGivenNumber, result, getResults, error, isPending} = useContext(GameDataContext);
-        const {board, endOfGameTime} = gameData;
+        const {getResults, error, isPending} = useContext(GameDataContext);
+        const checkGivenNumber = () => true;
+        const result = 5;
+        const endOfGameTime = 5;
+        const board = [93, 67, 59, 86, 54, 22, 37, 47, 39, 83, 18, 73, 55, 23, 97, 42, 44, 80, 12, 43, 36, 81, 26, 25, 98, 77, 96, 49,
+            19, 14, 27, 72, 8, 11, 88, 64, 30, 10, 17, 58, 84, 52, 33, 21, 61, 48, 20, 71, 3, 66, 75, 76, 85, 45,
+            41, 16, 9, 29, 70, 60, 87, 15, 78, 74, 90, 91, 68, 4, 32, 40, 13, 82, 6, 34, 0,
+            56, 63, 5, 94, 57, 89, 31, 24, 51, 53, 92, 65, 35, 79, 69, 50, 95, 2, 7, 38, 1, 46, 99, 28, 62
+        ]
+
         const [clicked, setClicked] = useState(0);
         useEffect(() => {
                 window.addEventListener("keydown", removeFindOption)
@@ -44,7 +52,6 @@ export const BoardView = () => {
                                      result={result}
                                      getResults={getResults}
                                      clicked={clicked}
-                            // stopCheckingAccuracy={stopCheckingAccuracy}
                         />
                         {error && <p> {error} </p>}
                         {isPending && <Spinner/>}

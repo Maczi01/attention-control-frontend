@@ -28,24 +28,22 @@ const GameDataProvider = ({children}) => {
     };
 
     const getResults = async () => {
-        return await FetchData.getData(url.localGameResultEndpoint, HttpMethod.GET)
-            .then(data => setResult(data))
-            .catch(err => console.error(err.message));
+        return true
     };
 
     const saveUserInDatabase = async (playerName, score, clicked) => {
         console.log({playerName, score, clicked});
-        const date = new Date();
-        const id = Math.random();
-        await FetchData.getData(url.localToGetResultBoard, HttpMethod.POST, JSON.stringify(({
-            id,
-            playerName,
-            score,
-            date,
-            gameboard: gameData.board,
-            accuracy: (score/clicked)
-        })))
-            .catch(err => console.error(err.message));
+        // const date = new Date();
+        // const id = Math.random();
+        // await FetchData.getData(url.localToGetResultBoard, HttpMethod.POST, JSON.stringify(({
+        //     id,
+        //     playerName,
+        //     score,
+        //     date,
+        //     gameboard: gameData.board,
+        //     accuracy: (score/clicked)
+        // })))
+        //     .catch(err => console.error(err.message));
     };
 
     const getResultsList = async () => {
