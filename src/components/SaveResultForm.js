@@ -4,17 +4,18 @@ import {Link} from "react-router-dom";
 import {GiConfirmed} from "react-icons/gi";
 import {ModalHeader} from "@chakra-ui/modal";
 
-const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
+const SaveResultForm = ({result, saveUserInDatabase, clicked}) => {
 
     const [name, setName] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        saveUserInDatabase(name, result, clicked)
-        setName('')
+        event.preventDefault();
+        event.stopPropagation();
+        saveUserInDatabase(name, result, clicked);
+        setName('');
         setSubmitted(true);
-    }
+    };
     return (
         <FormControl id="name">
             {/*<FormLabel>Your name</FormLabel>*/}
@@ -56,11 +57,11 @@ const SaveResultForm = ({result, saveUserInDatabase,clicked}) => {
                         m="10px"
                         w="150px"
                         colorScheme="yellow"
-                        >
-                    {/*><Link*/}
-                    {/*    // to="/results">*/}
+                    >
+                        {/*><Link*/}
+                        {/*    // to="/results">*/}
                         Results
-                    {/*</Link>*/}
+                        {/*</Link>*/}
                     </Button>
                 </Link>
 
