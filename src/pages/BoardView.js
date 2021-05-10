@@ -19,7 +19,6 @@ export const BoardView = () => {
             setClicked(prev => prev + 1);
         }
 
-
         const removeFindOption = (e) => {
             if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
                 e.preventDefault();

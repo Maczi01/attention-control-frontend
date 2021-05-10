@@ -6,6 +6,7 @@ import {Button, Center, Flex} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
 import {BsArrowCounterclockwise} from "react-icons/bs"
+import {BiSave} from "react-icons/bi"
 import CountUp from 'react-countup';
 
 const ResultModal = ({isOpen, result, handleStart, clicked}) => {
@@ -39,6 +40,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                         <Flex
                             align="normal"
                             justify="space-around"
+                            width="80%"
                         >
                             <Link to="/">
                                 <Button
@@ -46,7 +48,6 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                                     m="3px"
                                     colorScheme="red"
                                     leftIcon={<BsArrowCounterclockwise/>}
-
                                     onClick={handleStart}>
                                     Play again
                                 </Button>
@@ -56,6 +57,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                                 m="3px"
                                 variant="solid"
                                 colorScheme="blue"
+                                leftIcon={<BiSave/>}
                                 onClick={() => setShowMailInput(prev => !prev)}
                             >
                                 Save result

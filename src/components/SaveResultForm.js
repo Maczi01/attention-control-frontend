@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import {Button, Flex, FormControl, FormLabel, Input} from "@chakra-ui/react"
+import {Button, Flex, FormControl, FormLabel, Input, Box} from "@chakra-ui/react"
 import {Link} from "react-router-dom";
-import {GiConfirmed} from "react-icons/gi";
+import {GiConfirmed, GiTrophyCup} from "react-icons/gi";
 import {ModalHeader} from "@chakra-ui/modal";
+import {BiSend} from "react-icons/bi"
 
 const SaveResultForm = ({result, saveUserInDatabase, clicked}) => {
 
@@ -17,58 +18,63 @@ const SaveResultForm = ({result, saveUserInDatabase, clicked}) => {
         setSubmitted(true);
     };
     return (
-        <FormControl id="name">
-            {/*<FormLabel>Your name</FormLabel>*/}
-            <Input type="text"
-                   value={name}
-                   onChange={(event) => setName(event.target.value)}
-                   placeholder="Add your name..."
-                   disabled={submitted}
-            />
-            <Flex
-                align="center"
-                justify="space-around"
-                zIndex="-5"
 
-            >
-                {submitted ?
-                    <Button
-                        m="10px"
-                        w="150px"
-                        leftIcon={<GiConfirmed/>}
-                        colorScheme="green"
-                        variant="solid"
-                    >
-                        Submited
-                    </Button>
-                    :
-                    <Button
-                        m="10px"
-                        w="150px"
-                        colorScheme="messenger"
-                        variant="solid"
-                        onClick={handleSubmit}
-                    >
-                        Submit
-                    </Button>
-                }
-                <Link to="/results">
-                    <Button
-                        m="10px"
-                        w="150px"
-                        colorScheme="yellow"
-                    >
-                        {/*><Link*/}
-                        {/*    // to="/results">*/}
-                        Results
-                        {/*</Link>*/}
-                    </Button>
-                </Link>
+       <Box
+       >
+           <FormControl id="name">
+               {/*<FormLabel>Your name</FormLabel>*/}
+               <Input type="text"
+                      value={name}
+                      focusBorderColor="lime"
+                      onChange={(event) => setName(event.target.value)}
+                      placeholder="Add your name..."
+                      disabled={submitted}
+               />
+               <Flex
+                   align="center"
+                   justify="space-around"
+               >
+                   {submitted ?
+                       <Button
+                           m="10px"
+                           w="150px"
+                           leftIcon={<GiConfirmed/>}
+                           colorScheme="green"
+                           variant="solid"
+                       >
+                           Submited
+                       </Button>
+                       :
+                       <Button
+                           m="10px"
+                           w="150px"
+                           colorScheme="messenger"
+                           variant="solid"
+                           leftIcon={<BiSend/>}
+                           onClick={handleSubmit}
+                       >
+                           Submit
+                       </Button>
+                   }
+                   <Link to="/results">
+                       <Button
+                           m="10px"
+                           w="150px"
+                           leftIcon={<GiTrophyCup/>}
+                           colorScheme="yellow"
+                       >
+                           {/*><Link*/}
+                           {/*    // to="/results">*/}
+                           Results
+                           {/*</Link>*/}
+                       </Button>
+                   </Link>
 
-            </Flex>
+               </Flex>
 
 
-        </FormControl>
+           </FormControl>
+       </Box>
     )
 
 }
