@@ -21,6 +21,7 @@ export const BoardView = () => {
         );
         const countNumberOfClicks = () => {
             setClicked(prev => prev + 1);
+            console.log("Clicked in overlay!")
         }
 
         const removeFindOption = (e) => {
@@ -45,9 +46,6 @@ export const BoardView = () => {
                                      result={result}
                                      getResults={getResults}
                                      clicked={clicked}
-                                     // isOpen={isOpen}
-                                     // onOpen={onOpen}
-                                     // onClose={onClose}
                         />
                         {error && <p> {error} </p>}
                         {isPending && <Spinner/>}

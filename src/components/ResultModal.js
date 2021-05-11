@@ -27,8 +27,8 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-                        <p> Your result is: {result} </p>
-                        <p>Accuracy: {(result / clicked) * 100}%</p>
+                        <p> Your result is: <CountUp delay={1} end={result} duration={1.5}/></p>
+                        <p>Accuracy:<CountUp delay={1} end={(result / clicked) * 100} duration={1.5}/> %</p>
                     </Box>
                 </Center>
                 <ModalBody>
