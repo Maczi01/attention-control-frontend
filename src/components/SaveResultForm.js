@@ -18,65 +18,55 @@ const SaveResultForm = ({result, saveUserInDatabase, clicked}) => {
         setSubmitted(true);
     };
     return (
-
-       <Box
-       >
-           <FormControl id="name">
-               {/*<FormLabel>Your name</FormLabel>*/}
-               <Input type="text"
-                      value={name}
-                      focusBorderColor="lime"
-                      onChange={(event) => setName(event.target.value)}
-                      placeholder="Add your name..."
-                      disabled={submitted}
-               />
-               <Flex
-                   align="center"
-                   justify="space-around"
-               >
-                   {submitted ?
-                       <Button
-                           m="10px"
-                           w="150px"
-                           leftIcon={<GiConfirmed/>}
-                           colorScheme="green"
-                           variant="solid"
-                       >
-                           Submited
-                       </Button>
-                       :
-                       <Button
-                           m="10px"
-                           w="150px"
-                           colorScheme="messenger"
-                           variant="solid"
-                           leftIcon={<BiSend/>}
-                           onClick={handleSubmit}
-                       >
-                           Submit
-                       </Button>
-                   }
-                   <Link to="/results">
-                       <Button
-                           m="10px"
-                           w="150px"
-                           leftIcon={<GiTrophyCup/>}
-                           colorScheme="yellow"
-                       >
-                           {/*><Link*/}
-                           {/*    // to="/results">*/}
-                           Results
-                           {/*</Link>*/}
-                       </Button>
-                   </Link>
-
-               </Flex>
-
-
-           </FormControl>
-       </Box>
+        <Box>
+            <FormControl id="name">
+                <Input type="text"
+                       value={name}
+                       focusBorderColor="lime"
+                       onChange={(event) => setName(event.target.value)}
+                       placeholder="Add your name..."
+                       disabled={submitted}
+                />
+                <Flex
+                    align="center"
+                    justify="space-around"
+                >
+                    {submitted ?
+                        <Button
+                            m="10px"
+                            w="150px"
+                            leftIcon={<GiConfirmed/>}
+                            colorScheme="green"
+                            variant="solid"
+                        >
+                            Submited
+                        </Button>
+                        :
+                        <Button
+                            m="10px"
+                            w="150px"
+                            colorScheme="messenger"
+                            variant="solid"
+                            leftIcon={<BiSend/>}
+                            onClick={handleSubmit}
+                        >
+                            Submit
+                        </Button>
+                    }
+                    <Link to="/results">
+                        <Button
+                            m="10px"
+                            w="150px"
+                            leftIcon={<GiTrophyCup/>}
+                            colorScheme="yellow"
+                        >
+                            Results
+                        </Button>
+                    </Link>
+                </Flex>
+            </FormControl>
+        </Box>
     )
-
 }
 
 export default SaveResultForm;

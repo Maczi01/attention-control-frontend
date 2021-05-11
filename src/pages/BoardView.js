@@ -3,11 +3,15 @@ import {GameDataContext} from "../context/GameDataContext";
 import GameBoard from "../components/GameBoard";
 import GameCounter from "../components/GameCounter";
 import {Flex, Spinner, Center, Box} from "@chakra-ui/react"
+import {ModalOverlay} from "@chakra-ui/modal";
+import {useDisclosure} from "@chakra-ui/hooks";
 
 export const BoardView = () => {
         const {gameData, checkGivenNumber, result, getResults, error, isPending} = useContext(GameDataContext);
         const {board, endOfGameTime} = gameData;
         const [clicked, setClicked] = useState(0);
+        // const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+
         useEffect(() => {
                 window.addEventListener("keydown", removeFindOption)
                 return (() => {
@@ -28,7 +32,6 @@ export const BoardView = () => {
         return (
             <Center>
                 <Box onClick={countNumberOfClicks}
-                     backgroundColor="rgba(0,0,0,0.0)"
                      zIndex="1"
                 >
                     <Flex direction="column"
@@ -42,7 +45,9 @@ export const BoardView = () => {
                                      result={result}
                                      getResults={getResults}
                                      clicked={clicked}
-                            // stopCheckingAccuracy={stopCheckingAccuracy}
+                                     // isOpen={isOpen}
+                                     // onOpen={onOpen}
+                                     // onClose={onClose}
                         />
                         {error && <p> {error} </p>}
                         {isPending && <Spinner/>}

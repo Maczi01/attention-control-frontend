@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import StartWindow from "./StartWindow";
 import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
+import {Box} from "@chakra-ui/layout";
 
 const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
     const [elapsedTime, setElapsedTime] = useState(endOfGameTime);
@@ -44,7 +45,9 @@ const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
     };
 
     return (
-        <>
+        <Box
+            filter="blur(20px)"
+        >
             <StartWindow
                 isOpen={isOpen}
                 onClose={onClose}
@@ -57,7 +60,7 @@ const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
                 clicked={clicked}
                 handleStart={handleStart}
             />
-        </>
+        </Box>
     )
 }
 

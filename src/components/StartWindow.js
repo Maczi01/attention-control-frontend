@@ -12,19 +12,14 @@ import {Box} from "@chakra-ui/layout";
 import {Button} from "@chakra-ui/button";
 
 const StartWindow = ({isOpen, onClose, handleStart}) => (
-
     <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
         <ModalOverlay
-            opacity="0.5"
-            // filter="alpha(opacity=65)"
-            // filter="opacity(0.5)"
-            backgroundColor="rgba(0,17,0,0.9)"
-            filter="blur(20px)"
+            style={{backdropFilter: 'blur(4px)'}}
         />
         <ModalContent>
             <ModalHeader>Attention control</ModalHeader>
             <Box p='10px' m='10px'>
-                Your goal is to click numbers from zero to 99. You have 90 seconds for that. Ready?            </Box>
+                Your goal is to click numbers from zero to 99. You have 90 seconds for that. Ready? </Box>
             <ModalCloseButton/>
             <ModalBody>
             </ModalBody>
