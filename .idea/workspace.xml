@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,14 +92,8 @@
       <workItem from="1618956051217" duration="12493000" />
       <workItem from="1619561980008" duration="38225000" />
       <workItem from="1620499834884" duration="883000" />
-      <workItem from="1620581144714" duration="16541000" />
-    </task>
-    <task id="LOCAL-00061" summary="Added method to save result (in progress)">
-      <created>1616884455260</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1616884455261</updated>
+      <workItem from="1620581144714" duration="17687000" />
+      <workItem from="1620830187631" duration="1782000" />
     </task>
     <task id="LOCAL-00062" summary="Added method 'saveToDatabase'">
       <created>1616970830136</created>
@@ -441,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620722023531</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Added blind Number and React count">
+      <created>1620730709705</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1620730709705</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +460,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work on useEffect" />
     <MESSAGE value="Changing in player data and get list" />
     <MESSAGE value="Errors in getting results" />
     <MESSAGE value="Try to fix get result" />
@@ -488,6 +484,7 @@
     <MESSAGE value="Added overlay" />
     <MESSAGE value="Added event.stopPropagation to avoid count clicks after times up. Works!" />
     <MESSAGE value="Changed in modal background - added filter with blur." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed in modal background - added filter with blur." />
+    <MESSAGE value="Added blind Number and React count" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added blind Number and React count" />
   </component>
 </project>
