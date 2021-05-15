@@ -33,17 +33,17 @@ const GameDataProvider = ({children}) => {
             .catch(err => console.error(err.message));
     };
 
-    const saveUserInDatabase = async (playerName, score, clicked) => {
-        console.log({playerName, score, clicked});
+    const saveUserInDatabase = async (playerName, score, accuracy) => {
+        console.log('here is gameboard');
+        console.log(gameData);
         const date = new Date();
         const id = Math.random();
         await FetchData.getData(url.localToGetResultBoard, HttpMethod.POST, JSON.stringify(({
-            id,
             playerName,
             score,
             date,
-            gameboard: gameData.board,
-            accuracy: (score/clicked)
+            gameboard:gameData.board,
+            accuracy
         })))
             .catch(err => console.error(err.message));
     };

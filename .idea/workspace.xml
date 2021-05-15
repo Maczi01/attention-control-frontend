@@ -4,11 +4,10 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,14 +107,7 @@
       <workItem from="1619561980008" duration="38225000" />
       <workItem from="1620499834884" duration="883000" />
       <workItem from="1620581144714" duration="17687000" />
-      <workItem from="1620830187631" duration="5807000" />
-    </task>
-    <task id="LOCAL-00063" summary="Work with saving user into database">
-      <created>1616971671805</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1616971671806</updated>
+      <workItem from="1620830187631" duration="10212000" />
     </task>
     <task id="LOCAL-00064" summary="Work with post user with result">
       <created>1617049252775</created>
@@ -453,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620925234924</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Changes connected to accuracy, delete unused methods">
+      <created>1621077863633</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1621077863664</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +474,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Errors in getting results" />
     <MESSAGE value="Try to fix get result" />
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Changes in css for button" />
@@ -500,6 +498,7 @@
     <MESSAGE value="Changed in modal background - added filter with blur." />
     <MESSAGE value="Added blind Number and React count" />
     <MESSAGE value="Changes in result details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in result details" />
+    <MESSAGE value="Changes connected to accuracy, delete unused methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes connected to accuracy, delete unused methods" />
   </component>
 </project>
