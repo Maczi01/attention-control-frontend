@@ -6,19 +6,23 @@ import GameDataProvider from "./context/GameDataContext";
 import {SaveResult} from "./pages/SaveResult";
 import {ResultView} from "./pages/ResultView";
 import {ResultDetailsView} from "./pages/ResultDetailsView";
+import {ChakraProvider} from "@chakra-ui/react";
+import {theme} from "./theme/theme";
 
 const App = () => (
     <>
         <Router>
-            <Switch>
-                <GameDataProvider>
-                    <Route exact path="/" component={MainView}/>
-                    <Route path="/game" component={BoardView}/>
-                    <Route path="/save" component={SaveResult}/>
-                    <Route path="/results" component={ResultView}/>
-                    <Route path="/playersresult/:id" component={ResultDetailsView}/>
-                </GameDataProvider>
-            </Switch>
+            <ChakraProvider theme={theme}>
+                <Switch>
+                    <GameDataProvider>
+                        <Route exact path="/" component={MainView}/>
+                        <Route path="/game" component={BoardView}/>
+                        <Route path="/save" component={SaveResult}/>
+                        <Route path="/results" component={ResultView}/>
+                        <Route path="/playersresult/:id" component={ResultDetailsView}/>
+                    </GameDataProvider>
+                </Switch>
+            </ChakraProvider>
         </Router>
     </>
 );
