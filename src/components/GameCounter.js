@@ -4,7 +4,7 @@ import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
 import {Box} from "@chakra-ui/layout";
 
-const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
+const GameCounter = ({endOfGameTime, getResults, result, clicked, gameBoard}) => {
     const [elapsedTime, setElapsedTime] = useState(endOfGameTime);
     const [isActive, setIsActive] = useState(false);
 
@@ -26,9 +26,7 @@ const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
                 clearInterval(countRef.current);
                 setIsActive(false);
                 onOpenReportModal();
-                // window.removeEventListener("click", countNumberOfClicks())
             }
-            // return () => {window.removeEventListener("click", countNumberOfClicks)}
         }, [elapsedTime]
     );
 
@@ -58,6 +56,7 @@ const GameCounter = ({endOfGameTime, getResults, result, clicked}) => {
                 isOpen={isOpenReportModal}
                 result={result}
                 clicked={clicked}
+                gameBoard={gameBoard}
                 handleStart={handleStart}
             />
         </Box>

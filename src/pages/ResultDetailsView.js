@@ -9,7 +9,7 @@ export const ResultDetailsView = ({match}) => {
     const {getPlayersResult, playersResult} = useContext(GameDataContext);
     useEffect(() => {
         getPlayersResult(selectedId)
-    },[selectedId]);
+    }, [selectedId]);
 
     console.log(playersResult)
 

@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +36,12 @@
       </set>
     </option>
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1oUXbtFZDiDPNoBCBpr1mgzcp2T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -40,22 +52,25 @@
     <property name="js.last.introduce.type" value="CONST" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/easyfit/easyfit-ui" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\context" />
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,14 +108,7 @@
       <workItem from="1619561980008" duration="38225000" />
       <workItem from="1620499834884" duration="883000" />
       <workItem from="1620581144714" duration="17687000" />
-      <workItem from="1620830187631" duration="1782000" />
-    </task>
-    <task id="LOCAL-00062" summary="Added method 'saveToDatabase'">
-      <created>1616970830136</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1616970830447</updated>
+      <workItem from="1620830187631" duration="5807000" />
     </task>
     <task id="LOCAL-00063" summary="Work with saving user into database">
       <created>1616971671805</created>
@@ -438,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620730709705</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Changes in result details">
+      <created>1620925234917</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1620925234924</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +475,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Changing in player data and get list" />
     <MESSAGE value="Errors in getting results" />
     <MESSAGE value="Try to fix get result" />
     <MESSAGE value="Remove unused imports" />
@@ -485,6 +499,7 @@
     <MESSAGE value="Added event.stopPropagation to avoid count clicks after times up. Works!" />
     <MESSAGE value="Changed in modal background - added filter with blur." />
     <MESSAGE value="Added blind Number and React count" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added blind Number and React count" />
+    <MESSAGE value="Changes in result details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in result details" />
   </component>
 </project>

@@ -20,6 +20,15 @@ export const ResultView = () => {
             mx="auto"
         >
             <Center><h2>Results</h2></Center>
+            <Center>
+                <Flex justify="space-between">
+                    <Button size="xs">Best results</Button>
+                    <Button size="xs">Best accuracy</Button>
+                    <Button size="xs">Last results</Button>
+                    <Button size="xs">Worst results</Button>
+                </Flex>
+            </Center>
+
             <Table variant="simple">
                 <Thead>
                     <Tr>

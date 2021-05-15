@@ -66,10 +66,6 @@ const GameDataProvider = ({children}) => {
         getResultsList();
     };
 
-    // const countNumberOfClicks = () => {
-    //     setClicked(previous => previous +1);
-    // }
-
 
     const value = {
         gameData,

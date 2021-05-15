@@ -9,11 +9,11 @@ import {BsArrowCounterclockwise} from "react-icons/bs"
 import {BiSave} from "react-icons/bi"
 import CountUp from 'react-countup';
 
-const ResultModal = ({isOpen, result, handleStart, clicked}) => {
+const ResultModal = ({isOpen, result, handleStart, clicked, board}) => {
 
     const [showMailInput, setShowMailInput] = useState(false);
     const {saveUserInDatabase} = useContext(GameDataContext);
-
+    const accuracy = (result / clicked) * 100
 
     return (
         <Modal isOpen={isOpen}>
@@ -28,7 +28,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                 <Center>
                     <Box p='10px' m='10px'>
                         <p> Your result is: <CountUp delay={1} end={result} duration={1.5}/></p>
-                        <p>Accuracy:<CountUp delay={1} end={(result / clicked) * 100} duration={1.5}/> %</p>
+                        <p>Accuracy:<CountUp delay={1} end={accuracy} duration={1.5}/> %</p>
                     </Box>
                 </Center>
                 <ModalBody>
@@ -38,9 +38,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                         direction="column"
                     >
                         <Flex
-                            align="normal"
-                            justify="space-around"
-                            width="80%"
+                            align="normal" justify="space-around" width="80%"
                         >
                             <Link to="/">
                                 <Button
@@ -65,7 +63,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked}) => {
                         </Flex>
                         <Flex m="15px">
                             {showMailInput &&
-                            <SaveResultForm result={result} clicked={clicked} saveUserInDatabase={saveUserInDatabase}/>}
+                            <SaveResultForm result={result} accuracy={accuracy} gameBoard={board} saveUserInDatabase={saveUserInDatabase}/>}
                         </Flex>
                     </Flex>
                 </ModalBody>

@@ -46,6 +46,7 @@ export const BoardView = () => {
                                      result={result}
                                      getResults={getResults}
                                      clicked={clicked}
+                                     gameBoard={board}
                         />
                         {error && <p> {error} </p>}
                         {isPending && <Spinner/>}
