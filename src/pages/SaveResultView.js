@@ -3,7 +3,7 @@ import React, {useContext} from "react";
 import {GameDataContext} from "../context/GameDataContext";
 import SaveResultModal from "../components/SaveResultForm";
 
-export const SaveResult = () => {
+export const SaveResultView = () => {
 
     const {result, saveUserInDatabase} = useContext(GameDataContext);
 

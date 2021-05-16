@@ -4,10 +4,8 @@
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlindNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlindNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SaveResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResultView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -64,12 +62,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\components" />
-      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\context" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\pages" />
+      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\components" />
+      <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\context" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,14 +107,8 @@
       <workItem from="1620499834884" duration="883000" />
       <workItem from="1620581144714" duration="17687000" />
       <workItem from="1620830187631" duration="10853000" />
-      <workItem from="1621108051774" duration="3851000" />
-    </task>
-    <task id="LOCAL-00065" summary="Fight with fetch data">
-      <created>1617055972004</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1617055972007</updated>
+      <workItem from="1621108051774" duration="4288000" />
+      <workItem from="1621160762313" duration="1905000" />
     </task>
     <task id="LOCAL-00066" summary="Working save user to database (first version)">
       <created>1617059552747</created>
@@ -453,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621100805956</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Added spring security">
+      <created>1621121763582</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1621121763589</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +475,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Changes in css for button" />
     <MESSAGE value="Try to fix ResultsDetailsView" />
     <MESSAGE value="Players details page works ok." />
@@ -500,6 +499,7 @@
     <MESSAGE value="Changes in result details" />
     <MESSAGE value="Changes connected to accuracy, delete unused methods" />
     <MESSAGE value="Changes in add player to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in add player to database" />
+    <MESSAGE value="Added spring security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spring security" />
   </component>
 </project>
