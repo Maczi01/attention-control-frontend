@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,14 +107,11 @@
       <workItem from="1620581144714" duration="17687000" />
       <workItem from="1620830187631" duration="10853000" />
       <workItem from="1621108051774" duration="4288000" />
-      <workItem from="1621160762313" duration="2808000" />
-    </task>
-    <task id="LOCAL-00067" summary="Added chakra-ui table (simple)">
-      <created>1617659740221</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1617659740226</updated>
+      <workItem from="1621160762313" duration="3658000" />
+      <workItem from="1621174590016" duration="1716000" />
+      <workItem from="1621202182703" duration="543000" />
+      <workItem from="1621285710757" duration="2652000" />
+      <workItem from="1621352586558" duration="822000" />
     </task>
     <task id="LOCAL-00068" summary="Changed table (map result board)">
       <created>1617748085479</created>
@@ -450,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621163326947</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Added login page and admin page">
+      <created>1621165294426</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1621165294427</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +478,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Try to fix ResultsDetailsView" />
     <MESSAGE value="Players details page works ok." />
     <MESSAGE value="Refactor in Context" />
     <MESSAGE value="Updated Results Form" />
@@ -497,6 +502,7 @@
     <MESSAGE value="Changes in add player to database" />
     <MESSAGE value="Added spring security" />
     <MESSAGE value="Added blind number no 2 and simple login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added blind number no 2 and simple login form" />
+    <MESSAGE value="Added login page and admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login page and admin page" />
   </component>
 </project>
