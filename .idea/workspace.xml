@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,14 +111,7 @@
       <workItem from="1621174590016" duration="1716000" />
       <workItem from="1621202182703" duration="543000" />
       <workItem from="1621285710757" duration="2652000" />
-      <workItem from="1621352586558" duration="2078000" />
-    </task>
-    <task id="LOCAL-00069" summary="Changed context(get results)">
-      <created>1617830571651</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1617830571652</updated>
+      <workItem from="1621352586558" duration="4804000" />
     </task>
     <task id="LOCAL-00070" summary="Working version (TODO: add unique key). Fixed Post user, get score, get scoreboard.">
       <created>1617834481946</created>
@@ -457,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621552451368</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Changes in board view and in login">
+      <created>1621595359781</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1621595359806</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +478,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactor in Context" />
     <MESSAGE value="Updated Results Form" />
     <MESSAGE value="Optimize import in Results view" />
     <MESSAGE value="Optimize import in Results Details view" />
@@ -504,6 +502,7 @@
     <MESSAGE value="Added blind number no 2 and simple login form" />
     <MESSAGE value="Added login page and admin page" />
     <MESSAGE value="Added new admin view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new admin view" />
+    <MESSAGE value="Changes in board view and in login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in board view and in login" />
   </component>
 </project>
