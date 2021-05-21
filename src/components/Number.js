@@ -10,7 +10,7 @@ const Number = ({number, checkGivenNumber}) => {
         <Button
             disabled={active}
             size="md"
-            colorScheme="blue"
+            colorScheme="text"
             height="48px"
             width="48px"
             border="2px"

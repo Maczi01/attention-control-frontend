@@ -19,7 +19,7 @@ export const AdminView = () => {
             backgroundColor="#ffd803"
             mx="auto"
         >
-            <Center><h2>Results</h2></Center>
+            <Center><h2>U are Admin</h2></Center>
             <Center>
                 <Flex justify="space-between">
                     <Button size="xs">Best results</Button>

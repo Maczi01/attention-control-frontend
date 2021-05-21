@@ -39,7 +39,7 @@ export const BoardView = () => {
                           align="center"
                           justify="space-around"
                           width="80%"
-                          backgroundColor="#ffd803"
+                          backgroundColor="primary"
                           mx="auto"
                     >
                         <GameCounter endOfGameTime={endOfGameTime}
