@@ -4,8 +4,6 @@ import {Button} from "@chakra-ui/react"
 const Number = ({number, checkGivenNumber}) => {
 
     const [active, setActive] = useState(false);
-// TODO
-//    Zrobić tu HOC
     return (
         <Button
             disabled={active}

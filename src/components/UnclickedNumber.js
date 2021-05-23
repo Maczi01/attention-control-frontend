@@ -1,13 +1,13 @@
 import React from "react";
 import {Container, Center,Box} from "@chakra-ui/react"
 
-const BlindNubmer = ({number}) => (
+const UnclickedNubmer = ({number}) => (
     <Box
         size="md"
         height="48px"
         width="48px"
         border="2px"
-        backgroundColor="#0BC5EA"
+        backgroundColor="gray"
         borderColor="yellow.500"
         borderRadius="15%"
         padding="0.6rem"
@@ -19,4 +19,4 @@ const BlindNubmer = ({number}) => (
 )
 
 
-export default BlindNubmer;
+export default UnclickedNubmer;

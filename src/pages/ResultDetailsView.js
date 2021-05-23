@@ -25,10 +25,10 @@ export const ResultDetailsView = ({match}) => {
             <Grid templateColumns="repeat(10, 1fr)" gap="1%" w="600px" m="5px">
                 {playersResult.gameboard && playersResult.gameboard.map((number, indexNummber) =>
                     number > playersResult.score ?
-                    <BlindNubmer
+                    <ClickedNubmer
                         number={number}
                         key={indexNummber}/> :
-                        <BlindNubmer2
+                        <UnclickedNubmer
                             number={number}
                             key={indexNummber}/>
                 )}

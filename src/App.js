@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Switch, PrivateRoute} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {MainView} from "./pages/MainView";
 import {BoardView} from "./pages/BoardView";
 import GameDataProvider from "./context/GameDataContext";
@@ -10,6 +10,7 @@ import {ChakraProvider} from "@chakra-ui/react";
 import {theme} from "./theme/theme";
 import {LoginView} from "./pages/LoginView";
 import {AdminView} from "./pages/AdminView";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => (
     <>
@@ -23,7 +24,7 @@ const App = () => (
                         <Route path="/results" component={ResultView}/>
                         <Route path="/playersresult/:id" component={ResultDetailsView}/>
                         <Route path="/login" component={LoginView}/>
-                        <PrivateRoute path="/admin" component={AdminView}/>
+                        <Route path="/admin" component={AdminView}/>
                     </GameDataProvider>
                 </Switch>
             </ChakraProvider>
