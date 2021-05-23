@@ -1,8 +1,8 @@
-import {Flex, Grid, Box} from "@chakra-ui/react"
+import {Flex, Grid} from "@chakra-ui/react"
 import React, {useContext, useEffect} from "react";
 import {GameDataContext} from "../context/GameDataContext";
-import BlindNubmer from "../components/BlindNumber";
-import BlindNubmer2 from "../components/BlindNumber2";
+import UnclickedNubmer from "../components/UnclickedNumber";
+import ClickedNubmer from "../components/ClickedNumber";
 
 export const ResultDetailsView = ({match}) => {
     const selectedId = match.params.id
@@ -25,9 +25,9 @@ export const ResultDetailsView = ({match}) => {
             <Grid templateColumns="repeat(10, 1fr)" gap="1%" w="600px" m="5px">
                 {playersResult.gameboard && playersResult.gameboard.map((number, indexNummber) =>
                     number > playersResult.score ?
-                    <ClickedNubmer
-                        number={number}
-                        key={indexNummber}/> :
+                        <ClickedNubmer
+                            number={number}
+                            key={indexNummber}/> :
                         <UnclickedNubmer
                             number={number}
                             key={indexNummber}/>

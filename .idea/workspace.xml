@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/LoginView2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlindNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ClickedNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlindNumber2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UnclickedNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/urls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LoginView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,14 +113,8 @@
       <workItem from="1621174590016" duration="1716000" />
       <workItem from="1621202182703" duration="543000" />
       <workItem from="1621285710757" duration="2652000" />
-      <workItem from="1621352586558" duration="15632000" />
-    </task>
-    <task id="LOCAL-00071" summary="Changed parametrs in saveUserInDatabase method">
-      <created>1617835314037</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1617835314037</updated>
+      <workItem from="1621352586558" duration="18944000" />
+      <workItem from="1621784090314" duration="2498000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>
@@ -462,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621600907870</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Changed to Clicked and Unclicked number in ResultDetailsView">
+      <created>1621769179583</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1621769179586</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +481,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Optimize import in Results view" />
     <MESSAGE value="Optimize import in Results Details view" />
     <MESSAGE value="Changed in chakra ui - save result form" />
     <MESSAGE value="Changed form (texts)" />
@@ -509,6 +505,7 @@
     <MESSAGE value="Added new admin view" />
     <MESSAGE value="Changes in board view and in login" />
     <MESSAGE value="Work on authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on authentication" />
+    <MESSAGE value="Changed to Clicked and Unclicked number in ResultDetailsView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed to Clicked and Unclicked number in ResultDetailsView" />
   </component>
 </project>

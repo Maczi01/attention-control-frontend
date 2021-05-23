@@ -37,10 +37,12 @@ export const BoardView = () => {
                 >
                     <Flex direction="column"
                           align="center"
-                          justify="space-around"
-                          width="80%"
-                          backgroundColor="primary"
+                          // justify="space-around"
+                          // width="80%"
+                          height="100vw"
+                          backgroundColor="tertiary"
                           mx="auto"
+                          px="20px"
                     >
                         <GameCounter endOfGameTime={endOfGameTime}
                                      result={result}

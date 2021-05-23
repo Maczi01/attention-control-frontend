@@ -8,7 +8,7 @@ const Number = ({number, checkGivenNumber}) => {
         <Button
             disabled={active}
             size="md"
-            colorScheme="text"
+            colorScheme="purple"
             height="48px"
             width="48px"
             border="2px"

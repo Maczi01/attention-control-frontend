@@ -3,7 +3,7 @@ import {Grid} from "@chakra-ui/react"
 import Number from "./Number";
 
 const GameBoard = ({board, checkGivenNumber}) => (
-    <Grid templateColumns="repeat(10, 1fr)" gap="5%" w="800px" m="5px">
+    <Grid templateColumns="repeat(10, 1fr)" gap="4%" w="900px" m="5px">
         {board && board.map((number, indexNummber) =>
             <Number
                 checkGivenNumber={checkGivenNumber}
