@@ -7,10 +7,23 @@ import {ModalOverlay} from "@chakra-ui/modal";
 import {useDisclosure} from "@chakra-ui/hooks";
 
 export const BoardView = () => {
-        const {gameData, checkGivenNumber, result, getResults, error, isPending} = useContext(GameDataContext);
-        const {board, endOfGameTime} = gameData;
+        const {gameData, result, getResults, error, isPending, gameTimeInSeconds} = useContext(GameDataContext);
+        // const {gameTime} = gameData;
         const [clicked, setClicked] = useState(0);
-        // const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+        const [currentNumber, setCurrentNumber] = useState(0);
+        const [board, setBoard] = useState([]);
+        console.log(currentNumber)
+        const checkGivenNumber = (number) => {
+            if (number === currentNumber) {
+                setCurrentNumber(c => c + 1);
+                return true;
+            }
+        };
+
+        useEffect(() => {
+            const map = Array(100).fill().map((_, idx) => idx);
+            setBoard(map.sort(() => Math.random() - 0.5))
+        }, []);
 
         useEffect(() => {
                 window.addEventListener("keydown", removeFindOption)
@@ -37,21 +50,18 @@ export const BoardView = () => {
                 >
                     <Flex direction="column"
                           align="center"
-                          // justify="space-around"
-                          // width="80%"
                           height="100vw"
                           backgroundColor="tertiary"
                           mx="auto"
                           px="20px"
                     >
-                        <GameCounter endOfGameTime={endOfGameTime}
+                        <GameCounter gameTimeInSeconds={gameTimeInSeconds}
                                      result={result}
                                      getResults={getResults}
                                      clicked={clicked}
                                      board={board}
                         />
                         {error && <p> {error} </p>}
-                        {isPending && <Spinner/>}
                         <GameBoard board={board}
                                    checkGivenNumber={checkGivenNumber}
                         />

@@ -4,8 +4,8 @@ import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
 import {Box} from "@chakra-ui/layout";
 
-const GameCounter = ({endOfGameTime, getResults, result, clicked, board}) => {
-    const [elapsedTime, setElapsedTime] = useState(endOfGameTime);
+const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board}) => {
+    const [elapsedTime, setElapsedTime] = useState(gameTimeInSeconds);
     const [isActive, setIsActive] = useState(false);
 
     const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
@@ -16,8 +16,8 @@ const GameCounter = ({endOfGameTime, getResults, result, clicked, board}) => {
     } = useDisclosure();
     const countRef = useRef(null);
     useEffect(() => {
-            setElapsedTime(endOfGameTime)
-        }, [endOfGameTime]
+            setElapsedTime(gameTimeInSeconds)
+        }, [gameTimeInSeconds]
     );
 
     useEffect(() => {

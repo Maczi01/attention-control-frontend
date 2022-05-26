@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginView2.js" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +31,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -44,7 +56,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
@@ -61,6 +79,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,18 +91,7 @@
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\api" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,6 +123,7 @@
       <workItem from="1621285710757" duration="2652000" />
       <workItem from="1621352586558" duration="18944000" />
       <workItem from="1621784090314" duration="2498000" />
+      <workItem from="1653329680728" duration="13421000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>
@@ -463,20 +472,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />

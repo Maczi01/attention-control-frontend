@@ -14,13 +14,13 @@ const GameDataProvider = ({children}) => {
     const [resultsList, setResultsList] = useState([]);
     const [playersResult, setPlayersResult] = useState({});
     // const [clicked, setClicked] = useState(0);
-
-    useEffect(async () => {
-        FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)
-            .then(data => setGameData(data))
-            .catch(err => setError(err.message))
-            .finally(() => setIsPending(false))
-    }, []);
+    const gameTimeInSeconds = 10;
+    // useEffect(async () => {
+    //     FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)
+    //         .then(data => setGameData(data))
+    //         .catch(err => setError(err.message))
+    //         .finally(() => setIsPending(false))
+    // }, []);
 
     const checkGivenNumber = async (number) => {
         return await FetchData.getData(url.localToCheckNumber, HttpMethod.POST, number)
@@ -69,7 +69,7 @@ const GameDataProvider = ({children}) => {
 
     const value = {
         gameData,
-        checkGivenNumber,
+        // checkGivenNumber,
         name,
         setName,
         result,
@@ -83,6 +83,7 @@ const GameDataProvider = ({children}) => {
         getPlayersResult,
         playersResult,
         setResultsList,
+        gameTimeInSeconds,
         // clicked,
         // countNumberOfClicks
     };
