@@ -10,12 +10,14 @@ export const BoardView = () => {
         const {gameData, result, getResults, error, isPending, gameTimeInSeconds} = useContext(GameDataContext);
         // const {gameTime} = gameData;
         const [clicked, setClicked] = useState(0);
+        const [points, setPoints] = useState(0);
         const [currentNumber, setCurrentNumber] = useState(0);
         const [board, setBoard] = useState([]);
         console.log(currentNumber)
         const checkGivenNumber = (number) => {
             if (number === currentNumber) {
                 setCurrentNumber(c => c + 1);
+                setPoints(c => c + 1);
                 return true;
             }
         };
@@ -60,8 +62,8 @@ export const BoardView = () => {
                                      getResults={getResults}
                                      clicked={clicked}
                                      board={board}
+                                     points={points}
                         />
-                        {error && <p> {error} </p>}
                         <GameBoard board={board}
                                    checkGivenNumber={checkGivenNumber}
                         />

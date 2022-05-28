@@ -2,18 +2,18 @@ import React, {useContext, useState} from 'react';
 import {Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay} from "@chakra-ui/modal";
 import {Box} from "@chakra-ui/layout";
 import {Link} from "react-router-dom";
-import {Button, Center, Flex} from "@chakra-ui/react"
+import {Button, Center, Flex, Collapse} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
 import {BsArrowCounterclockwise} from "react-icons/bs"
 import {BiSave} from "react-icons/bi"
 import CountUp from 'react-countup';
 
-const ResultModal = ({isOpen, result, handleStart, clicked, board}) => {
+const ResultModal = ({isOpen, result, handleStart, clicked, board, points}) => {
 
     const [showMailInput, setShowMailInput] = useState(false);
     const {saveUserInDatabase} = useContext(GameDataContext);
-    const accuracy = (result / clicked) * 100
+    const accuracy = (points / clicked) * 100
 
     return (
         <Modal isOpen={isOpen}>
@@ -27,7 +27,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked, board}) => {
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-                        <p> Your result is: <CountUp delay={1} end={result} duration={1.5}/></p>
+                        <p> Your result is: <CountUp delay={1} end={points} duration={1.5}/></p>
                         <p>Accuracy:<CountUp delay={1} end={accuracy} duration={1.5}/> %</p>
                     </Box>
                 </Center>
@@ -61,10 +61,12 @@ const ResultModal = ({isOpen, result, handleStart, clicked, board}) => {
                                 Save result
                             </Button>
                         </Flex>
-                        <Flex m="15px">
-                            {showMailInput &&
-                            <SaveResultForm result={result} accuracy={accuracy} gameBoard={board} saveUserInDatabase={saveUserInDatabase}/>}
-                        </Flex>
+                        <Collapse in={showMailInput} animateOpacity>
+                            <Flex m="15px">
+                                <SaveResultForm points={points} accuracy={accuracy} gameBoard={board}
+                                                saveUserInDatabase={saveUserInDatabase}/>
+                            </Flex>
+                        </Collapse>
                     </Flex>
                 </ModalBody>
             </ModalContent>

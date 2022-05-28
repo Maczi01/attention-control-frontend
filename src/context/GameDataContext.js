@@ -13,7 +13,7 @@ const GameDataProvider = ({children}) => {
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [playersResult, setPlayersResult] = useState({});
-    // const [clicked, setClicked] = useState(0);
+    const [points, setPoints] = useState(0);
     const gameTimeInSeconds = 10;
     // useEffect(async () => {
     //     FetchData.getData(url.localGameDataEndpoint, HttpMethod.GET)

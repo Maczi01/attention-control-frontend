@@ -4,7 +4,7 @@ import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
 import {Box} from "@chakra-ui/layout";
 
-const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board}) => {
+const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, points}) => {
     const [elapsedTime, setElapsedTime] = useState(gameTimeInSeconds);
     const [isActive, setIsActive] = useState(false);
 
@@ -57,6 +57,7 @@ const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board}) =>
                 result={result}
                 clicked={clicked}
                 board={board}
+                points={points}
                 handleStart={handleStart}
             />
         </Box>
