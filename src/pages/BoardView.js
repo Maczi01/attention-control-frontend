@@ -22,18 +22,6 @@ export const BoardView = () => {
             }
         };
 
-        useEffect(() => {
-            const map = Array(100).fill().map((_, idx) => idx);
-            setBoard(map.sort(() => Math.random() - 0.5))
-        }, []);
-
-        useEffect(() => {
-                window.addEventListener("keydown", removeFindOption)
-                return (() => {
-                    window.removeEventListener("keydown", removeFindOption);
-                })
-            }
-        );
         const countNumberOfClicks = () => {
             setClicked(prev => prev + 1);
             console.log("Clicked in overlay!")
@@ -44,6 +32,18 @@ export const BoardView = () => {
                 e.preventDefault();
             }
         };
+
+    useEffect(() => {
+        const map = Array(100).fill().map((_, idx) => idx);
+        setBoard(map.sort(() => Math.random() - 0.5))
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("keydown", removeFindOption)
+        return (() => {
+            window.removeEventListener("keydown", removeFindOption);
+        })
+    });
 
         return (
             <Center>

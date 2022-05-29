@@ -1,7 +1,12 @@
 import React, {useState} from "react";
 import {Button} from "@chakra-ui/react"
 
-const Number = ({number, checkGivenNumber}) => {
+interface Props {
+    number: number;
+    checkGivenNumber: (number: number) => boolean;
+}
+
+const Number: React.FC<Props> = ({number, checkGivenNumber}) => {
 
     const [active, setActive] = useState(false);
     return (

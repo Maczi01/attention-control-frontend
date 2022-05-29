@@ -4,7 +4,16 @@ import ResultModal from "./ResultModal";
 import {useDisclosure} from "@chakra-ui/hooks";
 import {Box} from "@chakra-ui/layout";
 
-const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, points}) => {
+interface GameCounterProps {
+    gameTimeInSeconds: number;
+    getResults: () => void;
+    result: number;
+    clicked: number;
+    board: number[];
+    points: number
+}
+
+const GameCounter: React.FC<GameCounterProps> = ({gameTimeInSeconds, getResults, result, clicked, board, points}) => {
     const [elapsedTime, setElapsedTime] = useState(gameTimeInSeconds);
     const [isActive, setIsActive] = useState(false);
 
@@ -14,7 +23,7 @@ const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, poi
         onOpen: onOpenReportModal,
         onClose: onCloseReportModal
     } = useDisclosure();
-    const countRef = useRef(null);
+    const countRef =  useRef<NodeJS.Timeout | null>(null);
     useEffect(() => {
             setElapsedTime(gameTimeInSeconds)
         }, [gameTimeInSeconds]
@@ -23,7 +32,7 @@ const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, poi
     useEffect(() => {
             if (elapsedTime < 1) {
                 getResults();
-                clearInterval(countRef.current);
+                clearInterval(countRef.current as NodeJS.Timeout);
                 setIsActive(false);
                 onOpenReportModal();
             }
@@ -32,11 +41,11 @@ const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, poi
 
     const handleStart = () => {
         if (isActive === true) {
-            clearInterval(countRef.current);
+            clearInterval(countRef.current as NodeJS.Timeout);
             setIsActive(false);
         } else if (elapsedTime > 1) {
             setIsActive(true);
-            countRef.current = setInterval(() => {
+            countRef.current  = setInterval(() => {
                 setElapsedTime((elapsedTime) => elapsedTime - 1);
             }, 1000);
         }
@@ -52,9 +61,7 @@ const GameCounter = ({gameTimeInSeconds, getResults, result, clicked, board, poi
                 handleStart={handleStart}
             />
             <ResultModal
-                onOpen={onOpenReportModal}
                 isOpen={isOpenReportModal}
-                result={result}
                 clicked={clicked}
                 board={board}
                 points={points}

@@ -1,34 +1,47 @@
 import React, {useContext, useState} from 'react';
 import {Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay} from "@chakra-ui/modal";
 import {Box} from "@chakra-ui/layout";
-import {Link} from "react-router-dom";
 import {Button, Center, Flex, Collapse} from "@chakra-ui/react"
 import SaveResultForm from "./SaveResultForm";
 import {GameDataContext} from "../context/GameDataContext";
 import {BsArrowCounterclockwise} from "react-icons/bs"
 import {BiSave} from "react-icons/bi"
+import {Link} from "react-router-dom";
 import CountUp from 'react-countup';
 
-const ResultModal = ({isOpen, result, handleStart, clicked, board, points}) => {
+interface ResultModalProps {
+    isOpen: boolean;
+    handleStart: () => void;
+    clicked: number,
+    board: number[];
+    points: number
+}
 
-    const [showMailInput, setShowMailInput] = useState(false);
-    const {saveUserInDatabase} = useContext(GameDataContext);
-    const accuracy = (points / clicked) * 100
+const ResultModal: React.FC<ResultModalProps> = ({
+                                                     isOpen,
+                                                     handleStart,
+                                                     clicked,
+                                                     points,
+                                                 }) => {
+
+    const [showMailInput, setShowMailInput] = useState<boolean>(false);
+    const saveUserInDatabase = (email: string) => {
+        console.log(email)
+    };
+    const accuracy = points / clicked * 100
 
     return (
-        <Modal isOpen={isOpen}>
+        <Modal isOpen={isOpen} onClose={() => {console.log("g")
+        }}>
             <ModalOverlay/>
             <ModalContent>
-                <ModalHeader
-                    align="center"
-                    justify="space-around"
-                >
+                <ModalHeader>
                     Time's up!
                 </ModalHeader>
                 <Center>
                     <Box p='10px' m='10px'>
-                        <p> Your result is: <CountUp delay={1} end={points} duration={1.5}/></p>
-                        <p>Accuracy:<CountUp delay={1} end={accuracy} duration={1.5}/> %</p>
+                        <p> Your result is:<CountUp delay={0.5} end={points} duration={1.5}/></p>
+                        <p>Accuracy:<CountUp delay={0.5} end={accuracy} duration={1.5}/> %</p>
                     </Box>
                 </Center>
                 <ModalBody>
@@ -63,7 +76,7 @@ const ResultModal = ({isOpen, result, handleStart, clicked, board, points}) => {
                         </Flex>
                         <Collapse in={showMailInput} animateOpacity>
                             <Flex m="15px">
-                                <SaveResultForm points={points} accuracy={accuracy} gameBoard={board}
+                                <SaveResultForm points={points} accuracy={accuracy}
                                                 saveUserInDatabase={saveUserInDatabase}/>
                             </Flex>
                         </Collapse>

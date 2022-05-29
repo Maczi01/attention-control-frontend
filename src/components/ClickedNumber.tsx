@@ -1,9 +1,12 @@
-import React from "react";
-import {Container, Center,Box} from "@chakra-ui/react"
+import * as React from "react";
+import { Center,Box} from "@chakra-ui/react"
 
-const ClickedNubmer = ({number}) => (
+type Props = {
+    number: number;
+}
+
+const ClickedNumber: React.FC<Props> = ({number}) => (
     <Box
-        size="md"
         height="48px"
         width="48px"
         border="2px"
@@ -19,4 +22,5 @@ const ClickedNubmer = ({number}) => (
 )
 
 
-export default ClickedNubmer;
+export default ClickedNumber;
+
