@@ -6,15 +6,15 @@ import {Flex, Spinner, Center, Box} from "@chakra-ui/react"
 import {ModalOverlay} from "@chakra-ui/modal";
 import {useDisclosure} from "@chakra-ui/hooks";
 
-export const BoardView = () => {
-        const {gameData, result, getResults, error, isPending, gameTimeInSeconds} = useContext(GameDataContext);
-        // const {gameTime} = gameData;
+export const BoardView: React.FC = () => {
+        // @ts-ignore
+    const {result, getResults, gameTimeInSeconds} = useContext(GameDataContext);
         const [clicked, setClicked] = useState(0);
         const [points, setPoints] = useState(0);
         const [currentNumber, setCurrentNumber] = useState(0);
         const [board, setBoard] = useState([]);
         console.log(currentNumber)
-        const checkGivenNumber = (number) => {
+        const checkGivenNumber = (number: number) => {
             if (number === currentNumber) {
                 setCurrentNumber(c => c + 1);
                 setPoints(c => c + 1);
@@ -27,14 +27,15 @@ export const BoardView = () => {
             console.log("Clicked in overlay!")
         }
 
-        const removeFindOption = (e) => {
+        const removeFindOption = (e: { keyCode: number; ctrlKey: any; preventDefault: () => void; }) => {
             if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
                 e.preventDefault();
             }
         };
 
     useEffect(() => {
-        const map = Array(100).fill().map((_, idx) => idx);
+        const map = Array(100).fill(0).map((_, idx) => idx);
+        // @ts-ignore
         setBoard(map.sort(() => Math.random() - 0.5))
     }, []);
 
@@ -45,7 +46,8 @@ export const BoardView = () => {
         })
     });
 
-        return (
+        // @ts-ignore
+    return (
             <Center>
                 <Box onClick={countNumberOfClicks}
                      zIndex="1"

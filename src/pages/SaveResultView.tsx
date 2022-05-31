@@ -5,11 +5,12 @@ import SaveResultModal from "../components/SaveResultForm";
 
 export const SaveResultView = () => {
 
-    const {result, saveUserInDatabase} = useContext(GameDataContext);
+    // @ts-ignore
+    const {saveUserInDatabase} = useContext(GameDataContext);
 
     return (
         <Flex direction="column" align="center" justify="space-around" width="80%" backgroundColor="#ffd803" mx="auto">
-          <SaveResultModal result={result} saveUserInDatabase={saveUserInDatabase}/>
+          <SaveResultModal points={10} saveUserInDatabase={saveUserInDatabase} />
         </Flex>
     )
 }

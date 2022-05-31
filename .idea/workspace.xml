@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ClickedNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ClickedNumber.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Number.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UnclickedNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UnclickedNumber.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/BoardView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SaveResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SaveResultView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,7 @@
       <workItem from="1621285710757" duration="2652000" />
       <workItem from="1621352586558" duration="18944000" />
       <workItem from="1621784090314" duration="2498000" />
-      <workItem from="1653329680728" duration="30252000" />
+      <workItem from="1653329680728" duration="34747000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>

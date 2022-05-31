@@ -3,13 +3,13 @@ import React, {useContext, useEffect} from 'react';
 import {useHistory} from "react-router";
 import {Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react"
 
-export const AdminView = () => {
+export const ResultView: React.FC = () => {
+    // @ts-ignore
     const {resultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
     useEffect(() => {
         getResultsList()
     }, []);
     const history = useHistory();
-    console.log(resultsList)
     return (
         <Flex
             direction="column"
@@ -19,7 +19,7 @@ export const AdminView = () => {
             backgroundColor="#ffd803"
             mx="auto"
         >
-            <Center><h2>U are Admin</h2></Center>
+            <Center><h2>Results</h2></Center>
             <Center>
                 <Flex justify="space-between">
                     <Button size="xs">Best results</Button>
@@ -42,15 +42,19 @@ export const AdminView = () => {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {resultsList && resultsList.map((result, index) => (
+                    {resultsList && resultsList.map((result: { playerName: string;
+                        score: number;
+                        date: string;
+                        accuracy: number;
+                        id: string; }, index: number) => (
                         <Tr key={index + 1}>
                             <Td>{index + 1}</Td>
                             <Td>{result.playerName}</Td>
                             <Td>{result.score}</Td>
                             <Td>{result.date}</Td>
                             <Td>{result.accuracy}</Td>
-                            {console.log(`${result.playerName}: ${result.id}`)}
-                            <Td> <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details
+                            <Td>
+                                <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details
                             </Button>
                             </Td>
                             <Td><Button onClick={() => deleteResultFromList(result.id)}>

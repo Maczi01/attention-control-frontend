@@ -4,7 +4,7 @@ import Number from "./Number";
 
 interface GameBoardProps {
     board: number[]
-    checkGivenNumber: (i: number) => boolean
+    checkGivenNumber: (number: number) => boolean
 }
 
 const GameBoard: React.FC<GameBoardProps> = ({board, checkGivenNumber}) => (

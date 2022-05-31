@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Modal,
     ModalBody,
-    ModalCloseButton,
     ModalContent,
     ModalFooter,
     ModalHeader,
@@ -11,7 +10,13 @@ import {
 import {Box} from "@chakra-ui/layout";
 import {Button} from "@chakra-ui/button";
 
-const StartWindow = ({isOpen, onClose, handleStart}) => (
+interface StartWindowProps {
+    isOpen: boolean;
+    onClose: () => void;
+    handleStart: () => void;
+}
+
+const StartWindow: React.FC<StartWindowProps> = ({isOpen, onClose, handleStart}) => (
     <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
         <ModalOverlay
             style={{backdropFilter: 'blur(4px)'}}

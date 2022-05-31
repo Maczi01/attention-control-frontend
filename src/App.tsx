@@ -8,9 +8,8 @@ import {ResultView} from "./pages/ResultView";
 import {ResultDetailsView} from "./pages/ResultDetailsView";
 import {ChakraProvider} from "@chakra-ui/react";
 import {theme} from "./theme/theme";
-import {AdminView} from "./pages/AdminView";
 
-const App = () => (
+const App: React.FC = () => (
     <>
         <Router>
             <ChakraProvider theme={theme}>
@@ -21,7 +20,6 @@ const App = () => (
                         <Route path="/save" component={SaveResultView}/>
                         <Route path="/results" component={ResultView}/>
                         <Route path="/playersresult/:id" component={ResultDetailsView}/>
-                        <Route path="/admin" component={AdminView}/>
                     </GameDataProvider>
                 </Switch>
             </ChakraProvider>

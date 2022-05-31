@@ -5,14 +5,19 @@ import {GiConfirmed, GiTrophyCup} from "react-icons/gi";
 import {ModalHeader} from "@chakra-ui/modal";
 import {BiSend} from "react-icons/bi"
 
-const SaveResultForm = ({points, saveUserInDatabase, accuracy}) => {
-    const [name, setName] = useState('');
-    const [submitted, setSubmitted] = useState(false);
+interface SaveResultFormProps {
+    points: number;
+    saveUserInDatabase: (name: string, points: number) => void;
+}
 
-    const handleSubmit = (event) => {
+const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDatabase}) => {
+    const [name, setName] = useState<string>('');
+    const [submitted, setSubmitted] = useState<boolean>(false);
+
+    const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         event.stopPropagation();
-        saveUserInDatabase(name, points, accuracy);
+        saveUserInDatabase(name, points);
         setName('');
         setSubmitted(true);
     };

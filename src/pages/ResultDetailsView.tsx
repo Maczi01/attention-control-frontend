@@ -4,9 +4,22 @@ import {GameDataContext} from "../context/GameDataContext";
 import UnclickedNubmer from "../components/UnclickedNumber";
 import ClickedNubmer from "../components/ClickedNumber";
 
-export const ResultDetailsView = ({match}) => {
+interface ResultDetailsViewProps {
+    match: {
+        path: string;
+        url: string;
+        isExact: boolean;
+        params: {
+            id: string;
+        };
+    }
+}
+
+
+export const ResultDetailsView: React.FC<ResultDetailsViewProps> = ({match}) => {
     const selectedId = match.params.id
     console.log(selectedId)
+    // @ts-ignore
     const {getPlayersResult, playersResult} = useContext(GameDataContext);
     useEffect(() => {
         getPlayersResult(selectedId)
@@ -23,14 +36,14 @@ export const ResultDetailsView = ({match}) => {
             <h2>Celność {playersResult.accuracy}</h2>
             <h2>Game board</h2>
             <Grid templateColumns="repeat(10, 1fr)" gap="1%" w="600px" m="5px">
-                {playersResult.gameboard && playersResult.gameboard.map((number, indexNummber) =>
+                {playersResult.gameboard && playersResult.gameboard.map((number: number, indexNumber: React.Key | null | undefined) =>
                     number > playersResult.score ?
                         <ClickedNubmer
                             number={number}
-                            key={indexNummber}/> :
+                            key={indexNumber}/> :
                         <UnclickedNubmer
                             number={number}
-                            key={indexNummber}/>
+                            key={indexNumber}/>
                 )}
             </Grid>
         </Flex>

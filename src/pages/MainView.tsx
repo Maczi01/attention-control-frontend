@@ -2,7 +2,7 @@ import {Button, Center, Flex} from "@chakra-ui/react"
 import React from "react";
 import {Link} from "react-router-dom";
 
-export const MainView = () => (
+export const MainView: React.FC = () => (
     <Center h="100%">
         <Flex direction="column" align="center" justify="space-around" width="80%" height="100%"
               backgroundColor="background"
