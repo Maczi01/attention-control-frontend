@@ -19,6 +19,8 @@ export const BoardView: React.FC = () => {
                 setCurrentNumber(c => c + 1);
                 setPoints(c => c + 1);
                 return true;
+            } else {
+                return false;
             }
         };
 

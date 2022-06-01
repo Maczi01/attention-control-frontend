@@ -76,7 +76,7 @@ const ResultModal: React.FC<ResultModalProps> = ({
                         </Flex>
                         <Collapse in={showMailInput} animateOpacity>
                             <Flex m="15px">
-                                <SaveResultForm points={points} accuracy={accuracy}
+                                <SaveResultForm points={points}
                                                 saveUserInDatabase={saveUserInDatabase}/>
                             </Flex>
                         </Collapse>
