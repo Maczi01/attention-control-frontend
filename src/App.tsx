@@ -8,7 +8,7 @@ import {ResultView} from "./pages/ResultView";
 import {ResultDetailsView} from "./pages/ResultDetailsView";
 import {ChakraProvider} from "@chakra-ui/react";
 import {theme} from "./theme/theme";
-
+const pss: string = 'd:"%!d(P*p3`!cjH'
 const App: React.FC = () => (
     <>
         <Router>

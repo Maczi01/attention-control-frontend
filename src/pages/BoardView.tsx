@@ -9,10 +9,10 @@ import {useDisclosure} from "@chakra-ui/hooks";
 export const BoardView: React.FC = () => {
         // @ts-ignore
     const {result, getResults, gameTimeInSeconds} = useContext(GameDataContext);
-        const [clicked, setClicked] = useState(0);
-        const [points, setPoints] = useState(0);
-        const [currentNumber, setCurrentNumber] = useState(0);
-        const [board, setBoard] = useState([]);
+        const [clicked, setClicked] = useState<number>(0);
+        const [points, setPoints] = useState<number>(0);
+        const [currentNumber, setCurrentNumber] = useState<number>(0);
+        const [board, setBoard] = useState<number[]>([]);
         console.log(currentNumber)
         const checkGivenNumber = (number: number) => {
             if (number === currentNumber) {
