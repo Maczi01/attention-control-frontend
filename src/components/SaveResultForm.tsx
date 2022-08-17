@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {Button, Flex, FormControl, FormLabel, Input, Box} from "@chakra-ui/react"
 import {Link} from "react-router-dom";
 import {GiConfirmed, GiTrophyCup} from "react-icons/gi";
 import {ModalHeader} from "@chakra-ui/modal";
 import {BiSend} from "react-icons/bi"
+import {GameDataContext} from "../context/GameDataContext";
 
 interface SaveResultFormProps {
     points: number;
@@ -13,10 +14,13 @@ interface SaveResultFormProps {
 const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDatabase}) => {
     const [name, setName] = useState<string>('');
     const [submitted, setSubmitted] = useState<boolean>(false);
+    // @ts-ignore
+    const {addItem} = useContext(GameDataContext);
 
     const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         event.stopPropagation();
+        addItem({name, points});
         saveUserInDatabase(name, points);
         setName('');
         setSubmitted(true);

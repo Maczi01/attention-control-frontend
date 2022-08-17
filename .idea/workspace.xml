@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/BoardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BoardView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +86,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszTwardy\WebstormProjects\attention-control-frontend\src\pages" />
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\pages" />
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\components" />
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\context" />
@@ -124,7 +128,12 @@
       <workItem from="1621352586558" duration="18944000" />
       <workItem from="1621784090314" duration="2498000" />
       <workItem from="1653329680728" duration="39896000" />
-      <workItem from="1654206594107" duration="867000" />
+      <workItem from="1654206594107" duration="2901000" />
+      <workItem from="1654294191706" duration="10366000" />
+      <workItem from="1654553822245" duration="2217000" />
+      <workItem from="1654986735288" duration="5054000" />
+      <workItem from="1659612069150" duration="2111000" />
+      <workItem from="1660766530648" duration="6854000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>

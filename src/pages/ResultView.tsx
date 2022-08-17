@@ -5,11 +5,10 @@ import {Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/
 
 export const ResultView: React.FC = () => {
     // @ts-ignore
-    const {resultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
-    useEffect(() => {
-        getResultsList()
-    }, []);
-    const history = useHistory();
+    // const {resultsList, getResultsList, deleteResultFromList} = useContext(GameDataContext);
+    // useEffect(() => {
+    //     getResultsList()
+    // }, []);
     return (
         <Flex
             direction="column"
@@ -41,29 +40,29 @@ export const ResultView: React.FC = () => {
                         <Th>Action</Th>
                     </Tr>
                 </Thead>
-                <Tbody>
-                    {resultsList && resultsList.map((result: { playerName: string;
-                        score: number;
-                        date: string;
-                        accuracy: number;
-                        id: string; }, index: number) => (
-                        <Tr key={index + 1}>
-                            <Td>{index + 1}</Td>
-                            <Td>{result.playerName}</Td>
-                            <Td>{result.score}</Td>
-                            <Td>{result.date}</Td>
-                            <Td>{result.accuracy}</Td>
-                            <Td>
-                                <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details
-                            </Button>
-                            </Td>
-                            <Td><Button onClick={() => deleteResultFromList(result.id)}>
-                                Remove
-                            </Button></Td>
-                        </Tr>
-                    ))
-                    }
-                </Tbody>
+                {/*<Tbody>*/}
+                {/*    {resultsList && resultsList.map((result: { playerName: string;*/}
+                {/*        score: number;*/}
+                {/*        date: string;*/}
+                {/*        accuracy: number;*/}
+                {/*        id: string; }, index: number) => (*/}
+                {/*        <Tr key={index + 1}>*/}
+                {/*            <Td>{index + 1}</Td>*/}
+                {/*            <Td>{result.playerName}</Td>*/}
+                {/*            <Td>{result.score}</Td>*/}
+                {/*            <Td>{result.date}</Td>*/}
+                {/*            <Td>{result.accuracy}</Td>*/}
+                {/*            <Td>*/}
+                {/*                <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details*/}
+                {/*            </Button>*/}
+                {/*            </Td>*/}
+                {/*            /!*<Td><Button onClick={() => deleteResultFromList(result.id)}>*!/*/}
+                {/*            /!*    Remove*!/*/}
+                {/*            /!*</Button></Td>*!/*/}
+                {/*        </Tr>*/}
+                {/*    ))*/}
+                {/*    }*/}
+                {/*</Tbody>*/}
             </Table>
         </Flex>
     )

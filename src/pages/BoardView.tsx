@@ -8,7 +8,7 @@ import {useDisclosure} from "@chakra-ui/hooks";
 
 export const BoardView: React.FC = () => {
         // @ts-ignore
-    const {result, getResults, gameTimeInSeconds} = useContext(GameDataContext);
+    const {result, gameTimeInSeconds} = useContext(GameDataContext);
         const [clicked, setClicked] = useState<number>(0);
         const [points, setPoints] = useState<number>(0);
         const [currentNumber, setCurrentNumber] = useState<number>(0);
@@ -63,7 +63,6 @@ export const BoardView: React.FC = () => {
                     >
                         <GameCounter gameTimeInSeconds={gameTimeInSeconds}
                                      result={result}
-                                     getResults={getResults}
                                      clicked={clicked}
                                      board={board}
                                      points={points}
