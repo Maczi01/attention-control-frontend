@@ -41,8 +41,8 @@ const ResultModal: React.FC<ResultModalProps> = ({
         event.preventDefault();
         event.stopPropagation();
         setSubmitted(true);
-        addItem({name, result: points});
-        saveUserInDatabase(user_name: name, points);
+        addItem({name, points, accuracy});
+        // saveUserInDatabase({user_name: name, points});
         setName('');
     };
 

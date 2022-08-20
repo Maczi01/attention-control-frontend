@@ -9,33 +9,38 @@ const GameDataProvider = ({children}) => {
     const [name, setName] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [playersResult, setPlayersResult] = useState({});
-    const gameTimeInSeconds = 10;
+    const gameTimeInSeconds = 5;
     const [adding, setAdding] = useState(false);
 
     const addItem = async (item) => {
-        console.log(item)
-        const userToAdd = {
-            ...item,
-            id: Date.now(),
-            user_id: uuid()
-        }
-        setAdding(true);
-        try {
+        // console.log(item)
+        // const userToAdd = {
+        //     ...item,
+            // id: uuid(),
+        // }
+        // setAdding(true);
+        // try {
             // const user = supabase.auth.user();
 
-            const { error } = await supabase
+            let { data, error } = await supabase
                 .from("results")
-                .insert(userToAdd)
-                .single(); //insert an object with the key value pair, the key being the column on the table
+                .insert(item)
+                .single();
+            console.log({data})
 
-            if (error) throw error;
+            // const { error } = await supabase
+            //     .from("results")
+            //     .insert(userToAdd)
+            //     .single(); //insert an object with the key value pair, the key being the column on the table
+            //
+            // if (error) throw error;
 
 
-        } catch (error) {
-            alert(error.message);
-        } finally {
-            setAdding(false);
-        }
+        // } catch (error) {
+        //     alert(error.message);
+        // } finally {
+        //     setAdding(false);
+        // }
     };
 
 

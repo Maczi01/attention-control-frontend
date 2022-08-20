@@ -31,21 +31,21 @@ const App: React.FC = () => {
     }
 
     const fetchTodos = async () => {
-        let { data, error } = await supabase
-            .from("results")
-            .select()
-        if (error) console.log("error", error);
-        else { // @ts-ignore
-            setTodosArray(results);
-        }
         // let { data, error } = await supabase
         //     .from("results")
-        //     .insert({ id: 1
-        //         , user_id:'a55a7d6a-6b07-46ad-aaf8-c3e97de8f1c8',
-        //         user_name: 'matti',
-        //         result: 9
-        //     })
-        //     .single();
+        //     .select()
+        // if (error) console.log("error", error);
+        // else { // @ts-ignore
+        //     setTodosArray(results);
+        // }
+        let { data, error } = await supabase
+            .from("results")
+            .insert({ id: Date.now(),
+                user_id:'a55a7d6a-6b07-46ad-aaf8-c3e97de8f1c8',
+                user_name: 'matti',
+                result: 9
+            })
+            .single();
         console.log({data})
         // console.log({error})
     };
@@ -70,9 +70,9 @@ const App: React.FC = () => {
     //         .single()
     //     setList({title: '', content: ''})
     // }
-    useEffect(() => {
-        func()
-    }, [])
+    // useEffect(() => {
+    //     fetchTodos()
+    // }, [])
     return (
         <>
             <Router>
