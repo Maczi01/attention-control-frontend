@@ -41,8 +41,8 @@ const ResultModal: React.FC<ResultModalProps> = ({
         event.preventDefault();
         event.stopPropagation();
         setSubmitted(true);
-        addItem({name, points});
-        saveUserInDatabase(name, points);
+        addItem({name, result: points});
+        saveUserInDatabase(user_name: name, points);
         setName('');
     };
 
@@ -57,21 +57,35 @@ const ResultModal: React.FC<ResultModalProps> = ({
                     submitted ?
                         (<Box>
                             <Text>
-                                Your result successfully submited.
+                                Your result successfully submitted.
                             </Text>
-                            <Link to="/results">
-                                <Button
-                                    m="10px"
-                                    w="150px"
-                                    leftIcon={<GiTrophyCup/>}
-                                    colorScheme="yellow"
-                                >
-                                    Results
-                                </Button>
-                            </Link>
+
+                            <Flex
+                                align="normal" justify="space-around" width="80%"
+                            >
+                                <Link to="/">
+                                    <Button
+                                        w="150px"
+                                        m="3px"
+                                        colorScheme="red"
+                                        leftIcon={<BsArrowCounterclockwise/>}
+                                        onClick={handleStart}>
+                                        Play again
+                                    </Button>
+                                </Link>
+                                <Link to="/results">
+                                    <Button
+                                        m="10px"
+                                        w="150px"
+                                        leftIcon={<GiTrophyCup/>}
+                                        colorScheme="yellow"
+                                    >
+                                        Results
+                                    </Button>
+                                </Link>
+                            </Flex>
                         </Box>)
                         :
-
                         (<Box>
 
                                 <ModalHeader>
@@ -119,7 +133,6 @@ const ResultModal: React.FC<ResultModalProps> = ({
                                                 <SaveResultForm points={points}
                                                                 saveUserInDatabase={saveUserInDatabase}
                                                                 handleSubmit={handleSubmit}
-                                                    // submitted={submitted}
                                                 />
                                             </Flex>
                                         </Collapse>

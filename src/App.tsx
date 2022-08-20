@@ -81,7 +81,6 @@ const App: React.FC = () => {
                         <GameDataProvider>
                             <Route exact path="/" component={MainView}/>
                             <Route path="/game" component={BoardView}/>
-                            {/*<Route path="/save" component={SaveResultView}/>*/}
                             <Route path="/results" component={ResultView}/>
                             <Route path="/signin" component={LoginPage}/>
                             <Route path="/playersresult/:id" component={ResultDetailsView}/>

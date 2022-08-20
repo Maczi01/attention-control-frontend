@@ -2,6 +2,8 @@ import {GameDataContext} from "../context/GameDataContext";
 import React, {useContext, useEffect} from 'react';
 import {useHistory} from "react-router";
 import {Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react"
+import {Link} from "react-router-dom";
+import {BsArrowCounterclockwise} from "react-icons/bs";
 
 export const ResultView: React.FC = () => {
     // @ts-ignore
@@ -19,6 +21,16 @@ export const ResultView: React.FC = () => {
             mx="auto"
         >
             <Center><h2>Results</h2></Center>
+            <Link to="/">
+                <Button
+                    w="150px"
+                    m="3px"
+                    colorScheme="red"
+                    leftIcon={<BsArrowCounterclockwise/>}
+                    >
+                    Play again
+                </Button>
+            </Link>
             <Center>
                 <Flex justify="space-between">
                     <Button size="xs">Best results</Button>

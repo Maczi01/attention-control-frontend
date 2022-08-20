@@ -28,13 +28,15 @@ const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDataba
     //     setSubmitted(true);
     // };
     return (
-        <Box>
+        <Box w="100%"
+        >
             <FormControl id="name">
                 <Input type="text"
                        value={name}
                        focusBorderColor="lime"
                        onChange={(event) => setName(event.target.value)}
                        placeholder="Add your name..."
+                       w="100%"
                 />
                 <Flex
                     align="center"
@@ -42,7 +44,6 @@ const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDataba
                 >
                     <Button
                         m="10px"
-                        // w="150px"
                         colorScheme="messenger"
                         variant="solid"
                         leftIcon={<BiSend/>}
