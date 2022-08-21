@@ -7,35 +7,18 @@ import {BiSend} from "react-icons/bi"
 import {GameDataContext} from "../context/GameDataContext";
 
 interface SaveResultFormProps {
-    points: number;
-    saveUserInDatabase: (name: string, points: number) => void;
-    // setName: (name: string) => void;
     handleSubmit: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => void
-    // submitted: boolean
 }
 
-const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDatabase, handleSubmit}) => {
+const SaveResultForm: React.FC<SaveResultFormProps> = ({handleSubmit}) => {
     const [name, setName] = useState<string>('');
-    // const [submitted, setSubmitted] = useState<boolean>(false);
-    // @ts-ignore
-    // const {addItem} = useContext(GameDataContext);
-
-    // const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    //     event.preventDefault();
-    //     event.stopPropagation();
-    //     addItem({name, points});
-    //     saveUserInDatabase(name, points);
-    //     setName('');
-    //     setSubmitted(true);
-    // };
 
     const onSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         handleSubmit(event, name)
     }
 
     return (
-        <Box w="100%"
-        >
+        <Box>
             <FormControl id="name">
                 <Input type="text"
                        value={name}
@@ -59,8 +42,6 @@ const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDataba
                     </Button>
                 </Flex>
             </FormControl>
-            {/*)*/}
-            {/*}*/}
         </Box>
     )
 }

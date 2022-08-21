@@ -18,6 +18,8 @@ interface ResultModalProps {
     points: number
 }
 
+const calculateAccuracy = (points: number, clicked: number) => points / clicked * 100
+
 const ResultModal: React.FC<ResultModalProps> = ({
                                                      isOpen,
                                                      handleStart,
@@ -26,13 +28,7 @@ const ResultModal: React.FC<ResultModalProps> = ({
                                                  }) => {
 
     const [showMailInput, setShowMailInput] = useState<boolean>(false);
-    const saveUserInDatabase = (email: string, points: number) => {
-        console.log(email)
-        console.log(points)
-    };
-    const accuracy = points / clicked * 100
-
-    // const [name, setName] = useState<string>('');
+    const accuracy = calculateAccuracy(points, clicked)
     const [submitted, setSubmitted] = useState<boolean>(false);
     // @ts-ignore
     const {addItem} = useContext(GameDataContext);
@@ -41,15 +37,13 @@ const ResultModal: React.FC<ResultModalProps> = ({
         event.preventDefault();
         event.stopPropagation();
         setSubmitted(true);
-        addItem({name, points, accuracy});
-        // saveUserInDatabase({user_name: name, points});
-        // setName('');
+        addItem({name, points, accuracy: Math.ceil(accuracy)});
     };
 
 
     return (
         <Modal isOpen={isOpen} onClose={() => {
-            console.log("g")
+            console.log("close modal")
         }}>
             <ModalOverlay/>
             <ModalContent>
@@ -130,10 +124,7 @@ const ResultModal: React.FC<ResultModalProps> = ({
 
                                         <Collapse in={showMailInput} animateOpacity>
                                             <Flex m="15px">
-                                                <SaveResultForm points={points}
-                                                                saveUserInDatabase={saveUserInDatabase}
-                                                                handleSubmit={handleSubmit}
-                                                />
+                                                <SaveResultForm handleSubmit={handleSubmit} />
                                             </Flex>
                                         </Collapse>
                                     </Flex>
