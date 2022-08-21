@@ -32,18 +32,18 @@ const ResultModal: React.FC<ResultModalProps> = ({
     };
     const accuracy = points / clicked * 100
 
-    const [name, setName] = useState<string>('');
+    // const [name, setName] = useState<string>('');
     const [submitted, setSubmitted] = useState<boolean>(false);
     // @ts-ignore
     const {addItem} = useContext(GameDataContext);
 
-    const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
         event.preventDefault();
         event.stopPropagation();
         setSubmitted(true);
         addItem({name, points, accuracy});
         // saveUserInDatabase({user_name: name, points});
-        setName('');
+        // setName('');
     };
 
 

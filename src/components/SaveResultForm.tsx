@@ -9,7 +9,8 @@ import {GameDataContext} from "../context/GameDataContext";
 interface SaveResultFormProps {
     points: number;
     saveUserInDatabase: (name: string, points: number) => void;
-    handleSubmit: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    // setName: (name: string) => void;
+    handleSubmit: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => void
     // submitted: boolean
 }
 
@@ -27,6 +28,11 @@ const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDataba
     //     setName('');
     //     setSubmitted(true);
     // };
+
+    const onSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        handleSubmit(event, name)
+    }
+
     return (
         <Box w="100%"
         >
@@ -47,7 +53,7 @@ const SaveResultForm: React.FC<SaveResultFormProps> = ({points, saveUserInDataba
                         colorScheme="messenger"
                         variant="solid"
                         leftIcon={<BiSend/>}
-                        onClick={handleSubmit}
+                        onClick={onSubmit}
                     >
                         Submit
                     </Button>
