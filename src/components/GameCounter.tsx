@@ -6,21 +6,19 @@ import {Box} from "@chakra-ui/layout";
 
 interface GameCounterProps {
     gameTimeInSeconds: number;
-    result: number;
     clicked: number;
     board: number[];
     points: number
 }
 
-const GameCounter: React.FC<GameCounterProps> = ({gameTimeInSeconds, result, clicked, board, points}) => {
+const GameCounter: React.FC<GameCounterProps> = ({gameTimeInSeconds, clicked, board, points}) => {
     const [elapsedTime, setElapsedTime] = useState(gameTimeInSeconds);
     const [isActive, setIsActive] = useState(false);
 
-    const {isOpen, onOpen, onClose} = useDisclosure({defaultIsOpen: true})
+    const {isOpen, onClose} = useDisclosure({defaultIsOpen: true})
     const {
         isOpen: isOpenReportModal,
         onOpen: onOpenReportModal,
-        onClose: onCloseReportModal
     } = useDisclosure();
     const countRef =  useRef<NodeJS.Timeout | null>(null);
     useEffect(() => {
@@ -38,7 +36,7 @@ const GameCounter: React.FC<GameCounterProps> = ({gameTimeInSeconds, result, cli
     );
 
     const handleStart = () => {
-        if (isActive === true) {
+        if (isActive) {
             clearInterval(countRef.current as NodeJS.Timeout);
             setIsActive(false);
         } else if (elapsedTime > 1) {
