@@ -9,11 +9,17 @@ interface Props {
 const Number: React.FC<Props> = ({number, checkGivenNumber}) => {
 
     const [active, setActive] = useState(false);
+    const activate = (number: number) => {
+        if (checkGivenNumber(number)) {
+            setActive(true);
+        }
+    }
+
     return (
         <Button
             disabled={active}
             size="md"
-            colorScheme="purple"
+            colorScheme={active ? "gray" : "purple"}
             height="48px"
             width="48px"
             border="2px"
@@ -26,7 +32,7 @@ const Number: React.FC<Props> = ({number, checkGivenNumber}) => {
                 boxShadow:
                     "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
             }}
-            onClick={async () => setActive(await checkGivenNumber(number))}
+            onClick={() => activate(number)}
         >
             {number}
         </Button>
