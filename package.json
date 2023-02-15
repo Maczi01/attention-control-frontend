@@ -19,6 +19,7 @@
     "@types/react-countup": "^4.3.1",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@vitejs/plugin-react": "^3.1.0",
     "axios": "^0.21.1",
     "framer-motion": "^6.3.4",
     "react": "^17.0.1",
@@ -32,6 +33,9 @@
     "react-scripts": "^5.0.0",
     "react-uuid": "^1.0.2",
     "typescript": "^4.7.2",
+    "vite": "^4.1.1",
+    "vite-plugin-svgr": "^2.4.0",
+    "vite-tsconfig-paths": "^4.0.5",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
