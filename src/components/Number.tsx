@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import {Button} from "@chakra-ui/react"
-
+import {Button} from "@chakra-ui/react";
 interface Props {
     number: number;
     checkGivenNumber: (number: number) => boolean;

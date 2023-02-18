@@ -35,17 +35,17 @@ export const ResultDetailsView: React.FC<ResultDetailsViewProps> = ({match}) => 
             <h2>Data gry {playersResult.date}</h2>
             <h2>Celność {playersResult.accuracy}</h2>
             <h2>Game board</h2>
-            <Grid templateColumns="repeat(10, 1fr)" gap="1%" w="600px" m="5px">
-                {playersResult.gameboard && playersResult.gameboard.map((number: number, indexNumber: React.Key | null | undefined) =>
-                    number > playersResult.score ?
-                        <ClickedNubmer
-                            number={number}
-                            key={indexNumber}/> :
-                        <UnclickedNubmer
-                            number={number}
-                            key={indexNumber}/>
-                )}
-            </Grid>
+            {/*<Grid templateColumns="repeat(10, 1fr)" gap="1%" w="600px" m="5px">*/}
+            {/*    {playersResult.gameboard && playersResult.gameboard.map((number: number, indexNumber: React.Key | null | undefined) =>*/}
+            {/*        number > playersResult.score ?*/}
+            {/*            <ClickedNubmer*/}
+            {/*                number={number}*/}
+            {/*                key={indexNumber}/> :*/}
+            {/*            <UnclickedNubmer*/}
+            {/*                number={number}*/}
+            {/*                key={indexNumber}/>*/}
+            {/*    )}*/}
+            {/*</Grid>*/}
         </Flex>
     )
 }
