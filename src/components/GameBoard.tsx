@@ -1,5 +1,6 @@
-import React, {useEffect} from "react";
 import {Grid} from "@chakra-ui/react"
+import React from "react";
+
 import Number from "./Number";
 
 interface GameBoardProps {

@@ -1,5 +1,6 @@
+import { Box } from "@chakra-ui/react"
+import { Center } from "@chakra-ui/react"
 import * as React from "react";
-import { Center,Box} from "@chakra-ui/react"
 
 type Props = {
     number: number;

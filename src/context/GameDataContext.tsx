@@ -9,6 +9,7 @@ interface Result {
     id: string;
     name: string;
     result: number;
+    accuracy: number
 }
 
 interface GameDataContextValue {

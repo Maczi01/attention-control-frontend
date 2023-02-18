@@ -1,11 +1,12 @@
-import React from "react";
-import {Container, Center,Box} from "@chakra-ui/react"
+import { Box } from '@chakra-ui/layout';
+import { Center } from "@chakra-ui/react"
+import { FC } from "react";
 
 interface UnclickedNumberProps {
     number: number
 }
 
-const UnclickedNubmer: React.FC<UnclickedNumberProps> = ({number}) => (
+const UnclickedNubmer: FC<UnclickedNumberProps> = ({number}) => (
     <Box
         height="48px"
         width="48px"

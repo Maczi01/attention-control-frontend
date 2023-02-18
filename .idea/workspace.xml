@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ClickedNumber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ClickedNumber.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameBoard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameBoard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameCounter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Number.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Number.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultDetailsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultDetailsView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SaveResultForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SaveResultForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StartWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StartWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UnclickedNumber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UnclickedNumber.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GameDataContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GameDataContext.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +136,7 @@
       <workItem from="1676568225648" duration="1577000" />
       <workItem from="1676569837888" duration="1428000" />
       <workItem from="1676636588879" duration="2112000" />
+      <workItem from="1676757723117" duration="1422000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>
