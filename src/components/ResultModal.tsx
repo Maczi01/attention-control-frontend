@@ -11,15 +11,15 @@ import { Flex } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 import { FC } from 'react';
 import { useState } from 'react';
-import { useContext } from 'react';
 import CountUp from 'react-countup';
 import { BiSave } from 'react-icons/bi';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { GiTrophyCup } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { v4 } from 'uuid';
 
-import { GameDataContext } from '../context/GameDataContext';
 import SaveResultForm from './SaveResultForm';
+import { useGameStore } from '../store/gameStore';
 
 interface ResultModalProps {
   isOpen: boolean;
@@ -42,13 +42,16 @@ const ResultModal: FC<ResultModalProps> = ({
   const accuracy = calculateAccuracy(points, clicked);
   const [submitted, setSubmitted] = useState<boolean>(false);
   // @ts-ignore
-  const { addItem } = useContext(GameDataContext);
+  // const { addItem } = useContext(GameDataContext);
+  const addItem = useGameStore(state => state.addItem);
 
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
     event.preventDefault();
     event.stopPropagation();
     setSubmitted(true);
-    addItem({id: '222', name, result: points, accuracy: Math.ceil(accuracy) });
+    addItem({id: v4(), name, result: points, accuracy: Math.ceil(accuracy) }).then((data) => {
+      console.log(data);
+    });
   };
 
 

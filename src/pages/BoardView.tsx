@@ -1,11 +1,9 @@
-import React, {useContext, useEffect, useState} from "react";
-import GameBoard from "../components/GameBoard";
-import GameCounter from "../components/GameCounter";
-import {Flex, Spinner, Center, Box} from "@chakra-ui/react"
-import {ModalOverlay} from "@chakra-ui/modal";
-import {useDisclosure} from "@chakra-ui/hooks";
-import {GameDataContext} from "../context/GameDataContext";
-import {useGameStore} from "../store/gameStore";
+import { Box, Center, Flex } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
+
+import GameBoard from '../components/GameBoard';
+import GameCounter from '../components/GameCounter';
+import { useGameStore } from '../store/gameStore';
 
 export const BoardView: React.FC = () => {
 
@@ -49,7 +47,6 @@ export const BoardView: React.FC = () => {
             })
         });
 
-        // @ts-ignore
         return (
             <Center>
                 <Box onClick={countNumberOfClicks}

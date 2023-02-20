@@ -1,9 +1,9 @@
 import { Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-import { GameDataContext } from '../context/GameDataContext';
+import { useGameStore } from '../store/gameStore';
 
 interface Result {
   id: string;
@@ -13,19 +13,15 @@ interface Result {
 }
 
 export const ResultView: React.FC = () => {
-  // @ts-ignore
-  const { getResultsList } = useContext(GameDataContext);
+  const getResultsList = useGameStore(state => state.getResultsList);
+  console.log('results in res view', getResultsList);
 
   const [results, setResults] = useState<Result[]>([]);
 
-  console.log(results);
-  useEffect(() => {
-    // @ts-ignore
-    getResultsList().then((res: React.SetStateAction<undefined>) => setResults(res.data));
-    console.log(results);
+  useEffect(async () => {
+    const res = await getResultsList();
+    setResults(res);
   }, []);
-  // @ts-ignore
-  // @ts-ignore
   return (
     <Flex
       direction='column'
@@ -77,7 +73,7 @@ export const ResultView: React.FC = () => {
             <Tr key={result.id}>
               <Td>{index + 1}</Td>
               <Td>{result.name}</Td>
-              <Td>{result.points}</Td>
+              <Td>{result.result}</Td>
               <Td>{result.accuracy}</Td>
               {/*<Td>*/}
               {/*    /!*    <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details*!/*/}

@@ -1,8 +1,7 @@
-import {Flex, Grid} from "@chakra-ui/react"
-import React, {useContext, useEffect} from "react";
-import {GameDataContext} from "../context/GameDataContext";
-import UnclickedNubmer from "../components/UnclickedNumber";
-import ClickedNubmer from "../components/ClickedNumber";
+import { Flex } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+
+import { useGameStore } from '../store/gameStore';
 
 interface ResultDetailsViewProps {
     match: {
@@ -20,7 +19,8 @@ export const ResultDetailsView: React.FC<ResultDetailsViewProps> = ({match}) => 
     const selectedId = match.params.id
     console.log(selectedId)
     // @ts-ignore
-    const {getPlayersResult, playersResult} = useContext(GameDataContext);
+    // const {getPlayersResult, playersResult} = useContext(GameDataContext);
+    const getPlayersResult, playersResult = useGameStore(state => [state.getPlayersResult, state.playersResult]);
     useEffect(() => {
         getPlayersResult(selectedId)
     }, [selectedId]);
