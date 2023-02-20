@@ -1,5 +1,8 @@
-import React, {createContext, useState} from "react";
-import {supabase} from '../auth/supabase';
+import { FC } from "react";
+import { createContext } from "react";
+import { useState} from "react";
+
+import { supabase } from '../auth/supabase';
 
 interface GameDataContextProps {
     children: React.ReactNode;
@@ -38,7 +41,7 @@ const defaultValues: GameDataContextValue = {
 
 export const GameDataContext = createContext<GameDataContextValue>(defaultValues);
 
-const GameDataProvider: React.FC<GameDataContextProps> = ({ children }) => {
+const GameDataProvider: FC<GameDataContextProps> = ({ children }) => {
     const [result, setResult] = useState<number>(0);
     const [name, setName] = useState<string>('');
     const [resultsList, setResultsList] = useState<Result[]>([]);
