@@ -12,10 +12,9 @@ interface Result {
 
 interface Game {
   name?: string;
-  setName: (name: SetStateAction<string | undefined>) => void;
   result: number;
   resultsList: Result[];
-  playersResult: Record<string, number>;
+  playersResult: Result;
   setResultsList: (results: SetStateAction<Result[]>) => void;
   gameTimeInSeconds: number;
   addItem: (item: Result) => Promise<void>;
@@ -25,20 +24,9 @@ interface Game {
 export const useGameStore = create<Game>((set) => {
   return ({
     name: undefined,
-    setName: (name: SetStateAction<string | undefined>) => {
-      if (typeof name === 'function') {
-        set((state) => ({ name: name(state.name) }));
-      } else {
-        set({ name });
-      }
-    },
     result: 0,
     playersResult: {},
     resultsList: [],
-    setResultsList: (value: SetStateAction<Result[]>) =>
-      set((state) => ({
-        resultsList: typeof value === 'function' ? value(state.resultsList) : value,
-      })),
     gameTimeInSeconds: 10,
     addItem: async (item: Result) => {
       try {

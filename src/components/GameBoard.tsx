@@ -8,7 +8,7 @@ interface GameBoardProps {
     checkGivenNumber: (number: number) => boolean
 }
 
-const GameBoard: React.FC<GameBoardProps> = ({board, checkGivenNumber}) => (
+export const GameBoard: React.FC<GameBoardProps> = ({board, checkGivenNumber}) => (
     <Grid templateColumns="repeat(10, 1fr)" gap="4%" w="900px" m="5px">
         {board && board.map((number: number, indexNumber: number) =>
             <Number
@@ -19,4 +19,3 @@ const GameBoard: React.FC<GameBoardProps> = ({board, checkGivenNumber}) => (
     </Grid>
 );
 
-export default GameBoard;
