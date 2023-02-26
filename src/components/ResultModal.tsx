@@ -1,16 +1,7 @@
 import { Box } from '@chakra-ui/layout';
-import { Modal } from '@chakra-ui/modal';
-import { ModalBody } from '@chakra-ui/modal';
-import { ModalContent } from '@chakra-ui/modal';
-import { ModalHeader } from '@chakra-ui/modal';
-import { ModalOverlay } from '@chakra-ui/modal';
-import { Button } from '@chakra-ui/react';
-import { Collapse } from '@chakra-ui/react';
-import { Center } from '@chakra-ui/react';
-import { Flex } from '@chakra-ui/react';
-import { Text } from '@chakra-ui/react';
-import { FC } from 'react';
-import { useState } from 'react';
+import { Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/modal';
+import { Button, Center, Collapse, Flex, Text } from '@chakra-ui/react';
+import { FC, useState } from 'react';
 import CountUp from 'react-countup';
 import { BiSave } from 'react-icons/bi';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
@@ -18,10 +9,9 @@ import { GiTrophyCup } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
-import SaveResultForm from './SaveResultForm';
-import { useGameStore } from '../store/gameStore';
 import { useMutation } from 'react-query';
 import { saveResult } from '../api/api';
+import SaveResultForm from './SaveResultForm';
 
 interface ResultModalProps {
   isOpen: boolean;
@@ -43,20 +33,14 @@ const ResultModal: FC<ResultModalProps> = ({
   const [showMailInput, setShowMailInput] = useState<boolean>(false);
   const accuracy = calculateAccuracy(points, clicked);
   const [submitted, setSubmitted] = useState<boolean>(false);
-  // @ts-ignore
-  // const { addItem } = useContext(GameDataContext);
-  // const addItem = useGameStore(state => state.addItem);
 
   const mutation = useMutation(saveResult);
 
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
     event.preventDefault();
     event.stopPropagation();
-    mutation.mutate({ id: v4(), name, result: points, accuracy: Math.ceil(accuracy) });
+    mutation.mutate({ id: v4(), name, points, accuracy: Math.ceil(accuracy) });
     setSubmitted(true);
-    // addItem({id: v4(), name, result: points, accuracy: Math.ceil(accuracy) }).then((data) => {
-    //   console.log(data);
-    // });
   };
 
 
