@@ -4,7 +4,7 @@ import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 
-import { getResults } from '../api/api';
+import { getResults } from '../api';
 
 interface Result {
   id: string;

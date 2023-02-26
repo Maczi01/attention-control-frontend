@@ -3,22 +3,19 @@ import React, { useEffect, useState } from 'react';
 
 import { GameBoard } from '../components/GameBoard';
 import { GameCounter } from '../components/GameCounter';
-import { useGameStore } from '../store/gameStore';
+import { GAME_TIME } from '../utils';
 
 export const BoardView: React.FC = () => {
-  const gameTimeInSeconds = useGameStore(state => state.gameTimeInSeconds);
 
   const [clicked, setClicked] = useState(0);
   const [points, setPoints] = useState(0);
   const [currentNumber, setCurrentNumber] = useState(0);
   const [board, setBoard] = useState<number[]>([]);
 
-  // Increment clicked count
   const countNumberOfClicks = () => {
     setClicked(prevClicked => prevClicked + 1);
   };
 
-  // Check if the given number is correct
   const checkGivenNumber = (number: number) => {
     if (number === currentNumber) {
       setCurrentNumber(prevNumber => prevNumber + 1);
@@ -29,7 +26,6 @@ export const BoardView: React.FC = () => {
     }
   };
 
-  // Remove the find key shortcut when the component mounts
   useEffect(() => {
     const removeFindKeyShortcut = (e: KeyboardEvent) => {
       if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
@@ -39,13 +35,11 @@ export const BoardView: React.FC = () => {
 
     window.addEventListener('keydown', removeFindKeyShortcut);
 
-    // Cleanup function to remove event listener when the component unmounts
     return () => {
       window.removeEventListener('keydown', removeFindKeyShortcut);
     };
   }, []);
 
-  // Generate random board numbers when the component mounts
   useEffect(() => {
     const boardNumbers = Array(100).fill(0).map((_, idx) => idx);
     setBoard(boardNumbers.sort(() => Math.random() - 0.5));
@@ -63,7 +57,7 @@ export const BoardView: React.FC = () => {
           px="20px"
         >
           <GameCounter
-            gameTimeInSeconds={gameTimeInSeconds}
+            gameTimeInSeconds={GAME_TIME}
             clicked={clicked}
             board={board}
             points={points}

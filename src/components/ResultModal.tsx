@@ -6,11 +6,11 @@ import CountUp from 'react-countup';
 import { BiSave } from 'react-icons/bi';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { GiTrophyCup } from 'react-icons/gi';
+import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
-import { useMutation } from 'react-query';
-import { saveResult } from '../api/api';
+import { saveResult } from '../api';
 import SaveResultForm from './SaveResultForm';
 
 interface ResultModalProps {
