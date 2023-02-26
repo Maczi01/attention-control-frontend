@@ -52,7 +52,14 @@
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "vitest"
+    "test": "vitest --watchAll=false",
+    "prepare": "husky install",
+    "lint:check": "npx eslint \"src/**\"",
+    "lint:fix": "npx eslint \"src/**\" --fix",
+    "format:check": "prettier --check \"./src\"",
+    "format:fix": "prettier --write \"./src\"",
+    "code:check": "npm run format:check && npm run lint:check",
+    "code:fix": "npm run format:fix && npm run lint:fix"
   },
   "eslintConfig": {
     "extends": [
