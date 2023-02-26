@@ -21,43 +21,13 @@ interface Game {
   getResultsList: () => Promise<Result[]>;
 }
 
-export const useGameStore = create<Game>((set) => {
+export const useGameStore = create<Game>(() => {
   return ({
     name: undefined,
     result: 0,
     playersResult: {},
     resultsList: [],
     gameTimeInSeconds: 10,
-    addItem: async (item: Result) => {
-      try {
-        const { data, error } = await supabase
-          .from('results')
-          .insert(item)
-          .single();
-        set((state: Game) => {
-          return ({
-            resultsList: [...state.resultsList, data ?? { id: '', name: '', result: 0 }],
-          });
-        });
-      } catch ({ message }) {
-        alert(message);
-      }
-    },
-
-    getResultsList: async () => {
-      const { data, error } = await supabase
-        .from('results')
-        .select()
-        .order('name', {ascending: false})
-
-      if (error) {
-        console.log('error')
-      }
-      if (data) {
-        console.log('data in store: ', data)
-        return data
-      }
-    },
   });
 });
 

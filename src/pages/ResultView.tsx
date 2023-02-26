@@ -1,9 +1,10 @@
 import { Button, Center, Flex, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 
-import { useGameStore } from '../store/gameStore';
+import { getResults } from '../api/api';
 
 interface Result {
   id: string;
@@ -13,15 +14,9 @@ interface Result {
 }
 
 export const ResultView: React.FC = () => {
-  const getResultsList = useGameStore(state => state.getResultsList);
-  console.log('results in res view', getResultsList);
+  const { data, error, isLoading,  } = useQuery('results', getResults);
+console.log(data)
 
-  const [results, setResults] = useState<Result[]>([]);
-
-  useEffect(async () => {
-    const res = await getResultsList();
-    setResults(res);
-  }, []);
   return (
     <Flex
       direction='column'
@@ -50,43 +45,29 @@ export const ResultView: React.FC = () => {
           <Button size='xs'>Worst results</Button>
         </Flex>
       </Center>
-
+      {error && <p>Cannot fetch results</p>}
+      {isLoading ? <p>Loading...</p> :
       <Table variant='simple'>
         <Thead>
           <Tr>
             <Th>Number</Th>
             <Th>Name</Th>
             <Th>Score</Th>
-            {/*<Th>Date</Th>*/}
             <Th>Accuracy</Th>
-            {/*<Th>Info</Th>*/}
-            {/*<Th>Action</Th>*/}
           </Tr>
         </Thead>
         <Tbody>
-          {results && results.map((result: {
-            name: string;
-            points: number;
-            accuracy: number;
-            id: string
-          }, index: number) => (
+          {data?.map((result: Result, index: number) => (
             <Tr key={result.id}>
               <Td>{index + 1}</Td>
               <Td>{result.name}</Td>
-              <Td>{result.result}</Td>
+              <Td>{result.points}</Td>
               <Td>{result.accuracy}</Td>
-              {/*<Td>*/}
-              {/*    /!*    <Button onClick={() => history.push(`/playersresult/${result.id}`)}> Details*!/*/}
-              {/*    /!*</Button>*!/*/}
-              {/*</Td>*/}
-              {/*<Td><Button onClick={() => deleteResultFromList(result.id)}>*/}
-              {/*    Remove*/}
-              {/*</Button></Td>*/}
             </Tr>
-          ))
-          }
+          ))}
         </Tbody>
       </Table>
+      }
     </Flex>
   );
 };

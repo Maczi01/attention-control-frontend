@@ -18,6 +18,16 @@ export const MainView: React.FC = () => (
                     Start the game
                 </Button>
             </Link>
+            <Link to="/results">
+                <Button
+                    _hover={{
+                        bg: "tertiary_hover",
+                        transform: "scale(1.1)",
+                    }}
+                    backgroundColor="primary" size="lg">
+                    Results
+                </Button>
+            </Link>
         </Flex>
     </Center>
 );

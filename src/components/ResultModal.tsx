@@ -20,6 +20,8 @@ import { v4 } from 'uuid';
 
 import SaveResultForm from './SaveResultForm';
 import { useGameStore } from '../store/gameStore';
+import { useMutation } from 'react-query';
+import { saveResult } from '../api/api';
 
 interface ResultModalProps {
   isOpen: boolean;
@@ -43,15 +45,18 @@ const ResultModal: FC<ResultModalProps> = ({
   const [submitted, setSubmitted] = useState<boolean>(false);
   // @ts-ignore
   // const { addItem } = useContext(GameDataContext);
-  const addItem = useGameStore(state => state.addItem);
+  // const addItem = useGameStore(state => state.addItem);
+
+  const mutation = useMutation(saveResult);
 
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
     event.preventDefault();
     event.stopPropagation();
+    mutation.mutate({ id: v4(), name, result: points, accuracy: Math.ceil(accuracy) });
     setSubmitted(true);
-    addItem({id: v4(), name, result: points, accuracy: Math.ceil(accuracy) }).then((data) => {
-      console.log(data);
-    });
+    // addItem({id: v4(), name, result: points, accuracy: Math.ceil(accuracy) }).then((data) => {
+    //   console.log(data);
+    // });
   };
 
 
