@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ResultView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResultView.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +83,7 @@
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.GameBoard.renders a game board with numbers">
+  <component name="RunManager" selected="Vitest.GameBoard.test.jsx">
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -132,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.GameBoard.renders a game board with numbers" />
         <item itemvalue="Vitest.GameBoard.test.jsx" />
+        <item itemvalue="Vitest.GameBoard.renders a game board with numbers" />
         <item itemvalue="Vitest.All Tests" />
         <item itemvalue="Vitest.GameBoard" />
       </list>
@@ -188,7 +184,7 @@
       <workItem from="1676636588879" duration="2112000" />
       <workItem from="1676757723117" duration="4766000" />
       <workItem from="1676892636826" duration="23272000" />
-      <workItem from="1677282511239" duration="7984000" />
+      <workItem from="1677282511239" duration="8488000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>
