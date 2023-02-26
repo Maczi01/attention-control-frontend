@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="" />
+    <list default="true" id="4b57b389-b923-4ec8-9ef6-081f988b3733" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/CentralBank.sol" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +78,7 @@
       <recent name="C:\Users\Admin\WebstormProjects\atenntion-contolr-frontend\src\context" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszTwardy\WebstormProjects\attention-control-frontend\.github\workflows" />
       <recent name="C:\Users\MateuszTwardy\WebstormProjects\attention-control-frontend\src\types" />
       <recent name="C:\Users\MateuszTwardy\WebstormProjects\attention-control-frontend" />
       <recent name="C:\Users\MateuszTwardy\WebstormProjects\attention-control-frontend\src\auth" />
@@ -183,7 +186,7 @@
       <workItem from="1676636588879" duration="2112000" />
       <workItem from="1676757723117" duration="4766000" />
       <workItem from="1676892636826" duration="23272000" />
-      <workItem from="1677282511239" duration="5596000" />
+      <workItem from="1677282511239" duration="6193000" />
     </task>
     <task id="LOCAL-00072" summary="Split code to component (form)">
       <created>1618075791175</created>
