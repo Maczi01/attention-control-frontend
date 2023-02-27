@@ -2,39 +2,29 @@ name: CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
       - name: Install dependencies
         run: npm install --ignore-engines
-
       - name: dep-check
-        uses: tj-actions/depcheck@v7.2
-        with:
-          ignores: 'eslint-*,babel-*, prettier, typescript, @testing-library/user-event, @types/jest, @types/node, react-router-dom, typesafe-actions, web-vitals'
-
+        run: npx depcheck --skip-missing --ignore-dirs=__tests__,coverage,dist --ignore-patterns="*.scss" --ignore-files=package-lock.json
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
-
       - name: Build
         run: npm run build
         env:
