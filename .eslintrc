@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["node_modules/", "*.svg", "*.json"],
+  "ignorePatterns": ["node_modules/", "*.svg", "*.json", "*.css"],
   "plugins": [  "react",
     "unused-imports",
     "ordered-imports"],
