@@ -7,9 +7,7 @@ describe('GameBoard', () => {
   const checkGivenNumber = jest.fn();
 
   it('renders a game board with numbers', () => {
-    const { getByRole, getAllByRole } = render(
-      <GameBoard board={board} checkGivenNumber={checkGivenNumber} />
-    );
+    const { getByRole, getAllByRole } = render(<GameBoard board={board} checkGivenNumber={checkGivenNumber} />);
     const gameBoard = getByRole('grid');
     const numbers = getAllByRole('button');
 
@@ -22,9 +20,7 @@ describe('GameBoard', () => {
   });
 
   it('calls checkGivenNumber function when a number is clicked', () => {
-    const { getByRole } = render(
-      <GameBoard board={board} checkGivenNumber={checkGivenNumber} />
-    );
+    const { getByRole } = render(<GameBoard board={board} checkGivenNumber={checkGivenNumber} />);
     const number = getByRole('button', { name: '1' });
     userEvent.click(number);
 

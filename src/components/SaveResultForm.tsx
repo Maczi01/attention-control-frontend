@@ -16,25 +16,17 @@ const SaveResultForm: FC<SaveResultFormProps> = ({ handleSubmit }) => {
 
   return (
     <Box>
-      <FormControl id='name'>
-        <Input type='text'
-               value={name}
-               focusBorderColor='lime'
-               onChange={(event) => setName(event.target.value)}
-               placeholder='Add your name...'
-               w='100%'
+      <FormControl id="name">
+        <Input
+          type="text"
+          value={name}
+          focusBorderColor="lime"
+          onChange={(event) => setName(event.target.value)}
+          placeholder="Add your name..."
+          w="100%"
         />
-        <Flex
-          align='center'
-          justify='space-around'
-        >
-          <Button
-            m='10px'
-            colorScheme='messenger'
-            variant='solid'
-            leftIcon={<BiSend />}
-            onClick={onSubmit}
-          >
+        <Flex align="center" justify="space-around">
+          <Button m="10px" colorScheme="messenger" variant="solid" leftIcon={<BiSend />} onClick={onSubmit}>
             Submit
           </Button>
         </Flex>

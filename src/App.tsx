@@ -12,15 +12,15 @@ import { theme } from './theme/theme';
 
 const App: FC = () => {
   return (
-      <ChakraProvider theme={theme}>
-          <Routes>
-            <Route path='/' element={<MainView />} />
-            <Route path='/game' element={<BoardView />} />
-            <Route path='/results' element={<ResultView />} />
-            {/*<Route path="/signin" element={LoginPage}/>*/}
-            <Route path='/protected' element={<ProtectedPage />} />
-          </Routes>
-      </ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <Routes>
+        <Route path="/" element={<MainView />} />
+        <Route path="/game" element={<BoardView />} />
+        <Route path="/results" element={<ResultView />} />
+        {/*<Route path="/signin" element={LoginPage}/>*/}
+        <Route path="/protected" element={<ProtectedPage />} />
+      </Routes>
+    </ChakraProvider>
   );
 };
 

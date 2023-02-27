@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +21,5 @@ root.render(
         <App />
       </BrowserRouter>
     </ChakraProvider>
-  </QueryClientProvider>,
-)
-;
+  </QueryClientProvider>
+);

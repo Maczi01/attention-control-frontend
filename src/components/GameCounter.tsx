@@ -20,24 +20,19 @@ export const GameCounter: FC<GameCounterProps> = ({ gameTimeInSeconds, clicked, 
   const [isActive, setIsActive] = useState(false);
 
   const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
-  const {
-    isOpen: isOpenReportModal,
-    onOpen: onOpenReportModal,
-  } = useDisclosure();
+  const { isOpen: isOpenReportModal, onOpen: onOpenReportModal } = useDisclosure();
   const countRef = useRef<NodeJS.Timeout | null>(null);
   useEffect(() => {
-      setElapsedTime(gameTimeInSeconds);
-    }, [gameTimeInSeconds],
-  );
+    setElapsedTime(gameTimeInSeconds);
+  }, [gameTimeInSeconds]);
 
   useEffect(() => {
-      if (elapsedTime < 1) {
-        clearInterval(countRef.current as NodeJS.Timeout);
-        setIsActive(false);
-        onOpenReportModal();
-      }
-    }, [elapsedTime],
-  );
+    if (elapsedTime < 1) {
+      clearInterval(countRef.current as NodeJS.Timeout);
+      setIsActive(false);
+      onOpenReportModal();
+    }
+  }, [elapsedTime]);
 
   const handleStart = () => {
     if (isActive) {
@@ -52,14 +47,8 @@ export const GameCounter: FC<GameCounterProps> = ({ gameTimeInSeconds, clicked, 
   };
 
   return (
-    <Box
-      filter='blur(20px)'
-    >
-      <StartWindow
-        isOpen={isOpen}
-        onClose={onClose}
-        handleStart={handleStart}
-      />
+    <Box filter="blur(20px)">
+      <StartWindow isOpen={isOpen} onClose={onClose} handleStart={handleStart} />
       <ResultModal
         isOpen={isOpenReportModal}
         clicked={clicked}
@@ -70,4 +59,3 @@ export const GameCounter: FC<GameCounterProps> = ({ gameTimeInSeconds, clicked, 
     </Box>
   );
 };
-
