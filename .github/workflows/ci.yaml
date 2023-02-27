@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install --ignore-engines
       - name: dep-check
-        run: npx depcheck --skip-missing --ignore-dirs=__tests__,coverage,dist --ignore-patterns="*.scss" --ignore-files=package-lock.json --ignores= @commitlint/cli, @commitlint/config-conventional, @testing-library/user-event,@types/jest, axios, eslint-config-standard, eslint-plugin-import, eslint-plugin-jest, eslint-plugin-node, eslint-plugin-promise, jest, react-hooks-global-state, react-uuid, uuidv4, web-vitals, zustand,@testing-library/react
+        run: npx depcheck --skip-missing --ignore-dirs=__tests__,coverage,dist --ignore-patterns="*.scss" --ignore-files=package-lock.json --ignores=@commitlint/cli, @commitlint/config-conventional, @testing-library/user-event,@types/jest, axios, eslint-config-standard, eslint-plugin-import, eslint-plugin-jest, eslint-plugin-node, eslint-plugin-promise, jest, react-hooks-global-state, react-uuid, uuidv4, web-vitals, zustand,@testing-library/react
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
       - name: Build
