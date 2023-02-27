@@ -1,6 +1,5 @@
-import {Button, Center, Flex} from "@chakra-ui/react"
-import React from "react";
-import {Link} from "react-router-dom";
+import { Center } from '@chakra-ui/react';
+import React from 'react';
 
 export const ProtectedPage: React.FC = () => (
     <Center h="100%">
