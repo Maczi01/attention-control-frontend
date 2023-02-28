@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/layout';
 import { Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/modal';
 import { Button, Center, Collapse, Flex, Text } from '@chakra-ui/react';
+import { nanoid } from 'nanoid';
 import { FC, useState } from 'react';
 import CountUp from 'react-countup';
 import { BiSave } from 'react-icons/bi';
@@ -8,7 +9,6 @@ import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { GiTrophyCup } from 'react-icons/gi';
 import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
-import uuid from 'uuid';
 
 import { saveResult } from '../api';
 import SaveResultForm from './SaveResultForm';
@@ -27,13 +27,12 @@ const ResultModal: FC<ResultModalProps> = ({ isOpen, handleStart, clicked, point
   const [showMailInput, setShowMailInput] = useState<boolean>(false);
   const accuracy = calculateAccuracy(points, clicked);
   const [submitted, setSubmitted] = useState<boolean>(false);
-
   const mutation = useMutation(saveResult);
 
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
     event.preventDefault();
     event.stopPropagation();
-    mutation.mutate({ id: uuid.v4(), name, points, accuracy: Math.ceil(accuracy) });
+    mutation.mutate({ id: nanoid(), name, points, accuracy: Math.ceil(accuracy) });
     setSubmitted(true);
   };
 
