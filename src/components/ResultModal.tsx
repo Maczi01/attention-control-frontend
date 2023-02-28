@@ -8,7 +8,7 @@ import { BsArrowCounterclockwise } from 'react-icons/bs';
 import { GiTrophyCup } from 'react-icons/gi';
 import { useMutation } from 'react-query';
 import { Link } from 'react-router-dom';
-import { v4 } from 'uuid';
+import uuid from 'uuid';
 
 import { saveResult } from '../api';
 import SaveResultForm from './SaveResultForm';
@@ -33,7 +33,7 @@ const ResultModal: FC<ResultModalProps> = ({ isOpen, handleStart, clicked, point
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, name: string) => {
     event.preventDefault();
     event.stopPropagation();
-    mutation.mutate({ id: v4(), name, points, accuracy: Math.ceil(accuracy) });
+    mutation.mutate({ id: uuid.v4(), name, points, accuracy: Math.ceil(accuracy) });
     setSubmitted(true);
   };
 
